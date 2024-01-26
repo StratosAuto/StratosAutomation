@@ -10,4 +10,6 @@ public class Stratos_Login_PageObjects {
 	public static final By errorMessage = By.xpath("//p[text()='Entered Email/Password is Incorrect']");
 	public static final By successMessage = By.xpath("//p[contains(text(),'Login Successful')]");
 	
+	
+	
 }

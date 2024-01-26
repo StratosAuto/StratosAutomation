@@ -1,19 +1,18 @@
 package TestRunner;
 
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="com.stratos.automation/features/Stratos_Login.feature",
-		glue={"gluecode", "TestRunner"},
+		features="Stratos_Automation/Stratos_features/Stratos_Login.feature",
+		glue={"gluecode", "Stratos_gluecode"},
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","progress","summary"},
+		tags= {""},
 		monochrome= true
+		
 		)
-
-
 public class Stratos_Test_Runner_Test {
 
 }
