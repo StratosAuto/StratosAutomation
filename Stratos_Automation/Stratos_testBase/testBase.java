@@ -1,18 +1,25 @@
 package Stratos_testBase;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Stratos_utilities.ExceptionHandling;
 import Stratos_utilities.Logs;
-
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
 import org.openqa.selenium.WebElement;
@@ -349,6 +356,158 @@ public class testBase extends PageBase {
 			ExceptionHandling.HandleExecption(e, "Element Text not available");
 		}
 		return sText;
-		
 	}
+//	public static String getFakerData() {
+//	       Faker faker = new Faker();
+//	       String data = faker.company().name().substring(0, 5);
+//	       return data;
+//	}
+	public static String randomNumeric(int stringLength) {
+
+		 String randomString = null;
+
+		 try {
+
+		 String num = "0123456789";
+
+		 StringBuilder sb = new StringBuilder();
+
+		 Random random = new Random();
+
+		 int length = stringLength;
+
+		 for (int i = 0; i < length; i++) {
+
+		 int index = random.nextInt(num.length());
+
+		 char randomChar = num.charAt(index);
+
+		 sb.append(randomChar);
+
+		 }
+
+		 String randomstring = sb.toString();
+
+		 randomString = randomstring;
+		 Logs.info("Generates Random Numbers");
+		 } catch (Exception e) {
+
+		 Logs.info("Unable to generate the Random Numbers value");
+
+		 }
+
+		 return randomString;
+
+		}
+
+		public static String randomAplhabet(int stringLength) {
+
+		 String randomString = null;
+
+		 try {
+
+		 String smallalpha = "abcdefghijklmnopqrstuvwxyz";
+
+		 StringBuilder sb = new StringBuilder();
+
+		 Random random = new Random();
+
+		 int length = stringLength;
+
+		 for (int i = 0; i < length; i++) {
+
+		 int index = random.nextInt(smallalpha.length());
+
+		 char randomChar = smallalpha.charAt(index);
+
+		 sb.append(randomChar);
+
+		 }
+
+		 String randomstring = sb.toString();
+
+		 randomString = randomstring;
+		 Logs.info("Generates Random Alphabets");
+
+		 } catch (Exception e) {
+
+		 Logs.info("Unable to generate the Random Alphabets value");
+
+		 }
+
+		 return randomString;
+
+		}
+
+
+		public static String randomAlphanumeric(int stringLength) {
+
+		 String randomString = null;
+
+		 try {
+
+		 String smallalpha = "abcdefghijklmnopqrstuvwxyz";
+
+		 String captialAplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		 String number = "0123456789";
+
+		 String alphaNumeric = smallalpha + captialAplha + number;
+
+
+		 StringBuilder sb = new StringBuilder();
+
+		 Random random = new Random();
+
+		 int length = stringLength;
+
+		 for (int i = 0; i < length; i++) {
+
+		 int index = random.nextInt(alphaNumeric.length());
+
+		 char randomChar = alphaNumeric.charAt(index);
+
+		 sb.append(randomChar);
+
+		 }
+
+		 String randomstring = sb.toString();
+
+		 randomString = randomstring;
+
+		 Logs.info("Generated Alphanumeric values");
+
+		 } catch (Exception e) {
+
+		 Logs.info("Unable to generate the Random AlphaNumeric value");
+
+		 }
+
+		 return randomString;
+
+		}
+//		public static void takeSnapShot(String filename) throws Exception {
+//			 try {
+//				 File Screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//				 FileUtils.copyFile(Screenshot, new File("./Screenshots/"+filename+".png"));
+//			 } catch (Exception e) {
+//			 ExceptionHandling.HandleExecption(e, e.getMessage());
+//			 }
+//			 }
+//}
+		public static void takeScreenshot(String filename) {
+	        try {
+	        
+	        	LocalDateTime now = LocalDateTime.now();
+	            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm:ss");
+	            String timestamp = now.format(formatter);
+	            timestamp = timestamp.replace(" ", "_").replace(":", "_");
+	            String fullFilename = filename + "_" + timestamp + ".png";
+	            File screenshot = ((TakesScreenshot) PageBase.driver).getScreenshotAs(OutputType.FILE);
+	            FileUtils.copyFile(screenshot, new File("./Screenshots/" + fullFilename));
+	        } catch (Exception e) {
+	            // Handle exceptions, for example, log them or display an error message
+	            e.printStackTrace();
+	        }
+	    }
 }
