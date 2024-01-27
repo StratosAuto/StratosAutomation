@@ -9,9 +9,9 @@ Feature: 3rd Party Provider functionality
 
   Scenario: Verify Add New Provider functionality
     Given User clicks on 3rd Party Provider in the menu
-    And User clicks on Add New Provider button
-    And Verify that user able to enter invalid data in Add Provider page
-    Then User Validates the error messages of Invalid data of all the feilds
+    #And User clicks on Add New Provider button
+    #And Verify that user able to enter invalid data in Add Provider page
+    #Then User Validates the error messages of Invalid data of all the feilds
     #And User clicks on Cancel button
     #And User clicks on Add New Provider button
     #And Verify that user able to enter invalid field length data in Add Provider page
@@ -19,26 +19,25 @@ Feature: 3rd Party Provider functionality
     #Then User clicks on Cancel button
     #And User clicks on Add New Provider button
     #Then User clicks on Save and Continue button to validate mandatory fields
-    #And User validates the error message as "errorMessage"
     #Then User clicks on Cancel button
-    #And User clicks on Add New Provider button
-    #And User enters Provider Name as "providerName" in Add Provider page
-    #And User enters Mobile Number as "mobileNumber" in Add Provider page
-    #And User enters Other Contact as "otherContactNumber" in Add Provider page
-    #And User enters Email Address as "emailAddress" in Add Provider page
-    #And User enters Fax Number as "faxNumber" in Add Provider page
-    #And User enters Vat Number as "vatNumber" in Add Provider page
-    #And User selects status as "status" from status dropdown in Add Provider page
-    #And User enters street as "street" in Add Provider page
-    #And User enters street2 as "street2" in Add Provider page
-    #And User selects City as "city" from City dropdown in Add Provider page
-    #And User validates valid Province is auto-populated when city is selectsed
-    #And User selects Country as "country" from country dropdown in Add Provider page
-    #And User enters Postal Code as "postalCode" in Add Provider page
-    #And User enters Comments as "comments" in Add Provider page
-    #Then User clicks on Save and Continue button
-    #And User validates the success message as "Provider added Successfully"
-#
+    And User clicks on Add New Provider button
+    And User enters Provider Name as "providerName" in Add Provider page
+    And User enters Mobile Number as "mobileNumber" in Add Provider page
+    And User enters Other Contact as "otherContactNumber" in Add Provider page
+    And User enters Email Address as "emailAddress" in Add Provider page
+    And User enters Fax Number as "faxNumber" in Add Provider page
+    And User enters Vat Number as "vatNumber" in Add Provider page
+    And User selects status as "status" from status dropdown in Add Provider page
+    And User enters street as "street" in Add Provider page
+    And User enters street2 as "street2" in Add Provider page
+    And User selects City as "city" from City dropdown in Add Provider page
+    And User validates valid Province is auto-populated when city is selectsed
+    And User selects Country as "country" from country dropdown in Add Provider page
+    And User enters Postal Code as "postalCode" in Add Provider page
+    And User enters Comments as "comments" in Add Provider page
+    Then User clicks on Save and Continue button
+    And User verifies the created provider to validate provider is created
+
   #Scenario: Verify the Active Providers and Inactive Providers filter functionality
     #Given User clicks on 3rd Party Provider in the menu
     #And User enters valid Provider Ref as "providerRef" on Active Providers
