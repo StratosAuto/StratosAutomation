@@ -6,7 +6,6 @@ Feature: Manager Shifts
     And User clicks on Login button
     And Verify the success message as "successMessage"
 
-
   Scenario: Verify the Add New Shifts functionality
     Given User clicks on Shifts in the menu
     And User clicks on Add New Shifts button

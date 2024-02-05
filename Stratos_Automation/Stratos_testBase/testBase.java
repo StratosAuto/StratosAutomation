@@ -3,13 +3,11 @@ package Stratos_testBase;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Stratos_utilities.ExceptionHandling;
@@ -510,4 +508,17 @@ public class testBase extends PageBase {
 	            e.printStackTrace();
 	        }
 	    }
-}
+		public static void FileUpload(By object,String filepath) throws Exception
+		{
+	       try {
+				Thread.sleep(3000);
+		        String absoluteFilePath = System.getProperty("user.dir") + "/" + filepath;
+				
+		        PageBase.driver.findElement(object).sendKeys(absoluteFilePath);
+		        Logs.info("File is selected Sucessfully");
+		        
+	       }catch (Exception e){
+				ExceptionHandling.HandleExecption(e, "Unable to select file");
+	       }
+		}	
+}		

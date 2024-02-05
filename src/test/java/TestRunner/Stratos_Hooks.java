@@ -35,7 +35,7 @@ public class Stratos_Hooks extends PageBase{
 				System.out.println("After Hook");
 			}
 			Logs.endTestCase();
-//			testBase.tearDown();
+//			PageBase.tearDown();
 			
 		}catch(Exception e) {
 			ExceptionHandling.HandleExecption(e, "Unable to run After scenario");
