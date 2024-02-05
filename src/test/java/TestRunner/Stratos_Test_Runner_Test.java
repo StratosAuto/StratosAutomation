@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features="Stratos_Automation/Stratos_features/Stratos_Login.feature",
-		glue={"gluecode", "Stratos_gluecode"},
+		glue={"Stratos_gluecode", "TestRunner"},
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","progress","summary"},
 		tags= {""},
 		monochrome= true

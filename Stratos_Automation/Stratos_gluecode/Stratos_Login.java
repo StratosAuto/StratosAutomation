@@ -59,7 +59,7 @@ public class Stratos_Login {
 			
 		} else {
 			Logs.info("User navigated to Homepage");
-			testBase.takeScreenshot("Login success message");
+		//	testBase.takeScreenshot("Login success message");
 		}
 		
 	}
