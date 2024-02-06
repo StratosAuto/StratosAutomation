@@ -47,7 +47,7 @@ Feature: Equipment functionality
     And Admin User click on  save and continue Button
     Then Admin User verifies the success message
     
-    Scenarios: Verify the faulty equipment manage functionality
+    Scenario: Verify the faulty equipment manage functionality
     Given Admin User login into the Stratos application
     When Admin User click on equipment module
     Then Admin User click on faulty equipment
@@ -58,7 +58,7 @@ Feature: Equipment functionality
     And Admin User click on save and continue Button
     Then Admin User verifies the success message
     
-    Scenarios: Verify the inactive equipment manage functionality
+    Scenario: Verify the inactive equipment manage functionality
     Given Admin User login into the Stratos application
     When Admin User click on equipment module
     Then Admin User click on inactive equipment
@@ -76,10 +76,3 @@ Feature: Equipment functionality
     Then Admin User Select the bulk upload file
     Then Admin User click on submit button.
     Then Admin User Verifies the success message
-    
-    
-
-
-    
-    
-

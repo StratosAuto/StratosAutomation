@@ -1,10 +1,13 @@
 package Stratos_gluecode;
 
+import javax.xml.stream.events.StartDocument;
+
 import org.openqa.selenium.WebElement;
 
 import Stratos_pageObjects.Stratos_Client_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
+import de.erichseifert.vectorgraphics2d.VectorHints.Value;
 import io.cucumber.java.en.*;
 
 public class Stratos_Client {
@@ -40,7 +43,7 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(1, 0);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
    
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	mobileNumber = Excel_Utility.getCellData_Integer(1, 1);
@@ -52,25 +55,25 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	EmailAdress = Excel_Utility.getCellData(1, 2);
 	testBase.clickonElement(Stratos_Client_PageObjects.emailAdress, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.emailAdress, EmailAdress, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.emailAdress, EmailAdress, "Email Adress");
 	
 	testBase.waitForElement(Stratos_Client_PageObjects.faxNumber, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	FaxNumber = Excel_Utility.getCellData_Integer(1, 3);
 	testBase.clickonElement(Stratos_Client_PageObjects.faxNumber, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "Fax Number");
     
 	testBase.waitForElement(Stratos_Client_PageObjects.vatNumber, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	VatNumber = Excel_Utility.getCellData_Integer(1, 4);
 	testBase.clickonElement(Stratos_Client_PageObjects.vatNumber, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "Vat Number");
 
 	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	AccountManager = Excel_Utility.getCellData(1, 6);
 	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account manager");
     
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Status = Excel_Utility.getCellData(1, 5);
@@ -90,7 +93,7 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street2 = Excel_Utility.getCellData(1, 8);
 	testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
    
 
 //@Then("User select invalid city {string} in add client page")
@@ -134,7 +137,7 @@ public void user_Enter_Client_Name_in_add_client_page(String string) throws Exce
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(2, 0);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
     
 }
 
@@ -153,7 +156,7 @@ public void user_Enter_Email_Address_in_add_client_page(String string) throws Ex
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	EmailAdress = Excel_Utility.getCellData(2, 2);
 	testBase.clickonElement(Stratos_Client_PageObjects.emailAdress, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.emailAdress, EmailAdress, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.emailAdress, EmailAdress, "Email Adress");
 }
 
 @Then("User Enter Fax Number {string} in add client page")
@@ -162,7 +165,7 @@ public void user_Enter_Fax_Number_in_add_client_page(String string) throws Excep
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	FaxNumber = Excel_Utility.getCellData_Integer(2, 3);
 	testBase.clickonElement(Stratos_Client_PageObjects.faxNumber, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "Fax Number");
 }
 
 @Then("User Enter Vat Number {string} in add client page")
@@ -171,7 +174,7 @@ public void user_Enter_Vat_Number_in_add_client_page(String string) throws Excep
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	VatNumber = Excel_Utility.getCellData_Integer(2, 4);
 	testBase.clickonElement(Stratos_Client_PageObjects.vatNumber, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "Vat Number");
 }
 
 @Then("User Enter Account Manager {string} in add client page")
@@ -180,7 +183,7 @@ public void user_Enter_Account_Manager_in_add_client_page(String string) throws 
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	AccountManager = Excel_Utility.getCellData(2, 6);
 	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account Manager");
 }
 
 //@Then("User Select Status {string} in add client page")
@@ -207,7 +210,7 @@ public void user_Enter_street1_in_add_client_page(String string) throws Throwabl
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street2 = Excel_Utility.getCellData(2, 8);
 	testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "string");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
     
 }
 
@@ -230,16 +233,16 @@ public void user_Select_province_in_add_client_page(String string) throws Except
 public void user_Select_country_in_add_client_page(String string) throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.country, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.country, "country selected");
-	testBase.clickonElement(Stratos_Client_PageObjects.selectCountry, "Pretoria");
+	testBase.clickonElement(Stratos_Client_PageObjects.selectCountry, "South Africa");
 }
 
 @Then("User Enter postal code {string} in add client page")
 public void user_Enter_postal_code_in_add_client_page(String string) throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.postalCode, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-	PostalCode = Excel_Utility.getCellData(2, 11);
-	testBase.clickonElement(Stratos_Client_PageObjects.postalCode, " postal code");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.postalCode, PostalCode, "PostalCode");
+	PostalCode = Excel_Utility.getCellData_Integer(2, 11);
+	testBase.clickonElement(Stratos_Client_PageObjects.postalCode, "postal code");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.postalCode, String.valueOf(PostalCode), "PostalCode");
    
 }
 
@@ -248,7 +251,7 @@ public void user_Enter_comments_in_add_client_page(String string) throws Excepti
 	testBase.waitForElement(Stratos_Client_PageObjects.comments, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Comments = Excel_Utility.getCellData(2, 12);
-	testBase.clickonElement(Stratos_Client_PageObjects.comments, " postal code");
+	testBase.clickonElement(Stratos_Client_PageObjects.comments, "comments");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.comments, Comments, "PostalCode");
     
 }
@@ -264,4 +267,77 @@ public void user_Click_on_Save_and_Continue_Button_in_add_client_page() throws E
 public void user_Verifies_the_client_Success_Message_as(String string) throws Exception {
    String s =testBase.getElementText(Stratos_Client_PageObjects.addclientSuccessMessage, "success message");
    System.out.println(s);
-}}
+}
+  @Then("User click on manage client")
+  public void user_click_on_manage_client() throws Throwable {
+	testBase.waitForElement(Stratos_Client_PageObjects.manageClient, 20);
+	testBase.clickonElement(Stratos_Client_PageObjects.manageClient, "manage client");
+	testBase.ScrollDownBottom();
+	
+}
+
+@Then("User click on client info edit button")
+public void user_click_on_client_info_edit_button() throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.editManageClientDetails, 20);
+	testBase.clickonElement(Stratos_Client_PageObjects.editManageClientDetails, "edit button");
+    
+}
+
+@Then("User change valid client name {string} in manage clients")
+public void user_change_valid_client_name_in_manage_clients(String string) throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
+	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+	ClientName = Excel_Utility.getCellData(2, 0);
+	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
+}
+
+@Then("User change street {string} When in manage clients")
+public void user_change_street_When_in_manage_clients(String string) throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
+	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+	Street = Excel_Utility.getCellData(2, 7);
+	testBase.clickonElement(Stratos_Client_PageObjects.street, "Street");
+	testBase.typeinTextBox(Stratos_Client_PageObjects.street, Street, "Street");
+}
+	@Then("User change street1 {string} in manage client page")
+	public void user_change_street1_in_manage_client_page(String string) throws Exception {
+		testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		Street2 = Excel_Utility.getCellData(2, 8);
+		testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
+		testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
+	    
+	}
+
+//	@Then("User select city {string} in manage clients")
+//	public void user_select_city_in_manage_clients(String string) throws Exception {
+//		testBase.waitForElement(Stratos_Client_PageObjects.city, 20);
+//		testBase.clickonElement(Stratos_Client_PageObjects.city, "City dropdown");
+//		testBase.clickonElement(Stratos_Client_PageObjects.selectCity, "Vereeniging");
+//	}
+
+
+
+@Then("User click on update button")
+public void user_click_on_update_button() throws Exception {
+    testBase.waitForElement(Stratos_Client_PageObjects.updateButton, 20);
+    testBase.clickonElement(Stratos_Client_PageObjects.updateButton, "update button");
+}
+
+@Then("User verifies the success message")
+public void user_verifies_the_success_message() throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.succcessMessageForUpdate, 20);
+	String s = testBase.getElementText(Stratos_Client_PageObjects.succcessMessageForUpdate, "success message");
+	System.out.println(s);
+    
+}
+
+@Then("User click on deactivate button")
+public void user_click_on_deactivate_button() throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.deActivateButton, 20);
+	testBase.clickonElement(Stratos_Client_PageObjects.deActivateButton, "deactivate button");
+
+}
+
+}
