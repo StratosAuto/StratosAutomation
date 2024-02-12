@@ -1,11 +1,10 @@
 Feature: Equipment functionality
 
   Background: 
-    Given Admin User Enter the Stratos application URL
-    Then Admin User enter the valid username
-    Then Admin User enter the valid passsword
-    Then Admin user click on login button
-    Then Admin User navigates to home page
+   Given User Enter the Stratos application URL
+    Then User enter the valid username
+    Then User enter the valid passsword
+    Then user click on login button
     When User Click on Equipment module
 
   Scenario: Verify add new equipemt functionality

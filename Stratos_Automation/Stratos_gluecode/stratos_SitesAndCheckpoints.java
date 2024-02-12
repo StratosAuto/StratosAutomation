@@ -29,7 +29,7 @@ public class stratos_SitesAndCheckpoints {
 	public void user_click_on_add_new_site_button() throws Exception {
 	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.addnewSiteButton, 20);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.addnewSiteButton, "Add new site");
-	    
+	    testBase.RefreshPage();
 	}
 
 	@Given("Verify that user able to enter invalid data in Add new site page")
@@ -90,8 +90,11 @@ public class stratos_SitesAndCheckpoints {
 	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.completeAdress, 20);
 	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	    String completeAdress= Excel_Utility.getCellData(1, 2);
-	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.completeAdress, "complete adress");
+//	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.completeAdress, "complete adress");
 	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.completeAdress, completeAdress, "completeAdress");
+	    Thread.sleep(15000);
+	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.completeAdressOption, 30);
+	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.completeAdressOption, "completeAdress");
 	    Thread.sleep(5000);
 	   
 	}
@@ -145,7 +148,7 @@ public class stratos_SitesAndCheckpoints {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String email=Excel_Utility.getCellData(1, 6);
 //		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.email, "email");
-		testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.email, "han@gmail.com" , "email");
+		testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.email, email , "email");
 	    
 	}
 
@@ -200,7 +203,7 @@ public class stratos_SitesAndCheckpoints {
 	public void user_enter_site_contact_information_email_address_as_in_add_new_site(String string) throws Throwable {
 		testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.siteEmail, 20);
 	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String siteEmail=Excel_Utility.getCellData(1, 6);
+		String siteEmail=Excel_Utility.getCellData(1, 11);
 //	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.siteEmail, "site mobile");
 	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.siteEmail, siteEmail, "sitemobile");
 	    Thread.sleep(2000);
@@ -211,12 +214,13 @@ public class stratos_SitesAndCheckpoints {
 	@Then("User Click on Save and Continue Button")
 	public void user_Click_on_Save_and_Continue_Button() throws Exception {
 		testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.addnewsiteSaveButton, 20);
+		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.addnewsiteSaveButton, "save and continue button");
-	    
 	}
 
 	@Then("User Verifies the created site to validate site is created")
 	public void user_Verifies_the_created_site_to_validate_site_is_created() {
+		
 		
 	    
 	}
@@ -225,6 +229,7 @@ public class stratos_SitesAndCheckpoints {
 	public void user_Click_on_Manage_check_points_button() throws Exception {
 	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.manageCheckpointsButton, 20);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.manageCheckpointsButton, "manageCheckpoints");
+	    testBase.RefreshPage();
 	}
 
 	@When("Verify that user able to enter invalid data in manage checkpoints page")
@@ -266,7 +271,7 @@ public class stratos_SitesAndCheckpoints {
 		   Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 			String checkPointAdress=Excel_Utility.getCellData(1, 2);
 			testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.checkpointsAdress, checkPointAdress, "checkpointsAdress");
-			Thread.sleep(4000);
+			Thread.sleep(10000);
 			testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, 20);
 			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, "checkpoints");
 			testBase.waitForElementToBevisible(Stratos_SitesAndCheckpoints_PageObjects.checkpointsLAtitude, 20);
@@ -281,8 +286,6 @@ public class stratos_SitesAndCheckpoints {
 	    Thread.sleep(5000);
 	   WebElement s=testBase.getListElementsText(Stratos_SitesAndCheckpoints_PageObjects.checkPointName);
 	   System.out.println(s);
-	  
-	    
 	}
 
 	@Then("User Click on Done")
@@ -296,6 +299,7 @@ public class stratos_SitesAndCheckpoints {
 		Thread.sleep(5000);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.manageSite, "Manage Site");
 	}
+	
 
 	@When("User enters Mobile Number as {string} in Edit Site page")
 	public void user_enters_Mobile_Number_as_in_Edit_Site_page(String string) throws Exception {
@@ -304,42 +308,72 @@ public class stratos_SitesAndCheckpoints {
 	   testBase.clearTextbox(Stratos_SitesAndCheckpoints_PageObjects.siteMobile, "Mobile Number");
 	   Thread.sleep(2000);
 	   testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.siteMobile, mobileNumber, "Mobile Number");
+	   Thread.sleep(2000);
 	}
 
 	@Then("User clicks on Update button")
 	public void user_clicks_on_Update_button() throws Exception {
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.updateButton, "Update Button");
+	   Thread.sleep(10000);
+	   
 	}
 	
 	@Then("User validates the updates of Active Site")
 	public void user_validates_the_updates_of_Active_Site() throws Exception {
+		testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filter, mobileNumber, "mobile number in filters");
 	    Thread.sleep(5000);
-	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.manageSite, "Manage Site");
-	    String data=testBase.driver.findElement(By.xpath("//input[@formcontrolname='siteMobile']")).getText();
-	    System.out.println(data);
-	    if(!(mobileNumber.contains(data))) {
-	    	ExceptionHandling.HandleAssertion("Mobile Number is not updated");
+	    if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.cellData, "Validate Deactivate"))) {
+	    	ExceptionHandling.HandleAssertion("Site is not activated");
 	    }else
-	    	Logs.info("Mobile Number is updated");
+	    	Logs.info("Site is activated");
+	    testBase.RefreshPage();
+	    
+//	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.manageSite, "Manage Site");
+//	    String data=testBase.driver.findElement(By.xpath("//input[@formcontrolname='siteMobile']")).getText();
+//	    System.out.println(data);
+//	    if(!(mobileNumber.contains(data))) {
+//	    	ExceptionHandling.HandleAssertion("Mobile Number is not updated");
+//	    }else
+//	    	Logs.info("Mobile Number is updated");
 	}
-
+	@Then("User click on Inactive site tab")
+	public void user_click_on_Inactive_site_tab() throws Exception {
+		Thread.sleep(3000);
+		testBase.RefreshPage();
+	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, 20);
+	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "inactive site");
+	    Thread.sleep(20000);
+	}
+	
 	@Then("User clicks on Deactivate button")
 	public void user_clicks_on_Deactivate_button() throws Exception {
 		Thread.sleep(3000);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.deactivateButton, "Deactivate");
+	    
 	}
 
 	@Then("User validates the deactivated site")
 	public void user_validates_the_deactivated_site() throws Exception {
 	    Thread.sleep(5000);
-	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		siteName = Excel_Utility.getCellData(1, 0);
-	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "Inctive Sites");
-	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filterButton, siteName, "Filter");
-	    if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.validateResults, "Validate Deactivate"))) {
-	    	ExceptionHandling.HandleAssertion("Site is not Deactivated");
+//	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+//		siteName = Excel_Utility.getCellData(1, 0);
+//	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "Inctive Sites");
+//	    
+//	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filterButton, siteName, "Filter");
+//	    if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.validateResults, "Validate Deactivate"))) {
+//	    	ExceptionHandling.HandleAssertion("Site is not Deactivated");
+//	    }else
+//	    	Logs.info("Site is Deactivated");
+		
+//		testBase.ClickViaMouse(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "Inctive Sites");
+	    Thread.sleep(5000);
+		testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filter, mobileNumber, "mobile number in filters");
+	    Thread.sleep(5000);
+	    if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.cellData, "Validate Deactivate"))) {
+	    	ExceptionHandling.HandleAssertion("Site is not deactivated");
 	    }else
-	    	Logs.info("Site is Deactivated");
+	    	Logs.info("Site is deactivated");
+		
 	}
 
 	@Then("User enters Other Contact Number as {string} in Edit Site page")
@@ -387,7 +421,7 @@ public class stratos_SitesAndCheckpoints {
 	
 	@When("User clicks on Bulk Upload button")
 	public void user_clicks_on_Bulk_Upload_button() throws Exception {
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.bulkUpload, "Bulk Upload");
 	}
 
@@ -404,8 +438,8 @@ public class stratos_SitesAndCheckpoints {
 	}
 
 	@Then("User validates the success message as {string}")
-	public void user_validates_the_success_message_as(String string) {
-	   
+	public void user_validates_the_success_message_as(String string) throws InterruptedException {
+	   Thread.sleep(10000);
 	}
 
 	@Then("User validates the error message as {string} of invalid Bulk Upload")
@@ -417,8 +451,10 @@ public class stratos_SitesAndCheckpoints {
 	
 	@Then("User clicks on cancel button")
 	public void user_clicks_on_cancel_button() throws Throwable {
+		Thread.sleep(2000);
 	   testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.cancelButton, 20);
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.cancelButton, "Cancel Button");
+	   Thread.sleep(2000);
 	}
 
 	@Then("User validates the error message as {string} of null Bulk Upload")

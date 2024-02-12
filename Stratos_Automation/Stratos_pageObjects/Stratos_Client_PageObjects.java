@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Stratos_Client_PageObjects {
 //	public static final By clientModule=By.xpath("//span[text()='Clients']");
-	public static final By clientModule=By.xpath("//span[text()='3rd Party Provider']");
+	public static final By clientModule=By.xpath("//span[text()='Clients']");
 	public static final By addNewclient=By.xpath("//button[text()=' Add New Client ']");
 	
 	public static final By clientName=By.xpath("//input[@formcontrolname='clientName']");
@@ -37,6 +37,14 @@ public class Stratos_Client_PageObjects {
 	public static final By succcessMessageForUpdate=By.xpath("//p[text()='Client updated Successfully']");
 	public static final By deActivateButton=By.xpath("//button[@class='btn btn-danger add ng-star-inserted']");
 	public static final By CheckpointsEdit=By.xpath("//p[text()='Edit']");
+	public static final By bulkUploadButton=By.xpath("//button[text()=' Bulk Upload ']");
+	public static final By bulkUploadSubmitButton=By.xpath("//button[text()='Submit']");
+	public static final By bulkUploadCancelButton=By.xpath("//button[text()='Cancel']");
+	public static final By file=By.xpath("//input[@type='file']");
+	 public static final By cellData=By.xpath("//td[@role='cell']");
+	 public static final By filter =By.xpath("//input[@placeholder='Ex. Mia']");
+	 public static final By inactiveClients =By.xpath("//span[text()='Inactive Clients']");
+	
 	
 	public static By SelectWithoptions(String text) {
 	   	  final By textXpath = By.xpath("//div[@role='listbox']/mat-option/span[text()='"+text+"']");

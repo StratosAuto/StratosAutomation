@@ -3,6 +3,7 @@ package Stratos_testBase;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,8 +11,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.github.javafaker.Faker;
+
 import Stratos_utilities.ExceptionHandling;
 import Stratos_utilities.Logs;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

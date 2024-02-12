@@ -9,15 +9,14 @@ import io.cucumber.java.en.*;
 
 public class Stratos_Home {
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
-	public static String sheetName = "LOGIN";
-	public static String sheetName1="Sheet1";
+	public static String sheetName="Sheet1";
 	public static int valid_Password;
 	public static String valid_Username;
 	public static int invalid_Password;
 	public static String invalid_Username;
-	public static int CurrentPassword;
-	public static int NewPassword;
-	public static int ConfirmPassword;
+	public static String CurrentPassword;
+	public static String NewPassword;
+	public static String ConfirmPassword;
 	
 
 	@Given("Admin User  click on Themes")
@@ -54,38 +53,45 @@ public class Stratos_Home {
 		testBase.clickonElement(Stratos_Login_PageObjects.changePassword, "click on change password");
 	   
 	}
-
-	@Then("Admin User enter current password by using Excelsheetdata {string} and row number {string}")
-	public void admin_User_enter_current_password_by_using_Excelsheetdata_and_row_number(String string, String string2) throws Exception {
-	 //   Thread.sleep(5000);
-	    Excel_Utility.setExcelFile(excelFileLocation, sheetName1);
-	    CurrentPassword = Excel_Utility.getNumericCellData(1, 0);
-	    NewPassword = Excel_Utility.getNumericCellData(1, 1);
-	    ConfirmPassword = Excel_Utility.getNumericCellData(1, 2);
-		testBase.waitForElement(Stratos_Login_PageObjects.currentPassword, 20);
-	    testBase.clickonElement(Stratos_Login_PageObjects.currentPassword, "currenrt password");
-	    testBase.typeinTextBox(Stratos_Login_PageObjects.currentPassword, String.valueOf(CurrentPassword), "string2");
-	}
-
-	@Then("Admin User enter new password by using Excelsheetdata {string} and row number {string}")
-	public void admin_User_enter_new_password_by_using_Excelsheetdata_and_row_number(String string, String string2) throws Exception {
-	    testBase.waitForElement(Stratos_Login_PageObjects.newPassword, 20);
-	    testBase.clickonElement(Stratos_Login_PageObjects.newPassword, "new password");
-	    testBase.typeinTextBox(Stratos_Login_PageObjects.newPassword, String.valueOf(NewPassword), "string2");
-	}
-
-	@Then("Admin User enter confirm password by using Excelsheetdata {string} and row number {string}")
-	public void admin_User_enter_confirm_password_by_using_Excelsheetdata_and_row_number(String string, String string2) throws Exception {
-	    testBase.waitForElement(Stratos_Login_PageObjects.confirmPassword, 20);
+	@Then("Admin User enter the current password as {string} in change password")
+	public void admin_User_enter_the_current_password_as_in_change_password(String string) throws Exception {
+		 Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		 CurrentPassword = Excel_Utility.getCellData_Integer(1, 0);
+//		    NewPassword = Excel_Utility.getNumericCellData(1, 1);
+//		    ConfirmPassword = Excel_Utility.getNumericCellData(1, 2);
+		    Thread.sleep(5000);
+			testBase.waitForElement(Stratos_Login_PageObjects.currentPassword, 20);
+//		    testBase.clickonElement(Stratos_Login_PageObjects.currentPassword, "currenrt password");
+		    testBase.typeinTextBox(Stratos_Login_PageObjects.currentPassword, String.valueOf(CurrentPassword), "current password");
+		}
+	
+	@Then("Admin User enter new password as {string} in change password")
+	public void admin_User_enter_new_password_as_in_change_password(String string) throws Exception {
+		 Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		 NewPassword = Excel_Utility.getCellData_Integer(1, 1);
+		 testBase.waitForElement(Stratos_Login_PageObjects.newPassword, 20);
+		    testBase.clickonElement(Stratos_Login_PageObjects.newPassword, "new password");
+		    testBase.typeinTextBox(Stratos_Login_PageObjects.newPassword, String.valueOf(NewPassword), "new password");
+		}
+	@Then("Admin User enter confirm password as {string} in change password")
+	public void admin_User_enter_confirm_password_as_in_change_password(String string) throws Exception {
+		 Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		 ConfirmPassword = Excel_Utility.getCellData_Integer(1, 2);
+		testBase.waitForElement(Stratos_Login_PageObjects.confirmPassword, 20);
 	    testBase.clickonElement(Stratos_Login_PageObjects.confirmPassword, "confirm password");
-	    testBase.typeinTextBox(Stratos_Login_PageObjects.confirmPassword, String.valueOf(ConfirmPassword), "string2");
+	    testBase.typeinTextBox(Stratos_Login_PageObjects.confirmPassword, String.valueOf(ConfirmPassword), "confirm password");
 	}
+
 
 	@Then("Admin User click update button")
 	public void admin_User_click_update_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.updateButton, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.updateButton, "click");
 	   
+	}
+	@Then("Admin User verifies the success message")
+	public void admin_User_verifies_the_success_message() {
+	    
 	}
 
 	@Then("Admin User  verify user navigates to homepage")

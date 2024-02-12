@@ -58,7 +58,9 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By cancelButton=By.xpath("//button[text()='Cancel']");
     public static final By nofileError=By.xpath("//p[text()='No File Selected']");
     public static final By filter =By.xpath("//input[@placeholder='Ex. Mia']");
-    		
+    public static final By completeAdressOption =By.xpath("//mat-option[@role='option']");
+    public static final By cellData=By.xpath("//td[@role='cell']");
+    
     
     
     

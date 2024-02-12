@@ -16,6 +16,7 @@ public class Stratos_Login {
 	public static String valid_Username;
 	public static String invalid_Password;
 	public static String invalid_Username;
+	
 	@Given("User Enter the Stratos application URL")
 	public void admin_User_Enter_the_Stratos_application_URL() throws InterruptedException {
 			PageBase.OpenBrowser("Browser");
@@ -60,16 +61,7 @@ public class Stratos_Login {
 			} else {
 				Logs.info("User navigated to Homepage");
 			}
-		}
-
-	@Given("User Enter the Stratos app URL")
-	public void admin_User_Enter_the_Stratos_application_URL1() throws InterruptedException {
-		PageBase.OpenBrowser("Browser");
-		Thread.sleep(5000);
-		String url = Utils.getFileProperty("URL");
-		PageBase.driver.get(url);
-		Thread.sleep(5000);			
-		testBase.RefreshPage();
+		
 	}
 	@Then("User enter the invalid username")
 	public void admin_User_enter_the_invalid_username() throws Exception {
@@ -87,18 +79,12 @@ public class Stratos_Login {
 		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(invalid_Password),
 				"Enter password");
 	}
-	
-	@Then("user click  login button")
-	public void admin_user_click_on_login_button1() throws Throwable {
-		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
-		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
-		Thread.sleep(10000);
-	}
 
  
 	@Then("User verifies the error message {string}")
 	public void admin_User_verifies_the_error_message(String string) throws Exception {
-		if ((testBase.isElementVisible(Stratos_Login_PageObjects.errorMessage, "Login successfully"))) {
+		Thread.sleep(2000);
+		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.errorMessage, "Login successfully"))) {
 			ExceptionHandling.HandleAssertion("Login not successfull");
 		}else
 			Logs.info("Login successful");		   
@@ -120,20 +106,20 @@ public class Stratos_Login {
 //				"Enter password");
 //	}
  
-	@Then("User click on login button")
-	public void admin_User_click_on_login_button() throws Exception {
-		testBase.RefreshPage();
-		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
-		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
-		Thread.sleep(10000);
-	}
-	@Then("User verifies the error message {string}")
-	public void admin_User_verifies_the_error_message1(String string) throws Exception {
-		testBase.getElementText(Stratos_Login_PageObjects.emptyLoginerrormessage, "error message");
-		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.emptyLoginerrormessageForEmpltyFileds, "Login successfully"))) {
-			ExceptionHandling.HandleAssertion("Login not successfull");
-		}else
-			Logs.info("Login successful");		
-	}
+//	@Then("User click on login button")
+//	public void admin_User_click_on_login_button() throws Exception {
+//		testBase.RefreshPage();
+//		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
+//		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
+//		Thread.sleep(10000);
+//	}
+//	@Then("User verifies the error message {string}")
+//	public void admin_User_verifies_the_error_message1(String string) throws Exception {
+//		testBase.getElementText(Stratos_Login_PageObjects.emptyLoginerrormessage, "error message");
+//		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.emptyLoginerrormessageForEmpltyFileds, "Login successfully"))) {
+//			ExceptionHandling.HandleAssertion("Login not successfull");
+//		}else
+//			Logs.info("Login successful");		
+//	}
 
 }

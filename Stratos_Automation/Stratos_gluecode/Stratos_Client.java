@@ -1,14 +1,13 @@
 package Stratos_gluecode;
 
-import javax.xml.stream.events.StartDocument;
-
-import org.openqa.selenium.WebElement;
-
 import Stratos_pageObjects.Stratos_Client_PageObjects;
+import Stratos_pageObjects.Stratos_SitesAndCheckpoints_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
-import de.erichseifert.vectorgraphics2d.VectorHints.Value;
-import io.cucumber.java.en.*;
+import Stratos_utilities.ExceptionHandling;
+import Stratos_utilities.Logs;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class Stratos_Client {
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
@@ -260,13 +259,19 @@ public void user_Enter_comments_in_add_client_page(String string) throws Excepti
 public void user_Click_on_Save_and_Continue_Button_in_add_client_page() throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.saveAndcontinue, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.saveAndcontinue, " save and continue");
-  
+	Thread.sleep(5000);
 }
 
 @Then("User Verifies the client Success Message as {string}")
 public void user_Verifies_the_client_Success_Message_as(String string) throws Exception {
-   String s =testBase.getElementText(Stratos_Client_PageObjects.addclientSuccessMessage, "success message");
-   System.out.println(s);
+//   String s =testBase.getElementText(Stratos_Client_PageObjects.addclientSuccessMessage, "success message");
+//   System.out.println(s);
+   testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filter, ClientName, "mobile number in filters");
+   Thread.sleep(5000);
+   if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.cellData, "Validate Deactivate"))) {
+   	ExceptionHandling.HandleAssertion("client is not created");
+   }else
+   	Logs.info("client is created");
 }
   @Then("User click on manage client")
   public void user_click_on_manage_client() throws Throwable {
@@ -323,13 +328,20 @@ public void user_change_street_When_in_manage_clients(String string) throws Exce
 public void user_click_on_update_button() throws Exception {
     testBase.waitForElement(Stratos_Client_PageObjects.updateButton, 20);
     testBase.clickonElement(Stratos_Client_PageObjects.updateButton, "update button");
+    Thread.sleep(5000);
 }
 
 @Then("User verifies the success message")
 public void user_verifies_the_success_message() throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.succcessMessageForUpdate, 20);
-	String s = testBase.getElementText(Stratos_Client_PageObjects.succcessMessageForUpdate, "success message");
-	System.out.println(s);
+//	testBase.waitForElement(Stratos_Client_PageObjects.succcessMessageForUpdate, 20);
+//	String s = testBase.getElementText(Stratos_Client_PageObjects.succcessMessageForUpdate, "success message");
+//	System.out.println(s);
+	testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filter, ClientName, "mobile number in filters");
+	   Thread.sleep(5000);
+	   if(!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.cellData, "Validate Deactivate"))) {
+	   	ExceptionHandling.HandleAssertion("client is not created");
+	   }else
+	   	Logs.info("client is created");
     
 }
 
@@ -337,7 +349,61 @@ public void user_verifies_the_success_message() throws Exception {
 public void user_click_on_deactivate_button() throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.deActivateButton, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.deActivateButton, "deactivate button");
-
+	Thread.sleep(5000);
+	
 }
+@Then("User click on inactive button")
+public void user_click_on_inactive_button() throws Exception {
+   testBase.RefreshPage();
+   testBase.waitForElement(Stratos_Client_PageObjects.inactiveClients, 20);
+   testBase.clickonElement(Stratos_Client_PageObjects.inactiveClients, "inactive clients");
+   Thread.sleep(10000);
+}
+
+@When("User clicks on Bulk Upload button in clients page")
+public void user_clicks_on_Bulk_Upload_button_in_clients_page() throws Exception {
+    testBase.waitForElement(Stratos_Client_PageObjects.bulkUploadButton, 20);
+    testBase.clickonElement(Stratos_Client_PageObjects.bulkUploadButton, "bulk upload button");
+}
+
+@When("User clicks on Select File button and upload file in clients page")
+public void user_clicks_on_Select_File_button_and_upload_file_in_clients_page() throws Exception {
+	Thread.sleep(5000);
+	String CSVFile = "Auto-IT/bulk_clients.xlsx";
+	testBase.FileUpload(Stratos_SitesAndCheckpoints_PageObjects.file, CSVFile);
+   
+}
+
+@When("User clicks on Submit button in clients page")
+public void user_clicks_on_Submit_button_in_clients_page() throws Exception {
+	testBase.waitForElement(Stratos_Client_PageObjects.bulkUploadSubmitButton, 20);
+	testBase.clickonElement(Stratos_Client_PageObjects.bulkUploadSubmitButton, "submit button");
+   Thread.sleep(2000);
+}
+
+@Then("User validates the success message as {string} in clients page")
+public void user_validates_the_success_message_as_in_clients_page(String string) throws InterruptedException {
+	Thread.sleep(6000);
+	}
+
+@Then("User validates the error message as {string} of invalid Bulk Upload in clients page")
+public void user_validates_the_error_message_as_of_invalid_Bulk_Upload_in_clients_page(String string) throws InterruptedException {
+	Thread.sleep(6000);
+	
+}
+
+@Then("User clicks on cancel button in clients page")
+public void user_clicks_on_cancel_button_in_clients_page() throws Exception {
+   testBase.waitForElement(Stratos_Client_PageObjects.bulkUploadCancelButton, 20);
+   testBase.clickonElement(Stratos_Client_PageObjects.bulkUploadCancelButton, "cancel button");
+   
+}
+
+@Then("User validates the error message as {string} of null Bulk Upload in clients page")
+public void user_validates_the_error_message_as_of_null_Bulk_Upload_in_clients_page(String string) {
+    
+}
+
+
 
 }
