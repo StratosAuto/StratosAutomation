@@ -449,8 +449,10 @@ public class testBase extends PageBase {
 		 String captialAplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		 String number = "0123456789";
+		 
+		 String splChars="~!@#$%^&*()-=";
 
-		 String alphaNumeric = smallalpha + captialAplha + number;
+		 String alphaNumeric = smallalpha + captialAplha + number+splChars;
 
 
 		 StringBuilder sb = new StringBuilder();

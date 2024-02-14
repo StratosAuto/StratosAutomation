@@ -5,12 +5,10 @@ Feature: Manager Homepage
     And User clicks on Login as Employee button
     And User enters Pin as "pin"
     And User clicks on Login button
-    And Verify the success message as "successMessage"
+    And User validates logged in successfull and navigated to Homepage
 
   Scenario: Verify Themes and Logout functionality
-    Given User is on Homepage
-    And User clicks on Themes button
+    Given User clicks on Themes button
     And User selects Theme as "theme"
-    And User clicks on settings symbol
-    Then User clicks on Logout
-    And Verify user is on Login page
+    And User clicks on Logout button
+    Then User validates navigated to login page
