@@ -1,15 +1,19 @@
-Feature: Login
+Feature: Admin Login functionality
 
-Scenario: Login with valid credentials
-    Given Enter the Url
-    #And Enter Email Address
-    #And Enter Password
-    #When Click on Log In button
-    #Then Verify Success message
+  Scenario: Verify the login functionality with valid credentials
+    Given User Enter the Stratos application URL
+    Then User enter the valid username
+    Then User enter the valid passsword
+    Then user click on login button
+    Then User navigates to home page
 
-  #Scenario: Login with invalid credentials
-    #Given Enter the Url
-    #And Enter invalid Email Address
-    #And Enter invalid Password
-    #When Click on Log In button
-    #Then Verify Error message
+  Scenario: Verify the login functionality with invalid credentials
+    Given User Enter the Stratos app URL
+    Then User enter the invalid username
+    Then User enter the invalid passsword
+    Then user click  login button
+    Then User verifies the error message "Please fill in all required fields."
+    #Then User click on login button
+    #Then User verifies the error message "Please fill in all required fields"
+    
+    
