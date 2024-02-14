@@ -1,758 +1,139 @@
- INFO [2024-02-03 14:12:45,871] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:12:45,874] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:12:45,875] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:12:53,871] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:12:54,001] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:12:54,097] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:12:54,181] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:12:54,270] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:12:57,344] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:12:57,524] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:12:57,730] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:12:57,730] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:12:57,731] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:12:57,731] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:12:57,732] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:12:58,054] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:12:58,321] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:12:58,554] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:12:58,754] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:12:58,842] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:12:58,864] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:12:58,886] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 14:12:58,895] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:12:58,910] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 14:13:04,054] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:13:04,180] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:13:04,180] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:13:04,181] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:13:04,182] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:13:04,184] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:13:04,186] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:13:04,361] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:13:04,502] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:13:04,720] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:13:04,970] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:13:05,210] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:13:05,288] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:13:05,314] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:13:05,327] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 14:13:05,336] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:13:05,347] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 14:13:05,361] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 14:13:10,528] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:13:10,637] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:13:10,733] (%D:22) - Clicked on Add
- INFO [2024-02-03 14:13:15,905] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:13:16,014] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:13:16,189] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:13:16,358] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:13:19,515] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:13:19,689] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:13:19,853] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:13:20,004] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:13:24,221] (%D:30) - Unable to click on element Male
- INFO [2024-02-03 14:13:24,471] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:13:24,471] (%D:18) -     
- INFO [2024-02-03 14:17:19,599] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:17:19,602] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:17:19,603] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:17:27,506] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:17:27,619] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:17:27,721] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:17:27,797] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:17:27,885] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:17:31,017] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:17:31,161] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:17:31,398] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:17:31,399] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:31,399] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:31,400] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:31,401] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:31,697] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:17:31,922] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:17:32,094] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:17:32,295] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:17:32,370] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:17:32,389] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:17:32,405] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 14:17:32,417] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:17:32,425] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 14:17:37,600] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:17:37,703] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:17:37,704] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:37,704] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:37,706] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:37,708] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:37,709] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:17:37,939] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:17:38,147] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:17:38,386] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:17:38,577] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:17:38,756] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:17:38,850] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:17:38,868] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:17:38,880] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 14:17:38,897] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:17:38,897] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 14:17:38,919] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 14:17:44,078] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:17:44,213] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:17:44,305] (%D:22) - Clicked on Add
- INFO [2024-02-03 14:17:49,473] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:17:49,588] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:17:49,764] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:17:49,929] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:17:53,115] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:17:53,285] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:17:53,446] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:17:53,584] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:17:57,749] (%D:30) - Unable to click on element Male
- INFO [2024-02-03 14:17:57,966] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:17:57,966] (%D:18) -     
- INFO [2024-02-03 14:18:54,877] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:18:54,877] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:18:54,877] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:19:04,715] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:19:04,825] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:19:04,931] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:19:05,010] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:19:05,098] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:19:08,154] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:19:08,347] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:19:08,569] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:19:08,570] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:08,571] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:08,571] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:08,572] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:08,900] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:19:09,183] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:19:09,351] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:19:09,602] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:19:09,734] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:19:09,774] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:19:09,791] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 14:19:09,804] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:19:09,820] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 14:19:14,970] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:19:15,090] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:19:15,090] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:15,094] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:15,095] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:15,096] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:15,096] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:19:15,332] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:19:15,498] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:19:15,733] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:19:15,902] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:19:16,046] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:19:16,127] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:19:16,149] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:19:16,165] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 14:19:16,175] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:19:16,178] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 14:19:16,204] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 14:19:21,371] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:19:21,488] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:19:21,583] (%D:22) - Clicked on Add
- INFO [2024-02-03 14:19:26,762] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:19:26,895] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:19:27,069] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:19:27,228] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:19:30,385] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:19:30,468] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:19:30,618] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:19:30,786] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:19:30,951] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:19:35,156] (%D:30) - Unable to click on element Male
- INFO [2024-02-03 14:19:35,326] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:19:35,326] (%D:18) -     
- INFO [2024-02-03 14:35:37,615] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:35:37,615] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:35:37,615] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:35:45,378] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:35:45,492] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:35:45,597] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:35:45,670] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:35:45,762] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:35:48,828] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:35:48,997] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:35:49,179] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:35:49,180] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:49,180] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:49,180] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:49,180] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:49,462] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:35:49,683] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:35:49,912] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:35:50,151] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:35:50,264] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:35:50,291] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:35:50,309] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 14:35:50,320] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 14:35:50,337] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 14:35:55,567] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:35:55,712] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:35:55,712] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:55,712] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:55,712] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:55,712] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:55,712] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 14:35:55,949] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:35:56,156] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:35:56,396] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:35:56,561] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:35:56,730] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:35:56,812] (%D:22) - Clicked on First Name
- INFO [2024-02-03 14:35:56,828] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:35:56,844] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 14:35:56,856] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 14:35:56,862] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 14:35:56,883] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 14:36:01,982] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:36:02,106] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:36:02,202] (%D:22) - Clicked on Add
- INFO [2024-02-03 14:36:07,336] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 14:36:07,445] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:36:07,594] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:36:07,765] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:36:10,918] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:36:11,001] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:36:11,001] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:36:11,001] (%D:18) -     
- INFO [2024-02-03 14:44:59,128] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:44:59,130] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:44:59,131] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:45:07,703] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:45:07,822] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:45:07,925] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:45:08,000] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:45:08,095] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:45:11,189] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:45:11,358] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:45:11,525] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:45:11,927] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:45:12,174] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:45:12,372] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:45:16,619] (%D:30) - Unable to click on element Role
- INFO [2024-02-03 14:45:16,835] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:45:16,835] (%D:18) -     
- INFO [2024-02-03 14:57:40,609] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 14:57:40,613] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:57:40,613] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 14:57:48,375] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 14:57:48,490] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:57:48,592] (%D:22) - Clicked on Password
- INFO [2024-02-03 14:57:48,672] (%D:22) - Text Entered into password
- INFO [2024-02-03 14:57:48,764] (%D:22) - Clicked on Login
- INFO [2024-02-03 14:57:51,828] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 14:57:52,001] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 14:57:52,228] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 14:57:52,563] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 14:57:52,778] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 14:57:52,931] (%D:22) - Text Entered into Password
- INFO [2024-02-03 14:57:53,244] (%D:22) - Clicked on Admin
- INFO [2024-02-03 14:57:53,465] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 14:57:53,715] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 14:57:53,935] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 14:57:58,144] (%D:30) - Unable to click on element Male
- INFO [2024-02-03 14:57:58,431] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 14:57:58,432] (%D:18) -     
- INFO [2024-02-03 15:12:07,783] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 15:12:07,783] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:12:07,783] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 15:12:15,456] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 15:12:15,571] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:12:15,680] (%D:22) - Clicked on Password
- INFO [2024-02-03 15:12:15,762] (%D:22) - Text Entered into password
- INFO [2024-02-03 15:12:15,850] (%D:22) - Clicked on Login
- INFO [2024-02-03 15:12:18,910] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 15:12:19,068] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 15:12:19,270] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:12:19,271] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:19,271] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:19,272] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:19,272] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:19,597] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:12:19,847] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:12:20,051] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:12:20,230] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:12:20,310] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:12:20,329] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:12:20,343] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 15:12:20,350] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:12:20,363] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 15:12:25,516] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:12:25,659] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:12:25,659] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:25,660] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:25,660] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:25,660] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:25,660] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:12:25,866] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:12:26,100] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:12:26,351] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:12:26,525] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:12:26,708] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:12:26,790] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:12:26,818] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:12:26,833] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 15:12:26,842] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:12:26,848] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 15:12:26,866] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 15:12:32,026] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:12:32,144] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:12:32,236] (%D:22) - Clicked on Add
- INFO [2024-02-03 15:12:37,418] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:12:37,522] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:12:37,697] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:12:37,865] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:12:38,003] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:12:38,315] (%D:22) - Clicked on Admin
- INFO [2024-02-03 15:12:38,475] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:12:38,632] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:12:38,792] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:12:39,280] (%D:22) - Clicked on Add
- INFO [2024-02-03 15:12:44,359] (%D:30) - Unable to Identify text field 
- INFO [2024-02-03 15:12:44,574] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:12:44,575] (%D:18) -     
- INFO [2024-02-03 15:14:45,348] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 15:14:45,348] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:14:45,348] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 15:14:53,240] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 15:14:53,359] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:14:53,463] (%D:22) - Clicked on Password
- INFO [2024-02-03 15:14:53,538] (%D:22) - Text Entered into password
- INFO [2024-02-03 15:14:53,628] (%D:22) - Clicked on Login
- INFO [2024-02-03 15:14:56,703] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 15:14:56,876] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 15:14:57,138] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:14:57,138] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:14:57,139] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:14:57,139] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:14:57,140] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:14:57,471] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:14:57,688] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:14:57,923] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:14:58,124] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:14:58,224] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:14:58,252] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:14:58,264] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 15:14:58,276] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:14:58,291] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 15:15:03,419] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:15:03,556] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:15:03,556] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:15:03,556] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:15:03,556] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:15:03,556] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:15:03,556] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:15:03,798] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:15:03,979] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:15:04,199] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:15:04,363] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:15:04,529] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:15:04,615] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:15:04,629] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:15:04,662] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 15:15:04,688] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:15:04,699] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 15:15:04,710] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 15:15:09,844] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:15:09,954] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:15:10,051] (%D:22) - Clicked on Add
- INFO [2024-02-03 15:15:15,177] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:15:15,291] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:15:15,459] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:15:15,660] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:15:15,810] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:15:16,178] (%D:22) - Clicked on Admin
- INFO [2024-02-03 15:15:16,376] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:15:16,616] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:15:16,799] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:15:16,855] (%D:30) - Unable to click on element Male
- INFO [2024-02-03 15:15:17,055] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:15:17,055] (%D:18) -     
- INFO [2024-02-03 15:17:47,098] (%D:10) - **********************************************************************************************
- INFO [2024-02-03 15:17:47,098] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Add New User functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:17:47,098] (%D:12) - ***********************************************************************************************
- INFO [2024-02-03 15:17:54,846] (%D:22) - Clicked on Email Address
- INFO [2024-02-03 15:17:54,984] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:17:55,107] (%D:22) - Clicked on Password
- INFO [2024-02-03 15:17:55,192] (%D:22) - Text Entered into password
- INFO [2024-02-03 15:17:55,281] (%D:22) - Clicked on Login
- INFO [2024-02-03 15:17:58,344] (%D:22) - User navigated to Homepage
- INFO [2024-02-03 15:17:58,499] (%D:22) - Clicked on Manage ACL Users
- INFO [2024-02-03 15:17:58,728] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:17:58,729] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:17:58,729] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:17:58,730] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:17:58,730] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:17:59,009] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:17:59,207] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:17:59,395] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:17:59,609] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:17:59,742] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:17:59,765] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:17:59,790] (%D:22) - Invalid Email Format element is visible
- INFO [2024-02-03 15:17:59,799] (%D:22) - Give correct name element is visible
- INFO [2024-02-03 15:17:59,819] (%D:22) - Give Correct Mobile Number element is visible
- INFO [2024-02-03 15:18:04,951] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:18:05,084] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:18:05,084] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:18:05,085] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:18:05,086] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:18:05,087] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:18:05,088] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-03 15:18:05,283] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:18:05,435] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:18:05,662] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:18:05,851] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:18:06,010] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:18:06,083] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:18:06,120] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:18:06,144] (%D:22) - Minimum 6 Characters Allowed is visible
- INFO [2024-02-03 15:18:06,151] (%D:22) - Maximum 25 characters allowed is visible
- INFO [2024-02-03 15:18:06,161] (%D:22) - Give Correct Mobile Number is visible
- INFO [2024-02-03 15:18:06,171] (%D:22) - Minimum 6 characters allowed is visible
- INFO [2024-02-03 15:18:11,266] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:18:11,377] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:18:11,492] (%D:22) - Clicked on Add
- INFO [2024-02-03 15:18:16,606] (%D:22) - Clicked on Cancel
- INFO [2024-02-03 15:18:16,749] (%D:22) - Clicked on Add New User
- INFO [2024-02-03 15:18:16,967] (%D:22) - Text Entered into First Name
- INFO [2024-02-03 15:18:17,159] (%D:22) - Text Entered into Email Address
- INFO [2024-02-03 15:18:17,371] (%D:22) - Text Entered into Password
- INFO [2024-02-03 15:18:17,738] (%D:22) - Clicked on Admin
- INFO [2024-02-03 15:18:17,935] (%D:22) - Text Entered into Last Name
- INFO [2024-02-03 15:18:18,137] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-03 15:18:18,336] (%D:22) - Text Entered into Confirm Password
- INFO [2024-02-03 15:18:18,822] (%D:22) - Clicked on First Name
- INFO [2024-02-03 15:18:18,927] (%D:22) - Clicked on Add
- INFO [2024-02-03 15:18:24,118] (%D:22) - Text Entered into Filter
- INFO [2024-02-03 15:18:24,179] (%D:22) - Text got from Filter data
- INFO [2024-02-03 15:18:24,193] (%D:22) - New User is created
- INFO [2024-02-03 15:18:24,196] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-03 15:18:24,196] (%D:18) -     
- INFO [2024-02-04 11:03:40,939] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:03:40,943] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:03:40,943] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:03:53,802] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:03:53,969] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:03:54,112] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:03:54,236] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:03:54,376] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:03:58,167] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:03:58,380] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:03:58,592] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:03:58,593] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,593] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,593] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,593] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,593] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,594] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,594] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:03:58,919] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:03:59,243] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:03:59,549] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:03:59,739] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:03:59,969] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:04:00,174] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:04:01,339] (%D:30) - Unable to click on element Gender
- INFO [2024-02-04 11:04:01,641] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:04:01,646] (%D:18) -     
- INFO [2024-02-04 11:04:59,741] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:04:59,744] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:04:59,744] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:05:09,142] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:05:09,306] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:05:09,429] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:05:09,557] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:05:09,688] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:05:12,820] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:05:13,071] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:05:13,377] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:05:13,379] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,379] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,379] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,380] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,380] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,381] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,381] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:05:13,665] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:05:13,871] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:05:14,026] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:05:14,223] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:05:14,481] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:05:14,639] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:05:15,270] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:05:15,417] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:05:15,535] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:05:15,675] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:05:15,788] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:05:16,979] (%D:30) - Unable to click on element Role
- INFO [2024-02-04 11:05:17,233] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:05:17,233] (%D:18) -     
- INFO [2024-02-04 11:05:50,188] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:05:50,190] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:05:50,191] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:06:00,193] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:06:00,372] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:06:00,513] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:06:00,607] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:06:00,737] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:06:03,929] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:06:04,154] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:06:04,364] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:06:04,364] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,365] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,365] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,366] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,366] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,366] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,367] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:06:04,698] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:06:04,885] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:06:05,146] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:06:05,346] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:06:05,559] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:06:05,793] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:06:05,809] (%D:30) - Unable to click on element Male
- INFO [2024-02-04 11:06:06,078] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:06:06,079] (%D:18) -     
- INFO [2024-02-04 11:10:27,376] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:10:27,380] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:10:27,380] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:10:51,664] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:10:51,833] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:10:51,984] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:10:52,098] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:10:52,241] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:11:02,955] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:11:03,273] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:11:03,610] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:11:03,616] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,618] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,618] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,619] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,619] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,619] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,619] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:11:03,981] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:11:04,310] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:11:04,445] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:11:04,583] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:11:04,805] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:11:04,982] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:11:05,686] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:11:05,815] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:11:05,920] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:11:06,028] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:11:06,274] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:11:06,732] (%D:30) - Unable to click on element Operations
- INFO [2024-02-04 11:11:07,009] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:11:07,010] (%D:18) -     
- INFO [2024-02-04 11:14:02,732] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:14:02,736] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:14:02,736] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:14:12,066] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:14:12,242] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:14:12,380] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:14:12,486] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:14:12,609] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:14:15,785] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:14:16,129] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:14:16,381] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:14:16,383] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,383] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,383] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,383] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,384] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,384] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,385] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:14:16,685] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:14:16,838] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:14:17,037] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:14:17,224] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:14:17,518] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:14:17,692] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:14:18,591] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:14:18,724] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:14:18,859] (%D:22) - Clicked on Year
- INFO [2024-02-04 11:14:18,978] (%D:22) - Clicked on Month
- INFO [2024-02-04 11:14:19,094] (%D:22) - Clicked on Date
- INFO [2024-02-04 11:14:20,850] (%D:30) - Unable to Identify text field 
- INFO [2024-02-04 11:14:21,183] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:14:21,183] (%D:18) -     
- INFO [2024-02-04 11:16:31,979] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:16:31,983] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:16:31,983] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:16:43,792] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:16:43,967] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:16:44,099] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:16:44,213] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:16:44,343] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:16:48,711] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:16:48,890] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:16:49,406] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:16:49,408] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,408] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,409] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,409] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,409] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,410] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,410] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:16:49,607] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:16:49,927] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:16:50,099] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:16:50,282] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:16:50,491] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:16:50,694] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:16:51,432] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:16:51,574] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:16:51,691] (%D:22) - Clicked on Year
- INFO [2024-02-04 11:16:51,807] (%D:22) - Clicked on Month
- INFO [2024-02-04 11:16:51,909] (%D:22) - Clicked on Date
- INFO [2024-02-04 11:16:56,836] (%D:22) - Text Entered into Passport Number
- INFO [2024-02-04 11:16:56,836] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:16:56,838] (%D:18) -     
- INFO [2024-02-04 11:37:44,920] (%D:10) - **********************************************************************************************
- INFO [2024-02-04 11:37:44,928] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:37:44,928] (%D:12) - ***********************************************************************************************
- INFO [2024-02-04 11:37:54,319] (%D:22) - Clicked on Email Address
- INFO [2024-02-04 11:37:54,470] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:37:54,604] (%D:22) - Clicked on Password
- INFO [2024-02-04 11:37:54,709] (%D:22) - Text Entered into password
- INFO [2024-02-04 11:37:54,841] (%D:22) - Clicked on Login
- INFO [2024-02-04 11:37:59,165] (%D:22) - User navigated to Homepage
- INFO [2024-02-04 11:37:59,435] (%D:22) - Clicked on Employees
- INFO [2024-02-04 11:37:59,817] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-04 11:37:59,818] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,818] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,818] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,818] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,818] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,819] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,819] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:37:59,819] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-04 11:38:00,046] (%D:22) - Text Entered into First Name
- INFO [2024-02-04 11:38:00,218] (%D:22) - Text Entered into Last Name
- INFO [2024-02-04 11:38:00,388] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-04 11:38:00,576] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-04 11:38:00,792] (%D:22) - Text Entered into Email Address
- INFO [2024-02-04 11:38:00,960] (%D:22) - Text Entered into job Title
- INFO [2024-02-04 11:38:01,113] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:38:01,234] (%D:22) - Clicked on Birthday
- INFO [2024-02-04 11:38:01,411] (%D:22) - Clicked on Year
- INFO [2024-02-04 11:38:01,525] (%D:22) - Clicked on Month
- INFO [2024-02-04 11:38:01,619] (%D:22) - Clicked on Date
- INFO [2024-02-04 11:38:05,158] (%D:22) - Text Entered into Passport Number
- INFO [2024-02-04 11:38:05,583] (%D:22) - Text Entered into SA ID
- INFO [2024-02-04 11:38:05,732] (%D:22) - Clicked on Employee Residential Address Details
- INFO [2024-02-04 11:38:05,734] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-04 11:38:05,734] (%D:18) -     
- INFO [2024-02-05 16:07:58,628] (%D:10) - **********************************************************************************************
- INFO [2024-02-05 16:07:58,632] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-05 16:07:58,633] (%D:12) - ***********************************************************************************************
- INFO [2024-02-05 16:08:07,677] (%D:22) - Clicked on Email Address
- INFO [2024-02-05 16:08:07,800] (%D:22) - Text Entered into Email Address
- INFO [2024-02-05 16:08:07,902] (%D:22) - Clicked on Password
- INFO [2024-02-05 16:08:07,982] (%D:22) - Text Entered into password
- INFO [2024-02-05 16:08:08,069] (%D:22) - Clicked on Login
- INFO [2024-02-05 16:08:11,150] (%D:22) - User navigated to Homepage
- INFO [2024-02-05 16:08:11,335] (%D:22) - Clicked on Employees
- INFO [2024-02-05 16:08:11,552] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,552] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,561] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,561] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,561] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,561] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,561] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,564] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,564] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,564] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:08:11,902] (%D:22) - Text Entered into First Name
- INFO [2024-02-05 16:08:12,053] (%D:22) - Text Entered into Last Name
- INFO [2024-02-05 16:08:12,189] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-05 16:08:12,355] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-05 16:08:12,527] (%D:22) - Text Entered into Email Address
- INFO [2024-02-05 16:08:12,668] (%D:22) - Text Entered into job Title
- INFO [2024-02-05 16:08:12,803] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:08:12,915] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:08:13,034] (%D:22) - Clicked on Year
- INFO [2024-02-05 16:08:13,119] (%D:22) - Clicked on Month
- INFO [2024-02-05 16:08:13,202] (%D:22) - Clicked on Date
- INFO [2024-02-05 16:08:16,647] (%D:22) - Text Entered into Passport Number
- INFO [2024-02-05 16:08:17,023] (%D:22) - Text Entered into SA ID
- INFO [2024-02-05 16:08:17,045] (%D:30) - Unable to Identify text field 
- INFO [2024-02-05 16:08:17,282] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-05 16:08:17,282] (%D:18) -     
- INFO [2024-02-05 16:16:35,157] (%D:10) - **********************************************************************************************
- INFO [2024-02-05 16:16:35,157] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-05 16:16:35,157] (%D:12) - ***********************************************************************************************
- INFO [2024-02-05 16:16:43,628] (%D:22) - Clicked on Email Address
- INFO [2024-02-05 16:16:43,750] (%D:22) - Text Entered into Email Address
- INFO [2024-02-05 16:16:43,859] (%D:22) - Clicked on Password
- INFO [2024-02-05 16:16:43,935] (%D:22) - Text Entered into password
- INFO [2024-02-05 16:16:44,026] (%D:22) - Clicked on Login
- INFO [2024-02-05 16:16:47,115] (%D:22) - User navigated to Homepage
- INFO [2024-02-05 16:16:47,289] (%D:22) - Clicked on Employees
- INFO [2024-02-05 16:16:47,563] (%D:22) - Clicked on Add New Employee
- INFO [2024-02-05 16:16:47,563] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,563] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,564] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,565] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,565] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,565] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,565] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,565] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,566] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,566] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,566] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,567] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,567] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,567] (%D:22) - Generated Alphanumeric values
- INFO [2024-02-05 16:16:47,823] (%D:22) - Text Entered into First Name
- INFO [2024-02-05 16:16:47,961] (%D:22) - Text Entered into Last Name
- INFO [2024-02-05 16:16:48,124] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-05 16:16:48,298] (%D:22) - Text Entered into other Contact Number
- INFO [2024-02-05 16:16:48,496] (%D:22) - Text Entered into Email Address
- INFO [2024-02-05 16:16:48,677] (%D:22) - Text Entered into job Title
- INFO [2024-02-05 16:16:48,849] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:16:48,980] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:16:49,106] (%D:22) - Clicked on Year
- INFO [2024-02-05 16:16:49,242] (%D:22) - Clicked on Month
- INFO [2024-02-05 16:16:49,365] (%D:22) - Clicked on Date
- INFO [2024-02-05 16:16:52,754] (%D:22) - Text Entered into Passport Number
- INFO [2024-02-05 16:16:53,151] (%D:22) - Text Entered into SA ID
- INFO [2024-02-05 16:16:53,310] (%D:22) - Clicked on Emergency Residential Address Details
- INFO [2024-02-05 16:16:53,502] (%D:22) - Text Entered into Postal Code
- INFO [2024-02-05 16:16:53,638] (%D:22) - Clicked on Postal Address Details
- INFO [2024-02-05 16:16:53,791] (%D:22) - Text Entered into Postal Code
- INFO [2024-02-05 16:16:53,940] (%D:22) - Clicked on Emergency Contact Details
- INFO [2024-02-05 16:16:54,135] (%D:22) - Text Entered into First Name
- INFO [2024-02-05 16:16:54,304] (%D:22) - Text Entered into Last Name
- INFO [2024-02-05 16:16:54,474] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-05 16:16:54,647] (%D:22) - Text Entered into Other Contact Number
- INFO [2024-02-05 16:16:54,838] (%D:22) - Text Entered into Email Address
- INFO [2024-02-05 16:16:54,967] (%D:22) - Text Entered into Postal Code
- INFO [2024-02-05 16:16:55,070] (%D:22) - Clicked on Next of Kin Details
- INFO [2024-02-05 16:16:55,221] (%D:22) - Text Entered into First Name
- INFO [2024-02-05 16:16:55,377] (%D:22) - Text Entered into Last Name
- INFO [2024-02-05 16:16:55,557] (%D:22) - Text Entered into Mobile Number
- INFO [2024-02-05 16:16:55,714] (%D:22) - Text Entered into Relationship
- INFO [2024-02-05 16:16:55,802] (%D:22) - Clicked on Security Details
- INFO [2024-02-05 16:16:55,975] (%D:22) - Text Entered into Security Licence Number
- INFO [2024-02-05 16:16:56,088] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:16:56,185] (%D:22) - Clicked on Birthday
- INFO [2024-02-05 16:16:56,292] (%D:22) - Clicked on Year
- INFO [2024-02-05 16:16:56,393] (%D:22) - Clicked on Month
- INFO [2024-02-05 16:16:56,476] (%D:22) - Clicked on Date
- INFO [2024-02-05 16:16:57,589] (%D:30) - Unable to click on element First Aid Details
- INFO [2024-02-05 16:16:57,778] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- INFO [2024-02-05 16:16:57,779] (%D:18) -     
+ INFO [2024-02-14 23:30:43,965] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:30:43,965] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:30:43,965] (%D:12) - ***********************************************************************************************
+ INFO [2024-02-14 23:30:52,218] (%D:22) - Clicked on Email Address
+ INFO [2024-02-14 23:30:52,357] (%D:22) - Text Entered into Email Address
+ INFO [2024-02-14 23:30:52,485] (%D:22) - Clicked on Password
+ INFO [2024-02-14 23:30:52,571] (%D:22) - Text Entered into password
+ INFO [2024-02-14 23:30:52,689] (%D:22) - Clicked on Login
+ INFO [2024-02-14 23:30:55,787] (%D:22) - User navigated to Homepage
+ INFO [2024-02-14 23:30:55,999] (%D:22) - Clicked on Employees
+ INFO [2024-02-14 23:31:01,622] (%D:22) - Text Entered into Filter
+ INFO [2024-02-14 23:31:01,690] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:31:01,690] (%D:22) - New Employee is created successfully
+ INFO [2024-02-14 23:31:01,866] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:31:01,868] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:31:05,134] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-02-14 23:31:10,257] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:31:15,372] (%D:30) - Unable to Identify text field 
+ INFO [2024-02-14 23:31:15,544] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:31:15,544] (%D:18) -     
+ INFO [2024-02-14 23:33:05,481] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:33:05,481] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:33:05,481] (%D:12) - ***********************************************************************************************
+ INFO [2024-02-14 23:33:13,782] (%D:22) - Clicked on Email Address
+ INFO [2024-02-14 23:33:13,914] (%D:22) - Text Entered into Email Address
+ INFO [2024-02-14 23:33:14,009] (%D:22) - Clicked on Password
+ INFO [2024-02-14 23:33:14,091] (%D:22) - Text Entered into password
+ INFO [2024-02-14 23:33:14,185] (%D:22) - Clicked on Login
+ INFO [2024-02-14 23:33:17,256] (%D:22) - User navigated to Homepage
+ INFO [2024-02-14 23:33:17,474] (%D:22) - Clicked on Employees
+ INFO [2024-02-14 23:33:23,108] (%D:22) - Text Entered into Filter
+ INFO [2024-02-14 23:33:23,180] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:33:23,180] (%D:22) - New Employee is created successfully
+ INFO [2024-02-14 23:33:23,341] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:33:23,341] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:33:26,643] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-02-14 23:33:31,759] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:33:36,990] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:33:37,117] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:33:37,161] (%D:22) - Text got from Mobile NUmber
+ INFO [2024-02-14 23:33:37,161] (%D:22) - Mobile Number is updated
+ INFO [2024-02-14 23:33:42,256] (%D:22) - Clicked on Deactivate Button
+ INFO [2024-02-14 23:33:42,937] (%D:22) - Clicked on Inactive Employees
+ INFO [2024-02-14 23:33:48,186] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:33:48,192] (%D:30) - Unable to get text from elementFiltered Data
+ INFO [2024-02-14 23:33:48,409] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:33:48,409] (%D:18) -     
+ INFO [2024-02-14 23:34:17,809] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:34:17,812] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:34:17,812] (%D:12) - ***********************************************************************************************
+ INFO [2024-02-14 23:34:25,925] (%D:22) - Clicked on Email Address
+ INFO [2024-02-14 23:34:26,047] (%D:22) - Text Entered into Email Address
+ INFO [2024-02-14 23:34:26,153] (%D:22) - Clicked on Password
+ INFO [2024-02-14 23:34:26,228] (%D:22) - Text Entered into password
+ INFO [2024-02-14 23:34:26,324] (%D:22) - Clicked on Login
+ INFO [2024-02-14 23:34:29,393] (%D:22) - User navigated to Homepage
+ INFO [2024-02-14 23:34:29,591] (%D:22) - Clicked on Employees
+ INFO [2024-02-14 23:34:35,254] (%D:22) - Text Entered into Filter
+ INFO [2024-02-14 23:34:35,333] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:34:35,333] (%D:22) - New Employee is created successfully
+ INFO [2024-02-14 23:34:35,551] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:34:35,551] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:34:38,843] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-02-14 23:34:43,968] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:34:49,242] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:34:49,371] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:34:49,414] (%D:22) - Text got from Mobile NUmber
+ INFO [2024-02-14 23:34:49,414] (%D:22) - Mobile Number is updated
+ INFO [2024-02-14 23:34:54,531] (%D:22) - Clicked on Deactivate Button
+ INFO [2024-02-14 23:34:55,248] (%D:22) - Clicked on Inactive Employees
+ INFO [2024-02-14 23:35:00,509] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:35:00,509] (%D:30) - Unable to get text from elementFiltered Data
+ INFO [2024-02-14 23:35:00,725] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:35:00,725] (%D:18) -     
+ INFO [2024-02-14 23:37:02,949] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:37:02,949] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:37:02,949] (%D:12) - ***********************************************************************************************
+ INFO [2024-02-14 23:37:11,035] (%D:22) - Clicked on Email Address
+ INFO [2024-02-14 23:37:11,159] (%D:22) - Text Entered into Email Address
+ INFO [2024-02-14 23:37:11,262] (%D:22) - Clicked on Password
+ INFO [2024-02-14 23:37:11,344] (%D:22) - Text Entered into password
+ INFO [2024-02-14 23:37:11,433] (%D:22) - Clicked on Login
+ INFO [2024-02-14 23:37:14,528] (%D:22) - User navigated to Homepage
+ INFO [2024-02-14 23:37:14,740] (%D:22) - Clicked on Employees
+ INFO [2024-02-14 23:37:20,386] (%D:22) - Text Entered into Filter
+ INFO [2024-02-14 23:37:20,443] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:37:20,443] (%D:22) - New Employee is created successfully
+ INFO [2024-02-14 23:37:20,611] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:37:20,612] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:37:23,885] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-02-14 23:37:28,991] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:37:34,339] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:37:34,488] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:37:34,532] (%D:22) - Text got from Mobile NUmber
+ INFO [2024-02-14 23:37:34,532] (%D:22) - Mobile Number is updated
+ INFO [2024-02-14 23:37:39,644] (%D:22) - Clicked on Deactivate Button
+ INFO [2024-02-14 23:37:40,319] (%D:22) - Clicked on Inactive Employees
+ INFO [2024-02-14 23:37:45,571] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:37:45,585] (%D:30) - Unable to get text from elementFiltered Data
+ INFO [2024-02-14 23:37:45,792] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:37:45,792] (%D:18) -     
+ INFO [2024-02-14 23:39:50,264] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:39:50,266] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:39:50,267] (%D:12) - ***********************************************************************************************
+ INFO [2024-02-14 23:40:00,465] (%D:22) - Clicked on Email Address
+ INFO [2024-02-14 23:40:00,598] (%D:22) - Text Entered into Email Address
+ INFO [2024-02-14 23:40:00,708] (%D:22) - Clicked on Password
+ INFO [2024-02-14 23:40:00,786] (%D:22) - Text Entered into password
+ INFO [2024-02-14 23:40:00,877] (%D:22) - Clicked on Login
+ INFO [2024-02-14 23:40:03,935] (%D:22) - User navigated to Homepage
+ INFO [2024-02-14 23:40:04,145] (%D:22) - Clicked on Employees
+ INFO [2024-02-14 23:40:09,685] (%D:22) - Text Entered into Filter
+ INFO [2024-02-14 23:40:09,751] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:40:09,751] (%D:22) - New Employee is created successfully
+ INFO [2024-02-14 23:40:09,924] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:40:09,926] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:40:13,164] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-02-14 23:40:18,267] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:40:23,513] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:40:23,631] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:40:23,677] (%D:22) - Text got from Mobile NUmber
+ INFO [2024-02-14 23:40:23,678] (%D:22) - Mobile Number is updated
+ INFO [2024-02-14 23:40:28,788] (%D:22) - Clicked on Deactivate Button
+ INFO [2024-02-14 23:40:32,060] (%D:22) - Clicked on Inactive Employees
+ INFO [2024-02-14 23:40:37,312] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:40:37,351] (%D:22) - Text got from Filtered Data
+ INFO [2024-02-14 23:40:37,351] (%D:22) - Employee is Deactivated
+ INFO [2024-02-14 23:40:37,497] (%D:22) - Clicked on Manage Employee
+ INFO [2024-02-14 23:40:37,501] (%D:22) - Generates Random Numbers
+ INFO [2024-02-14 23:40:40,791] (%D:22) - Text Entered into Other Contact Number
+ INFO [2024-02-14 23:40:45,905] (%D:22) - Clicked on Update
+ INFO [2024-02-14 23:40:47,118] (%D:22) - Clicked on Inactive Employees
+ INFO [2024-02-14 23:40:52,352] (%D:22) - Text Entered into Manager Name
+ INFO [2024-02-14 23:40:52,366] (%D:30) - Unable to get text from elementOther Contact Number
+ INFO [2024-02-14 23:40:52,566] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:40:52,566] (%D:18) -     
+ INFO [2024-02-14 23:42:22,679] (%D:10) - **********************************************************************************************
+ INFO [2024-02-14 23:42:22,682] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify Add New Employee functionality as Manager      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-02-14 23:42:22,682] (%D:12) - ***********************************************************************************************

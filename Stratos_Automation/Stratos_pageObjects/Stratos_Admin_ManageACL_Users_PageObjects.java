@@ -21,10 +21,10 @@ public class Stratos_Admin_ManageACL_Users_PageObjects {
 	public static final By invalidName=By.xpath("(//span[text()='Give Correct Name'])[2]");
 	public static final By invalidEmailAddress=By.xpath("//span[text()='Invalid Email Format']");
 	public static final By invalidMobileNumber=By.xpath("//span[text()='Give Correct Mobile Number']");
-	public static final By fieldLengthName=By.xpath("//span[text()='Maximum 25 characters allowed.']");
-	public static final By fieldLengthPassword=By.xpath("//span[text()='Minimum 6 Characters Allowed.']");
+	public static final By fieldLengthFirstName=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
+	public static final By fieldLengthLastName=By.xpath("//span[text()='Maximum 25 characters Allowed.']");
 	public static final By fieldLengthMobileNumber=By.xpath("//span[text()='Give Correct Mobile Number']");
-	public static final By fieldLengthConfirmPassword=By.xpath("//span[text()='Minimum 6 characters allowed.']");
-//	public static final By 
+	public static final By fieldLengthPassword=By.xpath("//span[text()='Minimum 6 Characters Allowed.']");
+	public static final By fieldLengthConfirmPassword=By.xpath("(//span[text()='Minimum 6 Characters Allowed.'])[2]");
 //	public static final By 
 }

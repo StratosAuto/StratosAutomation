@@ -24,7 +24,7 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By vatNumber =By.xpath("//input[@formcontrolname='vat']");
 	public static final By status =By.xpath("//span[text()='Active']");
 	public static final By active=By.xpath("(//span[text()='Active'])[2]");
-//	public static final By inactive=By.xpath("//span[text()='Inactive']");
+	public static final By inactive=By.xpath("//span[text()='Inactive']");
 	public static final By street =By.xpath("//input[@formcontrolname='street']");
 	public static final By street2 =By.xpath("//input[@formcontrolname='street2']");
 	public static final By city =By.xpath("//mat-select[@formcontrolname='city']");
@@ -44,6 +44,7 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By filterValidates=By.xpath("(//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td)[2]");
 	public static final By inactiveProvider=By.xpath("//span[text()='Inactive Providers']");
 	public static final By inactiveProviderRef=By.xpath("//td[text()='6576cdab2c97546ad1fa115a']");
+	public static final By errorFilter=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td");
 	public static final By itemsDropdown=By.xpath("//span[text()='5']");
 	public static final By itemsDropdownOption=By.xpath("//span[text()=' 10 ']");
 	
@@ -60,6 +61,5 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By errorFileUpload=By.xpath("//p[text()='Please fill required and valid data in row number 2']");
 	public static final By nullFileUpload=By.xpath("//p[text()='No File Selected']");
 	public static final By successFileUpload=By.xpath("");
-	public static final By cancelBulkUpload=By.xpath("//button[text()='Cancel']");
-	
+	public static final By cancelBulkUpload=By.xpath("//button[text()='Cancel']");	
 }

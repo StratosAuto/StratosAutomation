@@ -31,12 +31,12 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Given("Verify that user able to enter invalid data in Add Provider page")
 	public void verify_that_user_able_to_enter_invalid_data_in_Add_Provider_page() throws Exception {
-		String mobileNumber = "@!#" + testBase.randomAlphanumeric(7);
-		String otherContactNumber = "!*%" + testBase.randomAlphanumeric(7);
+		String mobileNumber = testBase.randomAlphanumeric(7);
+		String otherContactNumber = testBase.randomAlphanumeric(7);
 		String emailAddress = testBase.randomAlphanumeric(5) + ".com";
-		String faxNumber = "*@%" + testBase.randomAlphanumeric(7);
-		String vatNumber = "!%$" + testBase.randomAlphanumeric(7);
-		String postalCode = "#" + testBase.randomAlphanumeric(3);
+		String faxNumber = testBase.randomAlphanumeric(7);
+		String vatNumber = testBase.randomAlphanumeric(7);
+		String postalCode = testBase.randomAlphanumeric(3);
 
 //	  Invalid Mobile Number
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, 20);
@@ -44,8 +44,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 //	  Invalid Other Contact Number
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber, 20);
-		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber, otherContactNumber,
-				"Other Contact Number");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber, otherContactNumber,"Other Contact Number");
 
 //	  Invalid Email Address
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.emailAddress, 20);
@@ -212,6 +211,8 @@ public class Stratos_Admin_3rdPartyProvider {
 			Logs.info("New provider not created");
 	}
 
+// Active Provider	
+	
 	@Then("User enters Provider Name as {string} in Add Provider page")
 	public void user_enters_Provider_Name_as_in_Add_Provider_page(String string) throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
@@ -270,14 +271,14 @@ public class Stratos_Admin_3rdPartyProvider {
 	@Then("User enters street as {string} in Add Provider page")
 	public void user_enters_street_as_in_Add_Provider_page(String string) throws Exception {
 		Thread.sleep(3000);
-		String street = Excel_Utility.getCellData(1, 7);
+		String street = Excel_Utility.getCellData(1, 6);
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.street, 20);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street, street, "Street");
 	}
 
 	@Then("User enters street2 as {string} in Add Provider page")
 	public void user_enters_street2_as_in_Add_Provider_page(String string) throws Exception {
-		String street2 = Excel_Utility.getCellData(1, 8);
+		String street2 = Excel_Utility.getCellData(1, 7);
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.street2, 20);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street2, street2, "Street2");
 	}
@@ -289,8 +290,8 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.selectCity, "City");
 	}
 
-	@Then("User validates valid Province is auto-populated when city is selectsed")
-	public void user_validates_valid_Province_is_auto_populated_when_city_is_selectsed() throws Exception {
+	@Then("User validates valid Province is auto-populated when city is selected")
+	public void user_validates_valid_Province_is_auto_populated_when_city_is_selected() throws Exception {
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.province, 20);
 		if (!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.province, "Province"))) {
 			ExceptionHandling.HandleAssertion("Province is not auto-populated");
@@ -309,7 +310,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User enters Postal Code as {string} in Add Provider page")
 	public void user_enters_Postal_Code_as_in_Add_Provider_page(String string) throws Exception {
-		String postalCode = Excel_Utility.getCellData_Integer(1, 12);
+		String postalCode = Excel_Utility.getCellData_Integer(1, 8);
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, 20);
 		Thread.sleep(3000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, String.valueOf(postalCode),
@@ -318,7 +319,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User enters Comments as {string} in Add Provider page")
 	public void user_enters_Comments_as_in_Add_Provider_page(String string) throws Exception {
-		String comments = Excel_Utility.getCellData(1, 13);
+		String comments = Excel_Utility.getCellData(1, 9);
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.comments, 20);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.comments, comments, "Comments");
 	}
@@ -330,23 +331,127 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.saveAndContinueButton, "Save and Continue");
 	}
 
-	@Then("User verifies the created provider to validate provider is created")
+	@Then("User verifies the created Active Provider to validate provider is created")
 	public void user_verifies_the_created_provider_to_validate_provider_is_created() throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String providerName = Excel_Utility.getCellData(1, 0);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, providerName, "Filter");
-		String data = testBase.driver.findElement(By.xpath("(//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td)[2]")).getText();
+		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(providerName))) {
-			ExceptionHandling.HandleAssertion("New Provider is not created");
+			ExceptionHandling.HandleAssertion("New Active Provider is not created");
 		} else
-			Logs.info("New Provider is created successfully");
+			Logs.info("New Active Provider is created successfully");
+	}
+	
+// Inactive Providers	
+	
+	@Then("User enters Provider Name as {string} in Add Provider page of Inactive")
+	public void user_enters_Provider_Name_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String providerName = Excel_Utility.getCellData(2, 0);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.providerName, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.providerName, providerName, "Provider Name");
+	}
+
+	@Then("User enters Mobile Number as {string} in Add Provider page of Inactive")
+	public void user_enters_Mobile_Number_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String mobileNumber = Excel_Utility.getCellData_Integer(2, 1);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, String.valueOf(mobileNumber),
+				"Mobile Number");
+	}
+
+	@Then("User enters Other Contact as {string} in Add Provider page of Inactive")
+	public void user_enters_Other_Contact_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String otherContactNumber = Excel_Utility.getCellData_Integer(2, 2);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber,
+				String.valueOf(otherContactNumber), "Other Contact Number");
+	}
+
+	@Then("User enters Email Address as {string} in Add Provider page of Inactive")
+	public void user_enters_Email_Address_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String inactiveEmailAddress = Excel_Utility.getCellData(2, 3);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.emailAddress, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.emailAddress, inactiveEmailAddress, "Email Address");
+	}
+
+	@Then("User enters Fax Number as {string} in Add Provider page of Inactive")
+	public void user_enters_Fax_Number_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String faxNumber = Excel_Utility.getCellData_Integer(2, 4);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.faxNumber, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.faxNumber, String.valueOf(faxNumber),
+				"Fax Number");
+	}
+
+	@Then("User enters Vat Number as {string} in Add Provider page of Inactive")
+	public void user_enters_Vat_Number_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String vatNumber = Excel_Utility.getCellData_Integer(2, 5);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.vatNumber, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.vatNumber, String.valueOf(vatNumber),
+				"Vat Number");
+	}
+	
+	@Then("User selects status as {string} from status dropdown in Add Provider page of Inactive")
+	public void user_selects_status_as_from_status_dropdown_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.status, 20);
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.status, "Status");
+		Thread.sleep(3000);
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.inactive, "Inactive");
+	}
+	
+	@Then("User enters street as {string} in Add Provider page of Inactive")
+	public void user_enters_street_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		Thread.sleep(3000);
+		String street = Excel_Utility.getCellData(2, 6);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.street, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street, street, "Street");
+	}
+
+	@Then("User enters street2 as {string} in Add Provider page of Inactive")
+	public void user_enters_street2_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String street2 = Excel_Utility.getCellData(2, 7);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.street2, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street2, street2, "Street2");
+	}
+
+
+	@Then("User enters Postal Code as {string} in Add Provider page of Inactive")
+	public void user_enters_Postal_Code_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String postalCode = Excel_Utility.getCellData_Integer(2, 8);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, 20);
+		Thread.sleep(3000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, String.valueOf(postalCode),
+				"Postal Code");
+	}
+
+	@Then("User enters Comments as {string} in Add Provider page of Inactive")
+	public void user_enters_Comments_as_in_Add_Provider_page_of_Inactive(String string) throws Exception {
+		String comments = Excel_Utility.getCellData(2, 9);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.comments, 20);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.comments, comments, "Comments");
+	}
+	
+	@Then("User verifies the created Inactive Provider to validate provider is created")
+	public void user_verifies_the_created_Inactive_Provider_to_validate_provider_is_created() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String providerName = Excel_Utility.getCellData(2, 0);
+		Thread.sleep(3000);
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.inactiveProvider, "Inactive Provider");
+		Thread.sleep(5000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, providerName, "Filter");
+		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+		if (!(data.contains(providerName))) {
+			ExceptionHandling.HandleAssertion("New Inactive Provider is not created");
+		} else
+			Logs.info("New Inactive Provider is created successfully");
 	}
 
 	@Given("User enters valid Provider Ref as {string} on Active Providers")
 	public void user_enters_valid_Provider_Ref_as_on_Active_Providers(String string) throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		activeFilterData = Excel_Utility.getCellData(1, 0);
+		activeFilterData = Excel_Utility.getCellData(2, 0);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, activeFilterData, "Filter");
 	}
@@ -369,7 +474,10 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User validates the error message as {string} of invalid provider Ref")
 	public void user_validates_the_error_message_as_of_invalid_provider_Ref(String string) throws Exception {
-
+		if(!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.errorFilter, "Filter Error"))) {
+			ExceptionHandling.HandleAssertion(" No data matching the filter element is not visible");
+		}else
+			Logs.info(" No data matching the filter element is visible");
 	}
 
 	@Then("User clicks on Inactive Providers")
@@ -381,7 +489,7 @@ public class Stratos_Admin_3rdPartyProvider {
 	@Then("User enters valid Provider Ref as {string} on Inactive Providers")
 	public void user_enters_valid_Provider_Ref_as_on_Inactive_Providers(String string) throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		inactiveFilterData = Excel_Utility.getCellData(1, 14);
+		inactiveFilterData = Excel_Utility.getCellData(1, 0);
 		Thread.sleep(3000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, inactiveFilterData, "Inactive Filter");
 	}
@@ -404,11 +512,13 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User clicks on Items per page dropdown")
 	public void user_clicks_on_Items_per_page_dropdown() throws Exception {
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, 20);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, "Items Dropdown");
 	}
 
 	@Then("Users selects the desired number from items per page dropdown")
 	public void users_selects_the_desired_number_from_items_per_page_dropdown() throws Exception {
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdownOption, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdownOption, "Items Dropdown Option");
 	}
@@ -484,7 +594,7 @@ public class Stratos_Admin_3rdPartyProvider {
 	public void user_validates_the_updates_of_Inactive_Providers() throws Exception {
 		Thread.sleep(5000);
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String filterProviderName = Excel_Utility.getCellData(1, 0);
+		String filterProviderName = Excel_Utility.getCellData(2, 0);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.inactiveProvider, "Inactive Provider");
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, filterProviderName, "Filtered Data");
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.manageProviderButton, "Manage Provider");
@@ -505,7 +615,7 @@ public class Stratos_Admin_3rdPartyProvider {
 	@Then("User validates the activated provider")
 	public void user_validates_the_activated_provider() throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String filterProviderName = Excel_Utility.getCellData(1, 0);
+		String filterProviderName = Excel_Utility.getCellData(2, 0);
 		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Filter");
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, filterProviderName,
@@ -563,6 +673,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User clicks on Select File button and not upload null file")
 	public void user_clicks_on_Select_File_button_and_not_upload_null_file() throws Exception {
+		Thread.sleep(3000);
 		String CSVFile = "Auto-IT/Bulk-Provider-Null.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}

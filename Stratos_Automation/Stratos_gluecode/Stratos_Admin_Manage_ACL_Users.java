@@ -2,6 +2,7 @@ package Stratos_gluecode;
 
 import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
 import Stratos_pageObjects.Stratos_Admin_ManageACL_Users_PageObjects;
+import Stratos_pageObjects.Stratos_Admin_Manage_ACL_Roles_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
 import Stratos_utilities.ExceptionHandling;
@@ -96,7 +97,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 
 	@Then("User Validates the error messages of Invalid field length data of all the feilds in Create User page")
 	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_all_the_feilds_in_Create_User_page() throws Exception {
-		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthName, "First Name"))) {
+		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthFirstName, "First Name"))) {
 			ExceptionHandling.HandleAssertion("Maximum 25 characters allowed element is not visible");
 		}else
 	    Logs.info("Maximum 25 characters allowed is visible");
@@ -106,7 +107,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 		}else
 	    Logs.info("Minimum 6 Characters Allowed is visible");
 		
-		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthName, "Last Name"))) {
+		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthLastName, "Last Name"))) {
 			ExceptionHandling.HandleAssertion("Maximum 25 characters allowed element is not visible");
 		}else
 	    Logs.info("Maximum 25 characters allowed is visible");
@@ -183,7 +184,6 @@ public class Stratos_Admin_Manage_ACL_Users {
 		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.gender, 20);
 		testBase.ClickViaMouse(Stratos_Admin_ManageACL_Users_PageObjects.gender, "Gender");
 	    testBase.ClickViaMouse(Stratos_Admin_ManageACL_Users_PageObjects.selectGender, "Male");
-	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
 	}
 
 	@Then("User clicks on Add button")
@@ -247,8 +247,11 @@ public class Stratos_Admin_Manage_ACL_Users {
 
 	@Then("User validates the filtered data of valid ACL User Ref")
 	public void user_validates_the_filtered_data_of_valid_ACL_User_Ref() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String firstName=Excel_Utility.getCellData(1, 0);
+		Thread.sleep(3000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, firstName, "Filter");
 		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filter data");
-	    System.out.println(data);
 	    if(!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data"))) {
 	    	ExceptionHandling.HandleAssertion("New User is not created");
 	    }else
