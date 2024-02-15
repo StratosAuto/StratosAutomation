@@ -12,7 +12,7 @@ public class Stratos_Supervisor_Dashboard_PageObject {
 	public static final By clickonProvnce=By.xpath("//mat-select[@formcontrolname='selectedProvince']");
 	public static final By selectProvince=By.xpath("//span[text()='All Provinces']");
 	public static final By clickView=By.xpath("//mat-select[@formcontrolname='selectedview']");
-	public static final By selectView=By.xpath("//span[text()='Map View']");
+	public static final By selectView=By.xpath("//span[text()='List View']");
 	public static final By filterButton=By.xpath("//button[text()='Filter']");
 	public static final By map=By.xpath("//span[text()='To navigate, press the arrow keys.']");
 	public static final By maps=By.xpath("//div[@role='region']");

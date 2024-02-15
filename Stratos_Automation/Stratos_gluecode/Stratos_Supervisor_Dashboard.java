@@ -43,7 +43,7 @@ public class Stratos_Supervisor_Dashboard {
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.clickonProvnce, "select all clients");
 		Thread.sleep(4000);
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.selectProvince, "select all clients");
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 	   
 	}
 
@@ -51,9 +51,8 @@ public class Stratos_Supervisor_Dashboard {
 	public void user_clicks_on_view_dropdown_and_selects_view_as(String string) throws Exception {
 		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.clickView, 20);
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.clickView, "select all clients");
-		Thread.sleep(4000);
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.selectView, "select all clients");
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		
 		
 	}
@@ -68,7 +67,6 @@ public class Stratos_Supervisor_Dashboard {
 
 	@Then("User enters valid data in filter field")
 	public void user_enters_valid_data_in_filter_field() throws Exception {
-		
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.map, "map");
 	   
 	}

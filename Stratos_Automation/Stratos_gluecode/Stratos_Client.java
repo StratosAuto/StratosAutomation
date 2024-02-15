@@ -38,9 +38,9 @@ public void user_click_on_add_new_client_button1() throws Exception {
 }
 @When("Verify that user able to enter invalid data in Add new client page")
 public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page() throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(1, 0);
+	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
    
@@ -62,35 +62,36 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	testBase.clickonElement(Stratos_Client_PageObjects.faxNumber, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "Fax Number");
     
-	testBase.waitForElement(Stratos_Client_PageObjects.vatNumber, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	VatNumber = Excel_Utility.getCellData_Integer(1, 4);
+	testBase.waitForElement(Stratos_Client_PageObjects.vatNumber, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.vatNumber, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "Vat Number");
 
-	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	AccountManager = Excel_Utility.getCellData(1, 6);
+	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account manager");
     
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Status = Excel_Utility.getCellData(1, 5);
-	testBase.clickonElement(Stratos_Client_PageObjects.clickStatus, "status dropdown");
 	testBase.waitForElement(Stratos_Client_PageObjects.clickStatus, 20);
+	testBase.clickonElement(Stratos_Client_PageObjects.clickStatus, "status dropdown");
 	testBase.clickonElement(Stratos_Client_PageObjects.status, "inactive");
 //	testBase.dropdownSelectElement(Stratos_Client_PageObjects.clickStatus, Status);
 
-	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
+	
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street = Excel_Utility.getCellData(1, 7);
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.street, "Street");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.street, Street, "Street");
     
 
-	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street2 = Excel_Utility.getCellData(1, 8);
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
    
@@ -123,18 +124,18 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	testBase.waitForElement(Stratos_Client_PageObjects.cancelButton, 20);
     testBase.clickonElement(Stratos_Client_PageObjects.cancelButton, "click on client module");
     
-}
-@Then("User click client add new client button")
-public void user_click_client_add_new_client_button() throws Exception {
+ }
+ @Then("User click client add new client button")
+ public void user_click_client_add_new_client_button() throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.addNewclient, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.addNewclient, "click on add new client");
     
 }
 @Then("User Enter Client Name {string} in add client page")
 public void user_Enter_Client_Name_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(2, 0);
+	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
     
@@ -151,36 +152,36 @@ public void user_Enter_Mobile_Number_in_add_client_page(String string) throws Ex
 
 @Then("User Enter Email Address {string} in add client page")
 public void user_Enter_Email_Address_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.emailAdress, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	EmailAdress = Excel_Utility.getCellData(2, 2);
+	testBase.waitForElement(Stratos_Client_PageObjects.emailAdress, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.emailAdress, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.emailAdress, EmailAdress, "Email Adress");
 }
 
 @Then("User Enter Fax Number {string} in add client page")
 public void user_Enter_Fax_Number_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.faxNumber, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	FaxNumber = Excel_Utility.getCellData_Integer(2, 3);
+	testBase.waitForElement(Stratos_Client_PageObjects.faxNumber, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.faxNumber, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.faxNumber, String.valueOf(FaxNumber), "Fax Number");
 }
 
 @Then("User Enter Vat Number {string} in add client page")
 public void user_Enter_Vat_Number_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.vatNumber, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	VatNumber = Excel_Utility.getCellData_Integer(2, 4);
+	testBase.waitForElement(Stratos_Client_PageObjects.vatNumber, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.vatNumber, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "Vat Number");
 }
 
 @Then("User Enter Account Manager {string} in add client page")
 public void user_Enter_Account_Manager_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	AccountManager = Excel_Utility.getCellData(2, 6);
+	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account Manager");
 }
@@ -196,18 +197,18 @@ public void user_Enter_Account_Manager_in_add_client_page(String string) throws 
 
 @Then("User Enter street {string} in add client page")
 public void user_Enter_street_in_add_client_page(String string) throws Throwable {
-	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street = Excel_Utility.getCellData(2, 7);
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.street, "Street");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.street, Street, "Street");
 }
 
 @Then("User Enter street1 {string} in add client page")
 public void user_Enter_street1_in_add_client_page(String string) throws Throwable {
-	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street2 = Excel_Utility.getCellData(2, 8);
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
     
@@ -237,9 +238,9 @@ public void user_Select_country_in_add_client_page(String string) throws Excepti
 
 @Then("User Enter postal code {string} in add client page")
 public void user_Enter_postal_code_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.postalCode, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	PostalCode = Excel_Utility.getCellData_Integer(2, 11);
+	testBase.waitForElement(Stratos_Client_PageObjects.postalCode, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.postalCode, "postal code");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.postalCode, String.valueOf(PostalCode), "PostalCode");
    
@@ -247,9 +248,9 @@ public void user_Enter_postal_code_in_add_client_page(String string) throws Exce
 
 @Then("User Enter comments {string} in add client page")
 public void user_Enter_comments_in_add_client_page(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.comments, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Comments = Excel_Utility.getCellData(2, 12);
+	testBase.waitForElement(Stratos_Client_PageObjects.comments, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.comments, "comments");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.comments, Comments, "PostalCode");
     
@@ -290,26 +291,26 @@ public void user_click_on_client_info_edit_button() throws Exception {
 
 @Then("User change valid client name {string} in manage clients")
 public void user_change_valid_client_name_in_manage_clients(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(2, 0);
+	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
 }
 
 @Then("User change street {string} When in manage clients")
 public void user_change_street_When_in_manage_clients(String string) throws Exception {
-	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	Street = Excel_Utility.getCellData(2, 7);
+	testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.street, "Street");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.street, Street, "Street");
 }
 	@Then("User change street1 {string} in manage client page")
 	public void user_change_street1_in_manage_client_page(String string) throws Exception {
-		testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		Street2 = Excel_Utility.getCellData(2, 8);
+		testBase.waitForElement(Stratos_Client_PageObjects.street, 20);
 		testBase.clickonElement(Stratos_Client_PageObjects.street2, "client name");
 		testBase.typeinTextBox(Stratos_Client_PageObjects.street2, Street2, "Street1");
 	    

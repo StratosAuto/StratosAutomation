@@ -102,6 +102,7 @@ public class Stratos_Supervisor_Shifts {
 		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.selectJobCard, 20);
 		testBase.clickonElement(Stratos_Supervisor_SHifts_PageObjects.selectJobCard, "selectJobCard");
 		Thread.sleep(6000);
-		   
+		  
 	}
+
 }

@@ -13,6 +13,16 @@ Feature: Home functionality
     Then Admin User Select a theme
     Then Admin User verifies the theme
     
+     
+    ##------Logout functionality----------
+
+  Scenario: Verify the Home module logout functionality
+    Then Admin User  verify user navigates to homepage
+    And Admin User click on settings
+    Then Admin User click on logout
+    Then Admin User navigates to Login Page
+    
+    
     ##------home module settings functionality
 
   Scenario: Verify the Home module Settings change password functionality
@@ -23,11 +33,4 @@ Feature: Home functionality
     And Admin User enter confirm password as "confirm password" in change password
     Then Admin User click update button
     Then Admin User verifies the success message
-    
-    ##------Logout functionality----------
-
-  Scenario: Verify the Home module logout functionality
-    Then Admin User  verify user navigates to homepage
-    And Admin User click on settings
-    Then Admin User click on logout
-    Then Admin User navigates to Login Page
+   
