@@ -3,6 +3,7 @@ package Stratos_testBase;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,8 +11,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 import Stratos_utilities.ExceptionHandling;
 import Stratos_utilities.Logs;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -43,6 +47,7 @@ public class testBase extends PageBase {
 	public static void typeinTextBox(By locator , String data,String elementName) throws Exception {
 		try {
 			if(driver.findElement(locator).isDisplayed()) {
+//				driver.findElement(locator).click();
 				driver.findElement(locator).clear();
 				driver.findElement(locator).sendKeys(data);
 				Logs.info("Text Entered into "+elementName);
@@ -233,10 +238,10 @@ public class testBase extends PageBase {
 		return false;	
 	}
 	
-	public static void dropdownSelectElement(By objLocator, String sVisibletext) throws Throwable {
+	public static void dropdownSelectElement(By objLocator, String status) throws Throwable {
 		try {
 			Select s = new Select(driver.findElement(objLocator));
-			s.selectByVisibleText(sVisibletext);
+			s.selectByVisibleText(status);
 		} catch (Exception e) {
 			ExceptionHandling.HandleExecption(e, "Option not selected");
 		}
@@ -324,10 +329,23 @@ public class testBase extends PageBase {
 
 	        } catch (Exception e) {
 
-	        	ExceptionHandling.HandleExecption(e, "unable to scroll");
+	        	ExceptionHandling.HandleExecption(e, "unable to scroll down");
 
 	        }
 	}
+	public static void ScrollUp() throws Throwable {
+		
+		try {
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(300,0);");
+
+        } catch (Exception e) {
+
+        	ExceptionHandling.HandleExecption(e, "unable to scroll Up");
+
+        }
+}
 	
 	
 	public static String getTextFromPropertis(By object) throws Exception {
@@ -354,14 +372,10 @@ public class testBase extends PageBase {
 			ExceptionHandling.HandleExecption(e, "Element Text not available");
 		}
 		return sText;
+		
 	}
-//	public static String getFakerData() {
-//	       Faker faker = new Faker();
-//	       String data = faker.company().name().substring(0, 5);
-//	       return data;
-//	}
 	public static String randomNumeric(int stringLength) {
-
+		 
 		 String randomString = null;
 
 		 try {
@@ -449,10 +463,8 @@ public class testBase extends PageBase {
 		 String captialAplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		 String number = "0123456789";
-		 
-		 String splChars="~!@#$%^&*()-=";
 
-		 String alphaNumeric = smallalpha + captialAplha + number+splChars;
+		 String alphaNumeric = smallalpha + captialAplha + number;
 
 
 		 StringBuilder sb = new StringBuilder();
@@ -486,18 +498,8 @@ public class testBase extends PageBase {
 		 return randomString;
 
 		}
-//		public static void takeSnapShot(String filename) throws Exception {
-//			 try {
-//				 File Screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//				 FileUtils.copyFile(Screenshot, new File("./Screenshots/"+filename+".png"));
-//			 } catch (Exception e) {
-//			 ExceptionHandling.HandleExecption(e, e.getMessage());
-//			 }
-//			 }
-//}
 		public static void takeScreenshot(String filename) {
 	        try {
-	        
 	        	LocalDateTime now = LocalDateTime.now();
 	            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm:ss");
 	            String timestamp = now.format(formatter);
@@ -509,18 +511,17 @@ public class testBase extends PageBase {
 	            // Handle exceptions, for example, log them or display an error message
 	            e.printStackTrace();
 	        }
-	    }
-		public static void FileUpload(By object,String filepath) throws Exception
-		{
-	       try {
-				Thread.sleep(3000);
-		        String absoluteFilePath = System.getProperty("user.dir") + "/" + filepath;
-				
-		        PageBase.driver.findElement(object).sendKeys(absoluteFilePath);
-		        Logs.info("File is selected Sucessfully");
-		        
-	       }catch (Exception e){
-				ExceptionHandling.HandleExecption(e, "Unable to select file");
-	       }
-		}	
-}		
+		}
+	        public static void FileUpload(By object,String filepath) throws Exception
+	    	{
+	           try {
+	    			Thread.sleep(3000);
+	    	        String absoluteFilePath = System.getProperty("user.dir") + "/" + filepath;
+	    	        PageBase.driver.findElement(object).sendKeys(absoluteFilePath);
+	    	        Logs.info("File is uploaded Sucessfully");
+	    	        
+	           }catch (Exception e){
+	    			ExceptionHandling.HandleExecption(e, "Unable to upload file");
+	           }
+	    	}
+}
