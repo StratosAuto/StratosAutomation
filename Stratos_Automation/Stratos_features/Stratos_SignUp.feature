@@ -2,13 +2,22 @@ Feature: Signu Up functionality
 
   Scenario: Verify the Sign Up functionality 
     Given User Enters URL
-    When User clicks on Sign Up link
-    When User Verify the Sign Up functionality with invalid data
+    And User clicks on Sign Up link
+    When User Verify that able to enter invalid data in registration page
+    Then User Validates the error messages of Invalid data of all the feilds on sign up page
+    Then User click on goback button
+    And User clicks on Sign Up link
+    And Verify that user able to enter invalid field length data in Registration page
+    Then User Validates the error messages of Invalid field length data of all the feilds on sign up page
     Then User click on goback button
     
-    When User clicks on Sign Up link
+   #---------empty data  ---------  
+   
+    And User clicks on Sign Up link
     Then User clicks on Register button
     Then User click on goback button
+    
+    ##----------- valid data----------
     
     When User clicks on Sign Up link
     And User enters First Name as "First name" in registrtion page
@@ -22,7 +31,7 @@ Feature: Signu Up functionality
     Then User clicks on Register button
     And User  navigates to Login Page
     
-#
+    
   #Scenario: Verify the Sign Up functionality with invalid data
     #Given User Enters URL
     #When User clicks on Sign Up link
@@ -38,3 +47,4 @@ Feature: Signu Up functionality
     #And User verifies the error message
     #Then User clicks on Go Back Button
     #And User  navigates to Login Page
+		
