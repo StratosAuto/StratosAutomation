@@ -44,7 +44,11 @@ public class Stratos_Login {
 		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
 				"Enter password");
+		Thread.sleep(2000);
+		
+		
 	}
+	
  
 	@Then("user click on login button")
 	public void admin_user_click_on_login_button() throws Exception {

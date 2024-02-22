@@ -202,14 +202,16 @@ public class Stratos_Equipement {
 			testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentName, 20);
 		    testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentName, "equipment description");
 		    testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentName, EquipmentName, "EquipmentDescription");
+		    Thread.sleep(5000);
 		}
 
 	@Then("Admin User Select Client Name from Drop Down")
 	public void admin_User_Select_Client_Name_from_Drop_Down() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
-		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "John Fred");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
+		Thread.sleep(2000);
+		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
 		Thread.sleep(2000);
 	}
 
@@ -299,7 +301,7 @@ public class Stratos_Equipement {
 	public void admin_User_Click_on_Save_and_Continue_Button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.saveAndContinueButton, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.saveAndContinueButton, "save and continue button");
-	   Thread.sleep(2000);
+	   Thread.sleep(10000);
 	}
 
 	@Then("User Verifies the created equipment to validate equipment is created")
@@ -314,7 +316,7 @@ public class Stratos_Equipement {
 		Thread.sleep(10000);
 		testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.EquipmentFilter, EquipmentName, "equipment name");
 		Thread.sleep(10000);
-		if(!(testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.equipmentNameValidate, EquipmentName))){
+		if(!(testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.equipmentNameValidate, EquipmentName)))  {
 			ExceptionHandling.HandleAssertion("New Equipment is not created");
 		}
 		else
@@ -359,8 +361,8 @@ public class Stratos_Equipement {
 	public void admin_User_select_the_clent_name_in_manage_equipment() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
-		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "Roses");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectClientName, "Roses");
+		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "John Fred");
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
 		Thread.sleep(5000);
 	}
 	

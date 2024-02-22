@@ -61,10 +61,15 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By cellData=By.xpath("//td[@role='cell']");
     public static final By inavalidPostalCodeError=By.xpath("//span[text()='Give Correct Postal Code']");
     public static final By invalidMobileNumber=By.xpath("(//span[text()='Give Correct Mobile Number'])[1]");
-    public static final By invalidEmailAdressError=By.xpath("(//span[text()='Give Correct Email'])[1]");
+    public static final By invalidEmailAdressError=By.xpath("//span[text()='Give Correct Email']");
     
     
-    public static final By SiteNameError=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
+    public static final By filedlengthSiteNameError=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
+    public static final By filedlengthSiteDescriptionError=By.xpath("//span[text()='Max 250 Characters Allowed.']");
+    public static final By filedlengthCompleteAddressError=By.xpath("//span[text()='Maximum 100 Characters Allowed.']");
+    public static final By filedlengthFirstNameError=By.xpath("(//span[text()='Max 25 Alphabets Allowed'])[1]");
+    public static final By filedlengthLastNameError=By.xpath("(//span[text()='Max 25 Alphabets Allowed'])[2]");
+    public static final By addNewSiteCancelButton=By.xpath("//button[text()=' Cancel ']");
     
     
     
