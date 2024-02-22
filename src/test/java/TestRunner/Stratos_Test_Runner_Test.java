@@ -6,13 +6,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="Stratos_Automation/Stratos_features/Stratos_Admin_Manage_ACL_Users.feature",
+		features="Stratos_Automation/Stratos_features/Stratos_Sites & Checkpoints.feature",
 		glue={"Stratos_gluecode", "TestRunner"},
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","progress","summary"},
 		tags= {""},
 		monochrome= true
-		
 		)
+
 public class Stratos_Test_Runner_Test {
 
 }
