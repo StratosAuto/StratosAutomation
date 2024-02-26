@@ -44,11 +44,7 @@ public class Stratos_Login {
 		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
 				"Enter password");
-		Thread.sleep(2000);
-		
-		
 	}
-	
  
 	@Then("user click on login button")
 	public void admin_user_click_on_login_button() throws Exception {
@@ -122,7 +118,8 @@ public class Stratos_Login {
 		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.forgotpinemailSuccessMessage, "successmesage"))) {
 			ExceptionHandling.HandleAssertion("updatded not successfully");
 	}else
-		Logs.info("updatded successfully");		     
+		Logs.info("updatded successfully");		
+		Thread.sleep(2000);
 	}
 
 	@Then("User enter the create new passowrd as {string} in forgot password page")

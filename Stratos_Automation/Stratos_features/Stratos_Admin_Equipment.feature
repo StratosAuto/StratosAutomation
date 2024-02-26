@@ -37,16 +37,16 @@ Feature: Equipment functionality
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
     #//Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
+    Then Admin User select the clent name in manage equipment
+    Then Admin User select the site name in manage equipment
     And Admin User click on update Button
     Then Admin User validates the updated manage equipment
     Then Click on inactive page in equipment
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
     #//Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
+    Then Admin User select the clent name in manage equipment
+    Then Admin User select the site name in manage equipment
     And Admin User click on update Button
     Then Click on inactive page in equipment
     #//And Admin User click on  deactivate Button
@@ -55,8 +55,8 @@ Feature: Equipment functionality
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
     #//Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
+    Then Admin User select the clent name in manage equipment
+    Then Admin User select the site name in manage equipment
     #//And Admin User click on  faulty Button
     And Admin User click on update Button
     Then Click on faulty page in equipment
