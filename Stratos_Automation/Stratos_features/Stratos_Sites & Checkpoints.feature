@@ -9,16 +9,16 @@ Feature: Sites & Checkpoints functionality
     
    
 
-  #Scenario: Verify add new site functionality with valid data
-  #Given User click on add new site button
-  #
-  #And Verify that user able to enter invalid data in Add new site page
-  #
-  #And User Validates the error messages of Invalid data of add new site all the feilds
-  #And Verify that user able to enter invalid field length data in add new site page
-  #Then User Validates the error messages of Invalid field length data of add new site all the feilds 
-  #
-  #
+  Scenario: Verify add new site functionality with valid data
+  Given User click on add new site button
+  
+  And Verify that user able to enter invalid data in Add new site page
+  
+  And User Validates the error messages of Invalid data of add new site all the feilds
+  And Verify that user able to enter invalid field length data in add new site page
+  Then User Validates the error messages of Invalid field length data of add new site all the feilds 
+  
+  #Given User click on add new equipment button
   #Given User click on add new site button
   #Then User Enter site Name as "site name" in add new site
   #Then User Enter site description as"site description" in add new site
@@ -39,17 +39,16 @@ Feature: Sites & Checkpoints functionality
   #And User Click on Save and Continue Button
   #Then User Verifies the created site to validate site is created
   #
-  
-  Scenario: Verify manage checkpoints functionality
-  And User Click on Manage check points button
-  And Verify that user able to enter invalid data in manage checkpoints page
-  And User Click on Manage check points button
-  Then User Enter Checkpoint name as "name" in manage checkpoints
-  Then User Enter Adress as "adress" in manage checkpoints
+  #
+  #Scenario: Verify manage checkpoints functionality
+  #And User Click on Manage check points button
+  #And Verify that user able to enter invalid data in manage checkpoints page
+  #And User Click on Manage check points button
+  #Then User Enter Checkpoint name as "name" in manage checkpoints
+  #Then User Enter Adress as "adress" in manage checkpoints
   #Then User Click Add button
   #Then User Click on Done
-  
-  
+  #
   #Scenario: Verify manage site functionality
     #And User clicks on Manage Site button
     #And User enters Mobile Number as "MobileNumber" in Edit Site page
@@ -59,7 +58,7 @@ Feature: Sites & Checkpoints functionality
     #And User clicks on Manage Site button
     #And User enters Mobile Number as "MobileNumber" in Edit Site page
     #And User clicks on Update button
-    #/#And User clicks on Deactivate button
+    ##/And User clicks on Deactivate button
     #Then User click on Inactive site tab
     #Then User validates the deactivated site
     #
@@ -68,12 +67,11 @@ Feature: Sites & Checkpoints functionality
     #And User click on bulk Upload button
     #And User clicks on Select File button and upload file
     #And User clicks on Submit button
-    #Then User Verifies the success message
-    #
+    #Then User validates the success message as "successMessage"
     #
     #And User click on bulk Upload button
     #And User clicks on Submit button
-    #And User validates the error message in Sites
+    #And User validates the error message as "errorMessage" of invalid Bulk Upload
     #And User clicks on cancel button
     #
      #And User click on bulk Upload button

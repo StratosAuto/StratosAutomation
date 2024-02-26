@@ -7,7 +7,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By addNewEquipment=By.xpath("//button[text()=' Add New Equipment ']");
 	public static final By equipmentDescription=By.xpath("//input[@formcontrolname='equipmentDescription']");
 	public static final By equipmentName=By.xpath("//input[@formcontrolname='equipmentName']");
-	public static final By clientNameDropdown=By.xpath("//mat-label[text()='Client Name']");
+	public static final By clientNameDropdown=By.xpath("//mat-select[@formcontrolname='clientName']");
 	public static final By siteNameDropdown=By.xpath("//mat-select[@formcontrolname='siteName']");
 	public static final By equipmentCategory=By.xpath("//mat-select[@formcontrolname='equipmentCategory']");
 	public static final By equipmentLicenceNumber=By.xpath("//mat-label[text()='Equipment Licence Number']");
@@ -31,8 +31,8 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentLicenseNumberInput=By.xpath("//input[@formcontrolname='licenseNumber']");
 	public static final By selectEquipmentType1=By.xpath("//span[text()='Doubel Barrel']");
 	public static final By EquipmentFilter=By.xpath("//input[@placeholder='Ex. Mia']");
-	public static final By equipmentNameValidate=By.xpath("//td[text()='For123']");
-	public static final By equipmentNameValidateequipmentName=By.xpath("//td[text()='Ever123']");
+	public static final By equipmentNameValidate=By.xpath("//td[text()='KUKKI-182']");
+	public static final By equipmentNameValidateequipmentName=By.xpath("//td[text()='KUKKA-01']");
 	public static final By updateButton=By.xpath("//button[text()=' Update ']");
 	public static final By faultyEquipment=By.xpath("//span[text()='Faulty Equipments']");
 	public static final By deactivateButton=By.xpath("//button[text()=' Deactivate ']");

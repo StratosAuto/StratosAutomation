@@ -60,7 +60,7 @@ Feature: Clients functionality
     
     
     
-    # #client bulkupload
+    # client bulkupload
     
     Scenario: Verify the Bulk Upload functionality
     And User clicks on Bulk Upload button in clients page
@@ -75,3 +75,5 @@ Feature: Clients functionality
     And User clicks on Submit button in clients page
     And User validates the error message as "errorMessage" of null Bulk Upload in clients page
     
+#
+  #
