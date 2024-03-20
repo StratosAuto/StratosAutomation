@@ -15,6 +15,7 @@ public class Stratos_Admin_Employees {
 	public static String sheetName1="3RD PARTY PROVIDER";
 	public String mobileNumber;
 	public String otherContactNumber;
+	public String employeeName;
 	
 	@Given("User clicks on Employees in the menu")
 	public void user_clicks_on_Employees_in_the_menu() throws Exception {
@@ -248,13 +249,15 @@ public class Stratos_Admin_Employees {
 	    if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.invalidGunLicence, "Gun Licence"))) {
 	    	ExceptionHandling.HandleAssertion("Give Valid Gun Licence Number element is not visible");
 	    }else
-	    	Logs.info("Give Valid Gun Licence Number element is visible");
-	    
-	    
-	    
-	    
+	    	Logs.info("Give Valid Gun Licence Number element is visible");  
 	}
 
+	@And("User clicks on Cancel button on Add Employees page")
+	public void user_clicks_on_Cancel_buttonon_Add_Employees_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.cancelButton, 20);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.cancelButton, "Cancel Button");
+	}
+	
 	@Then("Verify that user able to enter invalid field length data in Add Employee page")
 	public void verify_that_user_able_to_enter_invalid_field_length_data_in_Add_Employee_page() throws Exception {
 	    
@@ -557,6 +560,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Birthday date picker button and selects Birthday as {string} in Employee Details")
 	public void user_clicks_on_Birthday_date_picker_button_and_selects_Birthday_as_in_Employee_Details(String string) throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
+	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
@@ -600,7 +604,8 @@ public class Stratos_Admin_Employees {
 
 	@Then("User clicks on Passport Expiry Date date picker button and selects Passport Expiry Date as {string} in Employee Details")
 	public void user_clicks_on_Passport_Expiry_Date_date_picker_button_and_selects_Passport_Expiry_Date_as_in_Employee_Details(String string) throws Exception {
-	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, 20);
+	    Thread.sleep(2000);
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
@@ -628,8 +633,10 @@ public class Stratos_Admin_Employees {
 
 	@Then("User clicks on Employee Residential Address Details")
 	public void user_clicks_on_Employee_Residential_Address_Details() throws Exception {
+		Thread.sleep(3000);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, "Employee Residential Details");
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, "Employee Residential Details");
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, "Employee Residential Details");
 	}
 
 	@Given("User enters Street1  as {string} in Employee Residential Address Details")
@@ -870,6 +877,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Security Licence Expiry Date date picker button and selects Security Licence Expiry Date as {string} in Security Details")
 	public void user_clicks_on_Security_Licence_Expiry_Date_date_picker_button_and_selects_Security_Licence_Expiry_Date_as_in_Security_Details(String string) throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
@@ -893,6 +901,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on First Aid\\/CPR Expiry Date date picker button and selects First Aid\\/CPR Expiry Date as {string} in First Aid Details")
 	public void user_clicks_on_First_Aid_CPR_Expiry_Date_date_picker_button_and_selects_First_Aid_CPR_Expiry_Date_as_in_First_Aid_Details(String string) throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
+	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
@@ -916,6 +925,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Drivers Licence Expiry date picker button and selects Drivers Licence Expiry date as {string} in Compliance / Training / Certification Details")
 	public void user_clicks_on_Drivers_Licence_Expiry_date_picker_button_and_selects_Drivers_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details(String string) throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
+	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
@@ -933,6 +943,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Gun Licence Expiry date picker button and selects Gun Licence Expiry date as {string} in Compliance / Training / Certification Details")
 	public void user_clicks_on_Gun_Licence_Expiry_date_picker_button_and_selects_Gun_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details(String string) throws Exception {
 	  testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
+	  Thread.sleep(2000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
@@ -944,6 +955,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Equipment_Details() throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, "Equipment Details");
+	    Thread.sleep(2000);
 	}
 
 	@Then("User selects Use Force as {string} from Use Force dropdown in Equipment Details")
@@ -997,6 +1009,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Contract Start Date date picker button and selects Contract Start Date as {string} in Contract Details")
 	public void user_clicks_on_Contract_Start_Date_date_picker_button_and_selects_Contract_Start_Date_as_in_Contract_Details(String string) throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, 20);
+	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartYear, "Year");
@@ -1007,7 +1020,8 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Contract End Date date picker button and selects Contract End Date as {string} in Contract Details")
 	public void user_clicks_on_Contract_End_Date_date_picker_button_and_selects_Contract_End_Date_as_in_Contract_Details(String string) throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarButton, "Contract End Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarButton, "Contract End Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarArrow, "Contract End Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndMonth, "Month");
@@ -1019,6 +1033,7 @@ public class Stratos_Admin_Employees {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName1);
 		String provider=Excel_Utility.getCellData(1, 0);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.thirdPartyProvider, 20);
+		Thread.sleep(2000);
 		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.thirdPartyProvider, "Third Party Provider");
 	    testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentEmployee(provider), "3rd Party Provider");
 	}
@@ -1032,6 +1047,7 @@ public class Stratos_Admin_Employees {
 	
 	@Then("User verifies the created Manager to validate Manager is created")
 	public void user_verifies_the_created_Manager_to_validate_Manager_is_created() throws Exception {
+		Thread.sleep(5000);
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String managerName = Excel_Utility.getCellData(2, 0);
 		Thread.sleep(5000);
@@ -1047,6 +1063,7 @@ public class Stratos_Admin_Employees {
 	
 	@Given("User enters First Name as {string} in Employee Details of Supervisor")
 	public void user_enters_First_Name_as_in_Employee_Details_of_Supervisor(String string) throws Exception {
+		Thread.sleep(10000);
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String firstName = Excel_Utility.getCellData(3, 0);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstName, 20);
@@ -1100,6 +1117,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Birthday date picker button and selects Birthday as {string} in Employee Details of Supervisor")
 	public void user_clicks_on_Birthday_date_picker_button_and_selects_Birthday_as_in_Employee_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
+		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.supervisorBirthdayYear, "Year");
@@ -1140,7 +1158,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Passport Expiry Date date picker button and selects Passport Expiry Date as {string} in Employee Details of Supervisor")
 	public void user_clicks_on_Passport_Expiry_Date_date_picker_button_and_selects_Passport_Expiry_Date_as_in_Employee_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
+		Thread.sleep(3000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, 20);
@@ -1170,6 +1189,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Employee_Residential_Address_Details_of_Supervisor() throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, "Employee Residential Details");  
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeResidentialDetails, "Employee Residential Details");
 	}
 
 	@Given("User enters Street1  as {string} in Employee Residential Address Details of Supervisor")
@@ -1404,8 +1424,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Security Details of Supervisor")
 	public void user_clicks_on_Security_Details_of_Supervisor() throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityDetails, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityDetails, "Security Details");
-	    
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityDetails, "Security Details");    
 	}
 
 	@Given("User enters Security Licence Number as {string} in Security Details of Supervisor")
@@ -1418,6 +1437,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Security Licence Expiry Date date picker button and selects Security Licence Expiry Date as {string} in Security Details of Supervisor")
 	public void user_clicks_on_Security_Licence_Expiry_Date_date_picker_button_and_selects_Security_Licence_Expiry_Date_as_in_Security_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
+		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
@@ -1441,7 +1461,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on First Aid\\/CPR Expiry Date date picker button and selects First Aid\\/CPR Expiry Date as {string} in First Aid Details of Supervisor")
 	public void user_clicks_on_First_Aid_CPR_Expiry_Date_date_picker_button_and_selects_First_Aid_CPR_Expiry_Date_as_in_First_Aid_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
@@ -1464,7 +1485,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Drivers Licence Expiry date picker button and selects Drivers Licence Expiry date as {string} in Compliance / Training / Certification Details of Supervisor")
 	public void user_clicks_on_Drivers_Licence_Expiry_date_picker_button_and_selects_Drivers_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
@@ -1481,6 +1503,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Gun Licence Expiry date picker button and selects Gun Licence Expiry date as {string} in Compliance / Training / Certification Details of Supervisor")
 	public void user_clicks_on_Gun_Licence_Expiry_date_picker_button_and_selects_Gun_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
@@ -1492,6 +1515,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Equipment_Details_of_Supervisor()throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, "Equipment Details");
+	    Thread.sleep(2000);
 	}
 
 	@Given("User selects Use Force as {string} from Use Force dropdown in Equipment Details of Supervisor")
@@ -1545,14 +1569,15 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Contract Start Date date picker button and selects Contract Start Date as {string} in Contract Details of Supervisor")
 	public void user_clicks_on_Contract_Start_Date_date_picker_button_and_selects_Contract_Start_Date_as_in_Contract_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartMonth, "Month");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartDate, "Date");
 	}
 
-	@Given("User clicks on Parent Employee Deatils of Supervisor")
+	@Given("User clicks on Parent Employee Details of Supervisor")
 	public void user_clicks_on_Parent_Employee_Deatils_of_Supervisor() throws Exception{
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.parentEmployeeDetails, 20);
 	    testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentEmployeeDetails, "Parent Employee Details");
@@ -1564,33 +1589,11 @@ public class Stratos_Admin_Employees {
 		String parentName1 = Excel_Utility.getCellData(2, 0);
 		String parentName2=Excel_Utility.getCellData(2, 1);
 		String parentName= parentName1+" "+parentName2;
-		Thread.sleep(2000);
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.parentContactName, "Parent Contact Name");
-		Thread.sleep(2000);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.parentEmployee(parentName), "Parent Employee Name");
-	}
-
-	@Given("User validates the Parent Employee Details are auto-populated of Supervisor")
-	public void user_validates_the_Parent_Employee_Details_are_auto_populated_of_Supervisor() throws Exception{
-		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String firstName = Excel_Utility.getCellData(2, 0);
-	    String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.parentFirstName, "Parent First Name");
-	    System.out.println(data+"First Name");
-	    if(!(data.contains(firstName))) {
-	    	ExceptionHandling.HandleAssertion("Parent Employee FirsName is not fetched");
-	    }else
-	    	Logs.info("Parent Employee FirsName is fetched");
-	}
-
-	@Given("User selects 3rd Party Provider as {string} from 3rd Party Provider dropdown of Supervisor")
-	public void user_selects_3rd_Party_Provider_as_from_3rd_Party_Provider_dropdown_of_Supervisor(String string) throws Exception{
-		Excel_Utility.setExcelFile(excelFileLocation, sheetName1);
-		String provider=Excel_Utility.getCellData(1, 0);
-		String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.validateProvider, "Provider");
-		if(!(provider.contains(data))) {
-			ExceptionHandling.HandleAssertion("Provider is not auto-populated");
-		}else
-			Logs.info("Provider is auto-populated");
+		Thread.sleep(7000);
+	//	testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentdropdown, "Parent Contact Name");
+		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentContactName, "Parent Contact Name");
+		Thread.sleep(5000);
+	    testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentEmployee(parentName), "Parent Employee Name");
 	}
 	
 	@Then("User verifies the created Supervisor to validate Supervisor is created")
@@ -1598,6 +1601,7 @@ public class Stratos_Admin_Employees {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String supervisorName= Excel_Utility.getCellData(3, 0);
 		Thread.sleep(5000);
+		Thread.sleep(3000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, supervisorName, "Filter");
 		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(supervisorName))) {
@@ -1610,6 +1614,7 @@ public class Stratos_Admin_Employees {
 	
 	@Given("User enters First Name as {string} in Employee Details of Employee")
 	public void user_enters_First_Name_as_in_Employee_Details_of_Employee(String string)throws Exception {
+		Thread.sleep(10000);
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String firstName = Excel_Utility.getCellData(4, 0);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstName, 20);
@@ -1662,9 +1667,11 @@ public class Stratos_Admin_Employees {
 
 	@Given("User clicks on Birthday date picker button and selects Birthday as {string} in Employee Details of Employee")
 	public void user_clicks_on_Birthday_date_picker_button_and_selects_Birthday_as_in_Employee_Details_of_Employee(String string) throws Exception{
+		Thread.sleep(3000);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
+	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, 20);
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayYear, "Year");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayMonth, "Month");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayDate, "Date");
@@ -1703,7 +1710,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Passport Expiry Date date picker button and selects Passport Expiry Date as {string} in Employee Details of Employee")
 	public void user_clicks_on_Passport_Expiry_Date_date_picker_button_and_selects_Passport_Expiry_Date_as_in_Employee_Details_of_Employee(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, 20);
@@ -1948,6 +1956,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Security_Details_of_Employee() throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityDetails, "Security Details");
+	    Thread.sleep(3000);
 	}
 
 	@Given("User enters Security Licence Number as {string} in Security Details of Employee")
@@ -1960,6 +1969,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Security Licence Expiry Date date picker button and selects Security Licence Expiry Date as {string} in Security Details of Employee")
 	public void user_clicks_on_Security_Licence_Expiry_Date_date_picker_button_and_selects_Security_Licence_Expiry_Date_as_in_Security_Details_of_Employee(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
@@ -1971,6 +1981,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_First_Aid_Details_of_Employee() throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidDetails, "First Aid Details");
+	    Thread.sleep(3000);
 	}
 
 	@Given("User enters First Aid\\/CPR as {string} in First Aid Details of Employee")
@@ -1983,7 +1994,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on First Aid\\/CPR Expiry Date date picker button and selects First Aid\\/CPR Expiry Date as {string} in First Aid Details of Employee")
 	public void user_clicks_on_First_Aid_CPR_Expiry_Date_date_picker_button_and_selects_First_Aid_CPR_Expiry_Date_as_in_First_Aid_Details_of_Employee(String string) throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
@@ -1994,6 +2006,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Compliance_Training_Certification_Details_of_Employee() throws Exception{
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.complianceDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.complianceDetails, "complianceDetails");
+	    Thread.sleep(3000);
 	}
 
 	@Given("User enters Drivers Licence as {string} in Compliance / Training / Certification Details of Employee")
@@ -2006,7 +2019,8 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Drivers Licence Expiry date picker button and selects Drivers Licence Expiry date as {string} in Compliance / Training / Certification Details of Employee")
 	public void user_clicks_on_Drivers_Licence_Expiry_date_picker_button_and_selects_Drivers_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details_of_Employee(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
@@ -2023,6 +2037,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Gun Licence Expiry date picker button and selects Gun Licence Expiry date as {string} in Compliance / Training / Certification Details of Employee")
 	public void user_clicks_on_Gun_Licence_Expiry_date_picker_button_and_selects_Gun_Licence_Expiry_date_as_in_Compliance_Training_Certification_Details_of_Employee(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
@@ -2035,6 +2050,7 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Equipment_Details_of_Employee()throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.equipmentDetails, "Equipment Details");
+	    Thread.sleep(3000);
 	}
 
 	@Given("User selects Use Force as {string} from Use Force dropdown in Equipment Details of Employee")
@@ -2088,10 +2104,14 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Contract Start Date date picker button and selects Contract Start Date as {string} in Contract Details of Employee")
 	public void user_clicks_on_Contract_Start_Date_date_picker_button_and_selects_Contract_Start_Date_as_in_Contract_Details_of_Employee(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeontractStartYear, "Year");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeContractStartMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeContractStartDate, "Date");
 	}
 
@@ -2108,34 +2128,17 @@ public class Stratos_Admin_Employees {
 		String parentName2= Excel_Utility.getCellData(3, 1);
 		String parentName =parentName1+" "+parentName2;
 		System.out.println(parentName);
-		Thread.sleep(2000);
+		Thread.sleep(7000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.parentContactName, "Parent Contact Name");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.parentEmployee(parentName), "Parent Employee Name"); 
-	}
-
-	@Given("User validates the Parent Employee Details are auto-populated of Employee")
-	public void user_validates_the_Parent_Employee_Details_are_auto_populated_of_Employee()throws Exception {
-		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String firstName = Excel_Utility.getCellData(3, 0);
-	    String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.parentFirstName, "Parent First Name");
-	    System.out.println(data);
-	    if(!(data.contains(firstName))) {
-	    	ExceptionHandling.HandleAssertion("Parent Employee FirsName is not fetched");
-	    }else
-	    	Logs.info("Parent Employee FirsName is fetched");
-	    
-	}
-
-	@Given("User selects 3rd Party Provider as {string} from 3rd Party Provider dropdown of Employee")
-	public void user_selects_3rd_Party_Provider_as_from_3rd_Party_Provider_dropdown_of_Employee(String string) throws Exception{
-		
 	}
 	
 	@Then("User verifies the created Employee to validate Employee is created")
 	public void user_verifies_the_created_Employee_to_validate_Employee_is_created() throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String employeeName = Excel_Utility.getCellData(2, 0);
+		String employeeName = Excel_Utility.getCellData(4, 0);
+		Thread.sleep(5000);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filter");
 		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
@@ -2144,105 +2147,101 @@ public class Stratos_Admin_Employees {
 		} else
 			Logs.info("New Employee is created successfully");
 	}
+
+// Active Employees Filter
 	
 	@Given("User enters valid Employee Ref as {string} on Active Employees")
 	public void user_enters_valid_Employee_Ref_as_on_Active_Employees(String string) throws Exception{
-	    
-	    
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		employeeName = Excel_Utility.getCellData(2, 0);
+	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+	    Thread.sleep(5000);
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
 	}
 
-	@Then("User validates the filtered data")
-	public void user_validates_the_filtered_data() throws Exception{
-	    
-	    
+	@Then("User validates the filtered data of Active Employees")
+	public void user_validates_the_filtered_data_of_Active_Employees() throws Exception{
+	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	    if(!(employeeName.contains(data))) {
+	    	ExceptionHandling.HandleAssertion("Filtered data is not displayed");
+	    }else
+	    	Logs.info("Filtered data is displayed");
 	}
 
 	@Then("User enters invalid Employee Ref as {string} on Active Employees")
 	public void user_enters_invalid_Employee_Ref_as_on_Active_Employees(String string)throws Exception {
-	    
-	    
+	    String data1=testBase.randomAlphanumeric(10);
+	    testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Clear Filters");
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data1, "Filter");
 	}
 
-	@Then("User validates the error message as {string} of invalid Employee Ref")
-	public void user_validates_the_error_message_as_of_invalid_Employee_Ref(String string)throws Exception {
-	    
-	    
+	@Then("User validates the error message as {string} on Active Employees")
+	public void user_validates_the_error_message_as_on_Active_Employees(String string)throws Exception {
+		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.filterError, "Filter Error"))) {
+	    	ExceptionHandling.HandleAssertion(" No data matching the filter message is not displayed");
+	    }else
+	    	Logs.info(" No data matching the filter message is displayed");
 	}
 
+// Inactive Employees Filter
+	
 	@Then("User clicks on Inactive Employees")
 	public void user_clicks_on_Inactive_Employees() throws Exception{
-	    
-	    
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String employeeName = Excel_Utility.getCellData(2, 0);
+	    Thread.sleep(3000);
+	    testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Filter");
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
+	    Thread.sleep(3000);
+	    testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.deactivateButton, "Deactivate");
+	    Thread.sleep(3000);
+	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, 20);
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, "Inactive Employees");
 	}
 
 	@Then("User enters valid Employee Ref as {string} on Inactive Employees")
 	public void user_enters_valid_Employee_Ref_as_on_Inactive_Employees(String string)throws Exception {
-	    
-	    
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		employeeName = Excel_Utility.getCellData(2, 0);
+		Thread.sleep(5000);
+		testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Filter");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
+	}
+	
+	@Then("User validates the filtered data on Inactive Employees")
+	public void user_validates_the_filtered_data_of_Inactive_Employees() throws Exception{
+	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	    if(!(employeeName.contains(data))) {
+	    	ExceptionHandling.HandleAssertion("Filtered data is not displayed");
+	    }else
+	    	Logs.info("Filtered data is displayed");
 	}
 
-	@Then("User enters invalid Employee Ref as {string} in Add Employee page")
-	public void user_enters_invalid_Employee_Ref_as_in_Add_Employee_page(String string)throws Exception {
-	    
-	    
+	@Then("User enters invalid Employee Ref as {string} on Inactive Employees")
+	public void user_enters_invalid_Employee_Ref_as_on_Inactive_Employees(String string)throws Exception {
+	    String data=testBase.randomAlphanumeric(10);
+	    testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Filter");
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data, "Filter");
 	}
-
-	@Then("User validates the displayed Employee")
-	public void user_validates_the_displayed_Employee() throws Exception{
-	    
-	    
+	
+	@Then("User validates the error message as {string} on Inactive Employees")
+	public void user_validates_the_error_message_as_on_Inactive_Employees(String string)throws Exception {
+		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.filterError, "Filter Error"))) {
+	    	ExceptionHandling.HandleAssertion(" No data matching the filter message is not displayed");
+	    }else
+	    	Logs.info(" No data matching the filter message is displayed");
 	}
 
 	@Then("User clicks on Manage Employee button")
 	public void user_clicks_on_Manage_Employee_button()throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		employeeName = Excel_Utility.getCellData(4, 0);
+	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+	    Thread.sleep(5000);
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.manageEmployee, 20);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
-	}
-
-	@Then("User enters Mobile Number as {string} in Edit Employees page")
-	public void user_enters_Mobile_Number_as_in_Edit_Employees_page(String string) throws Exception{
-	    mobileNumber=testBase.randomNumeric(10);
-	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.mobileNumber, 20);
-	    Thread.sleep(3000);
-	    testBase.clearTextbox(Stratos_Admin_Employees_PageObjects.mobileNumber, "Mobile Number");
-	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.mobileNumber, mobileNumber, "Mobile Number");
-	}
-	
-	@Given("User clicks on Update button on employee page")
-	public void user_clicks_on_Update_button_on_employee_page() throws Exception {
-		Thread.sleep(5000);
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.updateButton, "Update");
-	}
-
-	@Then("User validates the updates of Active Employees")
-	public void user_validates_the_updates_of_Active_Employees() throws Exception{
-		Thread.sleep(5000);
-		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String managerName = Excel_Utility.getCellData(2, 0);
-		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
-		String updatedMobileNumber =testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, "Mobile NUmber");
-		if (!(mobileNumber.contains(updatedMobileNumber))) {
-			ExceptionHandling.HandleAssertion("Mobile Number is not updated");
-		} else
-			Logs.info("Mobile Number is updated");
-	    
-	}
-
-	@Then("User validates the Deactivated Employee on employee page")
-	public void user_validates_the_Deactivated_Employee() throws Exception {
-	   Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-	   String managerName = Excel_Utility.getCellData(2, 0);
-	   Thread.sleep(3000);
-	   testBase.waitForElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, 20);
-	   testBase.clickonElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, "Inactive Employees");
-	   Thread.sleep(5000);
-	   testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
-	   String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
-	   if(!(data.contains(managerName))) {
-		   ExceptionHandling.HandleAssertion("Employee is not Deactivated");
-	   }else
-		   Logs.info("Employee is Deactivated");
 	}
 
 	@Then("User enters Other Contact Number as {string} in Edit Employees page")
@@ -2253,28 +2252,60 @@ public class Stratos_Admin_Employees {
 	   testBase.clearTextbox(Stratos_Admin_Employees_PageObjects.otherContactNumber, "Other Contact Number");
 	   testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.otherContactNumber, otherContactNumber, "Other Contact Number");
 	}
+	
+	@Given("User clicks on Update button on employee page")
+	public void user_clicks_on_Update_button_on_employee_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.updateButton, 20);
+		Thread.sleep(5000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.updateButton, "Update");
+	}
 
-	@Then("User validates the updates of Inactive Employees")
-	public void user_validates_the_updates_of_Inactive_Employees() throws Exception{
+	@Then("User validates the updates of Active Employees")
+	public void user_validates_the_updates_of_Active_Employees() throws Exception{
+		Thread.sleep(5000);
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String managerName = Excel_Utility.getCellData(4, 0);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
+		String updatedOtherContactNumber=testBase.getElementText(Stratos_Admin_Employees_PageObjects.otherContactNumber, "Other Contact Number");
+		   if(!(otherContactNumber.contains(updatedOtherContactNumber))) {
+			   ExceptionHandling.HandleAssertion("Other Contact Number is not updated");
+		   }else
+			   Logs.info("Other Contact Number is updated"); 
+	}
+
+	@And("User clicks on Deactivate button on Manage Employees page")
+	public void user_clicks_on_Deactivate_button_on_Manage_Employees_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.deactivateButton, 20);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.deactivateButton, "Deactivate Button");
+	}
+	@Then("User validates the Deactivated Employee on employee page")
+	public void user_validates_the_Deactivated_Employee() throws Exception {
 	   Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-	   String managerName = Excel_Utility.getCellData(2, 0);
+	   String employeerName = Excel_Utility.getCellData(4, 0);
 	   Thread.sleep(3000);
+	   Thread.sleep(5000);
 	   testBase.waitForElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, 20);
 	   testBase.clickonElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, "Inactive Employees");
 	   Thread.sleep(5000);
-	   testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
-	   testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
-	   String updatedOtherContactNumber=testBase.getElementText(Stratos_Admin_Employees_PageObjects.otherContactNumber, "Other Contact Number");
-	   if(!(otherContactNumber.contains(updatedOtherContactNumber))) {
-		   ExceptionHandling.HandleAssertion("Other Contact Number is not updated");
+	   testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeerName, "Employee Name");
+	   String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	   if(!(data.contains(employeerName))) {
+		   ExceptionHandling.HandleAssertion("Employee is not Deactivated");
 	   }else
-		   Logs.info("Other Contact Number is updated");
+		   Logs.info("Employee is Deactivated");
 	}
 
+	@And("User clicks on Activate button on Manage Employees page")
+	public void user_clicks_on_Activate_button_on_Manage_Employees_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.activateButton, 20);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.activateButton, "Activate Button");
+	}
+	
 	@Then("User validates the Activated Employee")
 	public void user_validates_the_Activated_Employee() throws Exception{
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String managerName = Excel_Utility.getCellData(2, 0);
+		String managerName = Excel_Utility.getCellData(4, 0);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
 		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
@@ -2284,27 +2315,35 @@ public class Stratos_Admin_Employees {
 			Logs.info("Employee is Activated");
 	}
 
-	@Then("User clicks on Select File button")
-	public void user_clicks_on_Select_File_button()throws Exception {
-	    
-	    
+// Bulk Upload
+	
+	@Then("User clicks on Select File button and upload employees file")
+	public void user_clicks_on_Select_File_button_and_upload_employees_file() throws Exception {
+		Thread.sleep(3000);
+		String CSVFile = "Auto-IT/Bulk_Employee-Stable.xlsx";
+		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 
-	@Then("User double clicks on valid data excel file")
-	public void user_double_clicks_on_valid_data_excel_file() throws Exception{
-	    
-	    
+	@Then("User clicks on Select File button to upload invalid Employees bulk file")
+	public void user_clicks_on_selects_File_button_to_upload_invalid_Employees_bulk_file() throws Exception {
+		Thread.sleep(3000);
+		String CSVFile = "Auto-IT/Bulk-Employee-Unstable.xlsx";
+		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 
-	@Then("User clicks on selects File button")
-	public void user_clicks_on_selects_File_button() throws Exception{
-	    
-	    
+	@Then("User clicks on Select File button to upload empty Employees bulk file")
+	public void user_clicks_on_Select_File_button_to_upload_empty_Employees_bulk_file() throws Exception {
+		Thread.sleep(3000);
+		String CSVFile = "Auto-IT/Bulk-Employee-Null.xlsx";
+		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
-
-	@Then("User double clicks on invalid data excel file")
-	public void user_double_clicks_on_invalid_data_excel_file()throws Exception {
-	    
-	    
+	
+	@Given("User validates the error message as {string} of empty Employee Bulk Upload file")
+	public void user_validates_the_error_message_as_of_empty_Employee_Bulk_Upload_file(String string) throws Exception {
+		if (!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "File Upload"))) {
+			ExceptionHandling.HandleAssertion("Null bulk upload file is uploaded");
+		} else
+			Logs.info("Null file upload file is not uploaded");
 	}
+	
 }

@@ -58,7 +58,7 @@ public class Stratos_Manager_Login {
 	@Given("User enters Pin as {string}")
 	public void user_enters_Pin_as(String string)throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String pin=Excel_Utility.getCellData_Integer(1, 2);
+		String pin=Excel_Utility.getCellData(1, 2);
 	    testBase.waitForElement(Stratos_Manager_Login_PageObjects.pinField, 20);
 	    testBase.typeinTextBox(Stratos_Manager_Login_PageObjects.pinField, pin, "PIN");
 	}

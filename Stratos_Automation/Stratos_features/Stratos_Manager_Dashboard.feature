@@ -25,4 +25,8 @@ Background:
     And User clicks on view sites
     And User validates the site details
     And User clicks on More Info
-    Then User validates the displayed sites
+    And User clicks on Active Employee
+    And User validates the displayed employee details
+    And User clicks on Back button
+    Then User clicks on Active Shifts More Info 
+    And User validates Assigned Tasklist

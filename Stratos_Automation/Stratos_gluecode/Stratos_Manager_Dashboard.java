@@ -1,6 +1,5 @@
 package Stratos_gluecode;
 
-import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
 import Stratos_pageObjects.Stratos_Manager_Dashboard_Pageobjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;

@@ -522,5 +522,5 @@ public class testBase extends PageBase {
 	       }catch (Exception e){
 				ExceptionHandling.HandleExecption(e, "Unable to select file");
 	       }
-		}	
+		}
 }		

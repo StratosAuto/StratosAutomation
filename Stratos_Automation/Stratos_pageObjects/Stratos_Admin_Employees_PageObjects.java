@@ -4,8 +4,10 @@ import org.openqa.selenium.By;
 
 public class Stratos_Admin_Employees_PageObjects {
 	
+	public static final By nullBulkFileError=By.xpath("//p[text()='Your Excel file is Empty.']");
 	public static final By employeesMenu=By.xpath("//span[text()='Employees']");
 	public static final By addNewEmployeeButton=By.xpath("//button[text()=' Add New Employee ']");
+	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By saveButton=By.xpath("//button[text()=' Save ']");
 	public static final By nullValidateEmployees=By.xpath("//h1[text()='Manage Employees']");
 	public static final By manageEmployee=By.xpath("//button[text()=' Manage Employee ']");
@@ -14,6 +16,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By deactivateButton=By.xpath("//button[text()=' Deactivate ']");
 	public static final By activateButton=By.xpath("//button[text()=' Activate ']");
 	public static final By generatePIN=By.xpath("//button[text()=' Generate Pin ']");
+	public static final By filterError=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td");
 	public static final By parentEmployee(String Object) {
 		By data=By.xpath("//div[@role='listbox']/descendant::mat-option/span[contains(text(),'"+Object+"')]");
 				return data;
@@ -61,7 +64,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By lengthJobTitle=By.xpath("//span[text()='Max 25 Characters Allowed']");
 	
 // Employee Residential Address Details	
-	public static final By employeeResidentialDetails=By.xpath("//button[text()=' Employee Residential Address Details']");
+	public static final By employeeResidentialDetails=By.xpath("(//button[@class='btn'])[2]");
 	public static final By residentialStreet1=By.xpath("//input[@formcontrolname='streetOne']");
 	public static final By residentialStreet2=By.xpath("//input[@formcontrolname='streetTwo']");
 	public static final By residentialCity=By.xpath("//mat-label[text()='City']");
@@ -203,7 +206,8 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By contractEndDate=By.xpath("//span[text()=' 28 ']");
 // Parent Employee Details	
 	public static final By parentEmployeeDetails=By.xpath("//button[text()=' Parent Employee Details']");
-	public static final By parentContactName=By.xpath("//mat-select[@formcontrolname='parentEmployeeData']");
+	public static final By parentdropdown=By.className("[class='ng-tns-c24-155']");
+	public static final By parentContactName=By.xpath("(//mat-select[@role='combobox'])[19]");
 	public static final By parentFirstName=By.xpath("//input[@formcontrolname='parentFirstName']");
 	
 // 3rd Party Provider
