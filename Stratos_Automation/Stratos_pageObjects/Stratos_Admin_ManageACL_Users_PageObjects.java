@@ -26,5 +26,5 @@ public class Stratos_Admin_ManageACL_Users_PageObjects {
 	public static final By fieldLengthMobileNumber=By.xpath("//span[text()='Give Correct Mobile Number']");
 	public static final By fieldLengthPassword=By.xpath("//span[text()='Minimum 6 Characters Allowed.']");
 	public static final By fieldLengthConfirmPassword=By.xpath("(//span[text()='Minimum 6 Characters Allowed.'])[2]");
-//	public static final By 
+	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 }

@@ -95,6 +95,11 @@ public class Stratos_Admin_Manage_ACL_Users {
 		   testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
 	}
 
+	@And ("User clicks on Cancel button on Users")
+	public void user_clicks_on_Cancel_button_on_Users() throws Exception {
+		testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.cancelButton, "Cancel Button");
+	}
+	
 	@Then("User Validates the error messages of Invalid field length data of all the feilds in Create User page")
 	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_all_the_feilds_in_Create_User_page() throws Exception {
 		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthFirstName, "First Name"))) {

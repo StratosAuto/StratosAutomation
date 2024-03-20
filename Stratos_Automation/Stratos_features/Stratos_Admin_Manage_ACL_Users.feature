@@ -12,14 +12,14 @@ Feature: Manage ACL Users
     And User clicks on Add New User button
     And Verify that user able to enter invalid data in Create user page
     Then User Validates the error messages of Invalid data of all the feilds in
-    And User clicks on Cancel button
+    And User clicks on Cancel button on Users
     And User clicks on Add New User button
     And Verify that user able to enter invalid field length data in Create User page
     Then User Validates the error messages of Invalid field length data of all the feilds in Create User page
-    Then User clicks on Cancel button
+    Then User clicks on Cancel button on Users
     And User clicks on Add New User button
     Then User clicks on Add button to validate mandatory fields
-    Then User clicks on Cancel button
+    Then User clicks on Cancel button on Users
     And User clicks on Add New User button
     And User enters First Name as "firstName" in Create User page
     And User enters Email Address as "emailAddress" in Create User page
