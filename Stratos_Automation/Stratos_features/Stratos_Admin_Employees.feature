@@ -7,6 +7,7 @@ Feature: Employees module functionality
     When Click on Log In button
     Then Verify Success message
 
+
   Scenario: Verify Add New Employee functionality as Manager
     Given User clicks on Employees in the menu
     And User clicks on Add New Employee button

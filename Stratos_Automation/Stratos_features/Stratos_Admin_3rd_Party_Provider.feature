@@ -7,6 +7,7 @@ Feature: 3rd Party Provider functionality
     When Click on Log In button
     Then Verify Success message
 
+
   Scenario: Verify Add New Provider functionality status as Active
     Given User clicks on 3rd Party Provider in the menu
     And User clicks on Add New Provider button
