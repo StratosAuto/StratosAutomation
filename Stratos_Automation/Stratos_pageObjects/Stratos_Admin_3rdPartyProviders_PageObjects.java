@@ -41,12 +41,12 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By bulkUploadButton=By.xpath("//button[text()=' Bulk Upload ']");
 	public static final By nullValidate=By.xpath("//h1[text()='Manage Providers']");
 	public static final By activeProviderRef=By.xpath("//td[text()='65b5dba994f8e6cc41dd5024']");
-	public static final By filterValidates=By.xpath("(//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td)[2]");
+	public static final By filterValidates=By.xpath("(//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td)[2]");
 	public static final By inactiveProvider=By.xpath("//span[text()='Inactive Providers']");
 	public static final By inactiveProviderRef=By.xpath("//td[text()='6576cdab2c97546ad1fa115a']");
-	public static final By errorFilter=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td");
 	public static final By itemsDropdown=By.xpath("//span[text()='5']");
 	public static final By itemsDropdownOption=By.xpath("//span[text()=' 10 ']");
+	public static final By errorFilter=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td");
 	
 	public static final By manageProviderButton=By.xpath("//button[text()=' Manage Provider ']");
 	public static final By updateButton=By.xpath("//button[text()=' Update ']");
@@ -59,7 +59,7 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By file=By.xpath("//input[@type='file']");
 	public static final By submitButton=By.xpath("//button[text()='Submit']");
 	public static final By errorFileUpload=By.xpath("//p[text()='Please fill required and valid data in row number 2']");
-	public static final By nullFileUpload=By.xpath("//p[text()='No File Selected']");
+	public static final By nullFileUpload=By.xpath("//p[text()='Your Excel file is Empty.']");
 	public static final By successFileUpload=By.xpath("");
 	public static final By cancelBulkUpload=By.xpath("//button[text()='Cancel']");	
 }

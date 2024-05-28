@@ -1,12 +1,21 @@
-Feature: Admin Login functionality
+Feature: Login
 
-  Scenario: Verify the login functionality with valid credentials
-    Given User Enter the Stratos application URL
-    Then User enter the valid username
-    Then User enter the valid passsword
-    Then user click on login button
-    Then User navigates to home page
+Scenario: Login with valid credentials
+    Given Enter the Url
+    And Enter Email Address
+    And Enter Password
+    When Click on Log In button
+    Then Verify Success message
 
+<<<<<<< HEAD
+
+  #Scenario: Login with invalid credentials
+    #Given Enter the Url
+    #And Enter invalid Email Address
+    #And Enter invalid Password
+    #When Click on Log In button
+    #Then Verify Error message
+=======
   Scenario: Verify the login functionality with invalid credentials
     Given User Enter the Stratos application URL
     Then User enter the invalid username
@@ -29,3 +38,4 @@ Feature: Admin Login functionality
     Then User verifies the success message as"Password Updated Successfully"
     
     
+>>>>>>> b8fa17dd6ed3b98ebf4580ee720f571d10b5c29c

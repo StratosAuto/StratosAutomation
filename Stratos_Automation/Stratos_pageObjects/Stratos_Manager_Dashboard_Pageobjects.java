@@ -21,8 +21,12 @@ public class Stratos_Manager_Dashboard_Pageobjects {
 	public static final By viewSites=By.xpath("//div[text()=' view sites ']");
 	public static final By moreInfo=By.xpath("//button[text()='More Info']");
 	public static final By activeMoreInfo=By.xpath("(//button[text()='More Info'])[2]");
-//	public static final By 
-//	public static final By 
-//	public static final By 
-//	public static final By 
+	public static final By validateSiteName=By.xpath("//app-site-details[@class='ng-star-inserted']/div/div/h1");
+	public static final By validateClientName=By.xpath("//app-site-details[@class='ng-star-inserted']/div/div[2]/h1");
+	public static final By activeEmployees=By.xpath("//app-employee-details[@class='ng-star-inserted']/div/div/div/div/li");
+	public static final By validateEmployeeName=By.xpath("(//app-employee-details[@class='ng-star-inserted']/div/div/div/div/div/div/div/p)[2]");
+	public static final By validateSupervisorName=By.xpath("(//app-employee-details[@class='ng-star-inserted']/div/div/div/div/div/div/div/p)[5]");
+	public static final By validateTask=By.xpath("(//div[@class='row'])[3]/div/li");
+	public static final By validateTaskDescription=By.xpath("(//div[@class='row'])[3]/div[2]/p");
+	
 }
