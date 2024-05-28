@@ -8,7 +8,7 @@ Feature: Manage ACL Roles
     Then Verify Success message
 
   Scenario: Verify the Add Role functionality
-    Given user clicks on Manage ACL Roles in the menu
+    Given User clicks on Manage ACL Roles in the menu
     And User clicks on Add Role button
     And User clicks on Add button to validate mandatory fields of Roles
     And User clicks on close button
@@ -21,5 +21,13 @@ Feature: Manage ACL Roles
     And User enters Name as "name" in Add Roles page to update name
     And User cliks on Update button
     And User validates changes made
+    Then User clicks on Users button and navigates to Manage ACL Users page
+    
+    Scenario: Verify the Filter functionality
+    Given User clicks on Manage ACL Roles in the menu
+    And User enters valid Role Name as "roleName"
+    Then User validates the filtered data of valid Role Name
+    And User enters invalid Role Name as "roleName"
+    Then User validates the error message as "errorMessage" of invalid Role Name
     And User clicks on Items per page dropdown
     And Users selects the desired number from items per page dropdown

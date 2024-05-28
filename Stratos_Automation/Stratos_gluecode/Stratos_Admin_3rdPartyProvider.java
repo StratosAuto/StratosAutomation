@@ -286,8 +286,9 @@ public class Stratos_Admin_3rdPartyProvider {
 	@Then("User selects City as {string} from City dropdown in Add Provider page")
 	public void user_selects_City_as_from_City_dropdown_in_Add_Provider_page(String string) throws Exception {
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.city, 20);
-		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.city, "City");
-		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.selectCity, "City");
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.city, "City");
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.selectCity, "City");
 	}
 
 	@Then("User validates valid Province is auto-populated when city is selected")
@@ -303,9 +304,9 @@ public class Stratos_Admin_3rdPartyProvider {
 	@Then("User selects Country as {string} from country dropdown in Add Provider page")
 	public void user_selects_Country_as_from_country_dropdown_in_Add_Provider_page(String string) throws Exception {
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.country, 20);
-		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.country, "Country");
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.country, "Country");
 		Thread.sleep(3000);
-		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.selectCountry, "Country");
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.selectCountry, "Country");
 	}
 
 	@Then("User enters Postal Code as {string} in Add Provider page")
@@ -334,7 +335,7 @@ public class Stratos_Admin_3rdPartyProvider {
 	public void user_verifies_the_created_provider_to_validate_provider_is_created() throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String providerName = Excel_Utility.getCellData(1, 0);
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, providerName, "Filter");
 		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(providerName))) {

@@ -77,7 +77,7 @@ public class Stratos_Admin_Employees {
 	    
 // Postal Address Details
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.postalAddressDetails, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.postalAddressDetails, "Postal Address Details");
+	    testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.postalAddressDetails, "Postal Address Details");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.postalCode, 20);
 	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.postalCode, postalCode, "Postal Code");
 	    
@@ -524,6 +524,9 @@ public class Stratos_Admin_Employees {
 	public void user_enters_Mobile_Number_as_in_Employee_Details(String string) throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String mobileNumber=Excel_Utility.getCellData_Integer(2, 2);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.countryCode, "Country Code");
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.selectCountryCode, "Country Code");
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.mobileNumber, 20);
 	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.mobileNumber, mobileNumber, "Mobile Number");
 	}
@@ -1081,6 +1084,9 @@ public class Stratos_Admin_Employees {
 	public void user_enters_Mobile_Number_as_in_Employee_Details_of_Supervisor(String string) throws Exception{
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String mobileNumber=Excel_Utility.getCellData_Integer(3, 2);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.countryCode, "Country Code");
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.selectCountryCode, "Country Code");
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.mobileNumber, 20);
 	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.mobileNumber, mobileNumber, "Mobile Number");	    
 	}
@@ -1117,7 +1123,7 @@ public class Stratos_Admin_Employees {
 	@Given("User clicks on Birthday date picker button and selects Birthday as {string} in Employee Details of Supervisor")
 	public void user_clicks_on_Birthday_date_picker_button_and_selects_Birthday_as_in_Employee_Details_of_Supervisor(String string)throws Exception {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.supervisorBirthdayYear, "Year");
@@ -1632,6 +1638,9 @@ public class Stratos_Admin_Employees {
 	public void user_enters_Mobile_Number_as_in_Employee_Details_of_Employee(String string) throws Exception{
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String mobileNumber=Excel_Utility.getCellData_Integer(4, 2);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.countryCode, "Country Code");
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_Employees_PageObjects.selectCountryCode, "Country Code");
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.mobileNumber, 20);
 	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.mobileNumber, mobileNumber, "Mobile Number");
 	}

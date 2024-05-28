@@ -109,10 +109,7 @@ public class Stratos_Manager_Dashboard {
 	 testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.moreInfo, 20);
 	 testBase.clickonElement(Stratos_Manager_Dashboard_Pageobjects.moreInfo, "More Info");
 	}
-
-	@Then("User validates the displayed sites")
-	public void user_validates_the_displayed_sites() {
-	 
-	 
-	}
+	
+	
+	
 }

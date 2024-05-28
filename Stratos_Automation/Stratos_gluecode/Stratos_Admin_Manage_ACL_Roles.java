@@ -13,7 +13,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
 	public static String sheetName = "MANAGE ACL ROLES";
 	
-	@Given("user clicks on Manage ACL Roles in the menu")
+	@Given("User clicks on Manage ACL Roles in the menu")
 	public void user_clicks_on_Manage_ACL_Roles_in_the_menu() throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.manageACLRolesMenu, 20);
 	    testBase.clickonElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.manageACLRolesMenu, "Manage ACL Roles");
@@ -115,5 +115,46 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	    	ExceptionHandling.HandleAssertion("Name is not updated");
 	    }else
 	    	Logs.info("Name is updated");
+	}
+	
+	@Then("User clicks on Users button and navigates to Manage ACL Users page")
+	public void user_clicks_on_Users_button_and_navigates_to_Manage_ACL_Users_page() throws Exception {
+	    testBase.clickonElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.userButton, "User Button");
+	    if(!(testBase.isElementVisible(Stratos_Admin_Manage_ACL_Roles_PageObjects.manageACLUser, "Manage ACL User"))) {
+	    	ExceptionHandling.HandleAssertion("User not Navigated to Manage ACL User page");
+	    }else
+	    	Logs.info("User Navigated to Manage ACL User page");
+	}
+
+	@Given("User enters valid Role Name as {string}")
+	public void user_enters_valid_Role_Name_as(String string) throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+	    String name=Excel_Utility.getCellData(1, 1);
+	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+	    Thread.sleep(5000);
+	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
+	}
+
+	@Then("User validates the filtered data of valid Role Name")
+	public void user_validates_the_filtered_data_of_valid_Role_Name() throws Exception {
+	    if(!(testBase.isElementVisible(Stratos_Admin_Manage_ACL_Roles_PageObjects.roleValidate, "Filter"))){
+	    	ExceptionHandling.HandleAssertion("Role details are not visible");
+	    }else
+	    	Logs.info("Role details are visible");
+	}
+
+	@Then("User enters invalid Role Name as {string}")
+	public void user_enters_invalid_Role_Name_as(String string) throws Exception {
+		String data = testBase.randomAplhabet(9);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data, "Filter");
+		Thread.sleep(3000);
+	}
+
+	@Then("User validates the error message as {string} of invalid Role Name")
+	public void user_validates_the_error_message_as_of_invalid_Role_Name(String string) throws Exception {
+	   if(!(testBase.isElementVisible(Stratos_Admin_Manage_ACL_Roles_PageObjects.roleValidate, "Filter"))) {
+		   ExceptionHandling.HandleAssertion("No data matching the filter element is not visible");
+	   }else
+		   Logs.info("No data matching the filter element is visible");
 	}
 }

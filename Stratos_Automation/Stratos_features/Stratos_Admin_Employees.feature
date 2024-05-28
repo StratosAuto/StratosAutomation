@@ -270,18 +270,6 @@ Feature: Employees module functionality
     And User selects Parent Contact Name as "parentContactName" from Parent Contact Name dropdown in Parent Employees Details of Employee
     Then User clicks on Save button
     And User verifies the created Employee to validate Employee is created
-    #And User clicks on Manage Employee button
-    #And User enters Mobile Number as "mobileNumber" in Edit Employees page
-    #And User clicks on Update button on employee page
-    #Then User validates the updates of Active Employees
-    #And User clicks on Deactivate button on Manage Employees page
-    #Then User validates the Deactivated Employee on employee page
-    #And User clicks on Manage Employee button
-    #And User enters Other Contact Number as "otherContactNumber" in Edit Employees page
-    #And User clicks on Update button
-    #Then User validates the updates of Inactive Employees
-    #And User clicks on Activate button on Manage Employees page
-    #Then User validates the Activated Employee
     
   Scenario: Verify the Active Employees and Inactive Employees filter functionality
     Given User clicks on Employees in the menu

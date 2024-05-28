@@ -26,6 +26,8 @@ public class Stratos_Admin_Employees_PageObjects {
 // Employee Details
 	public static final By firstName=By.xpath("//input[@formcontrolname='FirstName']");
 	public static final By lastName=By.xpath("//input[@formcontrolname='LastName']");
+	public static final By countryCode=By.xpath("//span[text()='+27']");
+	public static final By selectCountryCode=By.xpath("//span[text()=' +91 ']");
 	public static final By mobileNumber=By.xpath("//input[@formcontrolname='mobileNumber']");
 	public static final By otherContactNumber=By.xpath("//input[@formcontrolname='otherContactNumber']");
 	public static final By emailAddress=By.xpath("//input[@formcontrolname='email']");
@@ -79,7 +81,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By lengthResidentialStreet2=By.xpath("//span[text()='Maximum 100 characters allowed.']");
 	
 // Postal Address Details	
-	public static final By postalAddressDetails=By.xpath("//button[text()=' Postal Address Details']");
+	public static final By postalAddressDetails=By.xpath("//button[text()=' Postal Address Details ']");
 	public static final By postalStreet1=By.xpath("//input[@formcontrolname='PostalstreetOne']");
 	public static final By postalStreet2=By.xpath("//input[@formcontrolname='PostalstreetTwo']");
 	public static final By postalCity=By.xpath("(//mat-label[text()='City'])[2]");
@@ -94,7 +96,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By lengthPostalStreet2=By.xpath("(//span[text()='Maximum 100 characters allowed.'])[3]");
 	
 // Emergency Contact Details
-	public static final By emergencyContactDetails=By.xpath("//button[text()=' Emergency Contact Details']");
+	public static final By emergencyContactDetails=By.xpath("//button[text()=' Emergency Contact Details ']");
 	public static final By emergencyFirstName=By.xpath("//input[@formcontrolname='EmergencyContactFirstName']");
 	public static final By emergencyLastName=By.xpath("//input[@formcontrolname='EmergencyContactLastName']");
 	public static final By emergencyMobileNumber=By.xpath("//input[@formcontrolname='EmergencyContactmobileNumber']");
@@ -113,7 +115,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By invalidEmergencyLastName=By.xpath("(//span[text()='Give Correct Name'])[4]");
 	public static final By invalidEmergencyMobile=By.xpath("(//span[text()='Give Correct Mobile Number'])[2]");
 	public static final By invalidEmergencyOtherContact=By.xpath("(//span[text()='Give Correct Number'])[2]");
-	public static final By invalidEmergencyEmailAddress=By.xpath("(//span[text()='Invalid Email Format.'])[2]");
+	public static final By invalidEmergencyEmailAddress=By.xpath("//span[text()='Invalid Email Format.']");
 	public static final By invalidEmergencyPostalCode=By.xpath("(//span[text()='Give Correct Postal Code'])[3]");
 	public static final By lengthEmergencyFirstName=By.xpath("//span[text()='Maximum 25 characters Allowed.']");
 	public static final By lengthEmergencyLastName=By.xpath("(//span[text()='Maximum 25 characters Allowed.'])[2]");
@@ -121,7 +123,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By lengthEmergencyStreet2=By.xpath("(//span[text()='Maximum 100 characters allowed.'])[5]");
 	
 // Next Of Kin Details	
-	public static final By kinDetails=By.xpath("//button[text()=' Next Of Kin Details']");
+	public static final By kinDetails=By.xpath("//button[text()=' Next Of Kin Details ']");
 	public static final By kinFirstName=By.xpath("//input[@formcontrolname='kinFirstName']");
 	public static final By kinLastName=By.xpath("//input[@formcontrolname='kinLastName']");
 	public static final By kinMobileNumber=By.xpath("//input[@formcontrolname='kinContactNumber']");
@@ -159,7 +161,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By invalidFirstAidCPR=By.xpath("//span[text()='Give Correct Details']");
 	
 // Compliance/Training/Certification Details	
-	public static final By complianceDetails=By.xpath("//button[text()=' Compliance / Training / Certification Details']");
+	public static final By complianceDetails=By.xpath("//button[text()=' Compliance / Training / Certification Details ']");
 	public static final By driverLicence=By.xpath("//input[@formcontrolname='DriversLicence']");
 	public static final By driverLicenceCalendarButton=By.xpath("(//span[@class='mat-mdc-button-touch-target'])[4]");
 	public static final By driverLicenceCalendarArrow=By.xpath("//span[@class='mdc-button__label']");
@@ -177,7 +179,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By invalidGunLicence=By.xpath("//span[text()='Give Valid Gun Licence Number']");
 	
 // Equipment Details
-	public static final By equipmentDetails=By.xpath("//button[text()=' Equipment Details']");
+	public static final By equipmentDetails=By.xpath("//button[text()='Equipment Details']");
 	public static final By useForce=By.xpath("//mat-label[text()='Use Force']");
 	public static final By selectUseForce=By.xpath("//span[text()='Yes']");	
 	public static final By trafficControl=By.xpath("//mat-label[text()='Traffic Control']");
@@ -189,7 +191,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By useGun=By.xpath("//mat-label[text()='Use Gun']");
 	public static final By selectUseGun=By.xpath("(//span[text()='No'])[2]");
 // Contract Details
-	public static final By contractDetails=By.xpath("//button[text()=' Contract Details']");
+	public static final By contractDetails=By.xpath("//button[text()='Contract Details']");
 	public static final By contractType=By.xpath("//mat-label[text()='Contract Type']");
 	public static final By selectContractType=By.xpath("//span[text()='Contractor']");
 	public static final By supervisorContractType=By.xpath("//span[text()='Permanent']");
@@ -205,9 +207,9 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By contractEndMonth=By.xpath("//span[text()=' DEC ']");
 	public static final By contractEndDate=By.xpath("//span[text()=' 28 ']");
 // Parent Employee Details	
-	public static final By parentEmployeeDetails=By.xpath("//button[text()=' Parent Employee Details']");
+	public static final By parentEmployeeDetails=By.xpath("//button[text()=' Parent Employee Details ']");
 	public static final By parentdropdown=By.className("[class='ng-tns-c24-155']");
-	public static final By parentContactName=By.xpath("(//mat-select[@role='combobox'])[19]");
+	public static final By parentContactName=By.xpath("(//mat-select[@role='combobox'])[20]");
 	public static final By parentFirstName=By.xpath("//input[@formcontrolname='parentFirstName']");
 	
 // 3rd Party Provider
