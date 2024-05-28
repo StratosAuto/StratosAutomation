@@ -157,7 +157,7 @@ Feature: Employees module functionality
     And User validates valid province is auto-populated when city is selected in Emergency Contact Details of Supervisor
     And User enter Postal Code as "postalCode" in Emergency Contact Details of Supervisor
     And User selects Country as "country" from Select Country dropdown in Emergency Contact Details of Supervisor
-   
+    
     And User clicks on Security Details of Supervisor
     And User enters Security Licence Number as "securityLicenceNumber" in Security Details of Supervisor
     And User clicks on Security Licence Expiry Date date picker button and selects Security Licence Expiry Date as "securityLicencetExpiryDate" in Security Details of Supervisor
