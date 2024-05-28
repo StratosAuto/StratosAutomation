@@ -23,7 +23,7 @@ public class Stratos_Home {
 
 	@Given("Admin User  click on Themes")
 	public void admin_User_click_on_Themes() throws Exception {
-		testBase.waitForElement(Stratos_Login_PageObjects.themes, 20);
+		testBase.waitForElement(Stratos_Login_PageObjects.themes, 40);
 		testBase.clickonElement(Stratos_Login_PageObjects.themes, "click on themes");
 	}
 

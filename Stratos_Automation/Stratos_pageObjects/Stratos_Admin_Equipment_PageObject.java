@@ -18,7 +18,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By licenceExpiryDate=By.xpath("[class='mat-mdc-button-touch-target']");
 	public static final By saveAndContinue=By.xpath("//button[@form='myForm']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
-	public static final By selectClientName=By.xpath("//span[text()='John Fred']");
+	public static final By selectClientName=By.xpath("//span[text()='Omega Building']");
 	public static final By selectSiteName=By.xpath("//span[text()='sativa']");
 	public static final By selectEquipmentType=By.xpath("//span[text()='Electronic Device']");
 	public static final By selectAutoAllocate=By.xpath("//span[text()='YES']");
@@ -54,7 +54,34 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By clearButton=By.xpath("//button[text()=' Clear ']");
 	public static final By bulkUploadCancelButton=By.xpath("//button[text()='Cancel']");
 
+	public static final By inactiveManageEquipment=By.xpath("//button[text()=' Manage Equipment ']");
+	public static final By assignEquipment=By.xpath("//button[text()=' Assign Employee ']");
+	public static final By employeeNameInAssignEmployee=By.xpath("//input[@formcontrolname='employeeName']");
+	public static final By selectEmployeeNameInAssignEmployee=By.xpath("(//span[@class='mdc-list-item__primary-text'])[1]");
+	public static final By returnDateInAssignEmployee=By.xpath("(//button[@type='button'])[2]");
+	public static final By selectreturnDateInAssignEmployee=By.xpath("//span[text()=' 30 ']");
+	public static final By submitButtonAssignEmployee=By.xpath("//button[text()=' Submit ']");
+	
 
+	public static final By manageEquipmentInActiveEquipment=By.xpath("(//button[text()=' Manage Equipment '])[1]");
+	public static final By returnEquipmentButton=By.xpath(" //button[text()=' Return Equipment ']");
+	public static final By returnComments=By.xpath("//input[@formcontrolname='comments']");
+	public static final By returnStateDropDown=By.xpath("//mat-select[@formcontrolname='state']");
+	public static final By selectReturnStateDropDown=By.xpath("//span[text()='Faulty']");
+	public static final By SubmitButtonReturnEquipment=By.xpath("//button[text()=' Submit ']");
+	public static final By manageEquipmentInFaulty=By.xpath("(//button[text()=' Manage Equipment '])[1]");
+	public static final By dectivateButtonInFaultyEquipment=By.xpath("//button[text()=' Deactivate ']");
+	public static final By workingStateinReturnEquipment=By.xpath("//span[text()='Working']");
+	
+	
+	public static final By successMessageforAssignEmployee=By.xpath("//p[text()='Equipment assigned successfully']");
+	public static final By returnStatrSuccessMessage=By.xpath("//p[text()='Equipment updated successfully']");
+	
+	
+	
+	
+	
+	
 
 
 

@@ -51,8 +51,8 @@ public class Stratos_Client_PageObjects {
 	public static final By invalidAccountManager=By.xpath("//span[text()='Give Correct Name']");
 	public static final By inavlidPostalCode=By.xpath("//span[text()='Give Correct Postal Code']");
 	public static final By fieldLengthErrorForClientName=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
-	public static final By fieldValiErrorforStreet=By.xpath("//span[text()='Max length is 100 characters']");
-	public static final By filedValiErrorForStreet2=By.xpath("(//span[text()='Max length is 100 characters'])[2]");
+	public static final By fieldValiErrorforStreet=By.xpath("(//span[text()='Max length is 100 characters allowed'])[1]");
+	public static final By filedValiErrorForStreet2=By.xpath("(//span[text()='Max length is 100 characters allowed'])[2]");
 	public static final By fieldValiForCommentserror=By.xpath("//span[text()='Max length is 250 characters']");
 //	public static final By =By.xpath("");
 //	public static final By =By.xpath("");

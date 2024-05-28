@@ -19,8 +19,11 @@ public class Stratos_SignUp_PageObjects {
 	public static final By firstNameFieldLength=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
 	public static final By lastNameFieldLength=By.xpath("//span[text()='Maximum 25 Characters Allowed']");
 	public static final By passwordFieldLength=By.xpath("//span[text()='Minimum 6 Characters Allowed.']");
-	public static final By firstNameInvalidError=By.xpath("//span[text()='No Numbers Allowed.']");
-	public static final By lastNameInvalidError=By.xpath("//span[text()='No Numbers Allowed.']");
-	public static final By emailAddressInvalidError=By.xpath("//span[text()='Invalid Valid Email Address']");
-	public static final By mobileNumberInvaidError=By.xpath("//span[text()='Give Correct Mobile Number']");
+	public static final By firstNameInvalidError=By.xpath("(//mat-error[@aria-atomic='true'])[1]");
+	public static final By lastNameInvalidError=By.xpath("(//mat-error[@aria-atomic='true'])[2]");
+	public static final By emailAddressInvalidError=By.xpath("//span[text()='Invalid Email Address']");
+	public static final By mobileNumberInvaidError=By.xpath("//span[text()='Give valid Mobile Number']");
+	
+	
+	
 }

@@ -39,6 +39,7 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By  addButton=By.xpath("//button[text()=' Add ']");
 	public static final By  doneButton=By.xpath("//button[text()=' Done ']");
     public static final By invalidDataErrorMessage =By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
+    public static final By AdressdropDown=By.xpath("//div[@role='listbox']");
     public static final By clickonCheckpoints =By.xpath("//h2[text()='Create Checkpoints']");
     public static final By checkpointsLAtitude =By.xpath("//input[@formcontrolname='latitude']");
     public static final By manageSite =By.xpath("//button[text()=' Manage Site '] ");
@@ -66,7 +67,10 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     
     public static final By SiteNameError=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
     
+    public static final By CancelButtonForInvalid=By.xpath("//button[text()=' Cancel ']");
     
-    
+    public static final By BulkUploadSuccessMessage=By.xpath("//p[text()='File Uploaded Successfully']");
+    public static final By DuplicateBulkfileUploadErrrorMessage=By.xpath("//p[text()='The Emails are already exist']");
+    public static final By EmptyBulkFileErrorMessage=By.xpath("//p[text()='No File Selected']");
     
 }

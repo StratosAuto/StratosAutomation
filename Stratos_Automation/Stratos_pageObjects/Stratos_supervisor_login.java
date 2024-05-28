@@ -3,9 +3,9 @@ package Stratos_pageObjects;
 import org.openqa.selenium.By;
 
 public class Stratos_supervisor_login {
-	public static final By loginAsemoloyeeBuuton=By.xpath(" //button[text()=' Log in as Employee ']");
+	public static final By loginAsemoloyeeBuuton=By.xpath("//button[text()=' Login as Employee ']");
 	public static final By enter5DigitPinField=By.xpath("//input[@formcontrolname='password']");
-	public static final By loginButton=By.xpath("//button[text()='Login']");
+	public static final By loginButton=By.xpath("//button[text()=' Login ']");
 	public static final By forgotPin=By.xpath("//span[text()='Forgot PIN?']");
 	public static final By enterEmployeeIdField=By.xpath("//input[@formcontrolname='password']");
 	public static final By requestNewPinButton=By.xpath("//button[text()=' Request New Pin ']");
