@@ -16,8 +16,8 @@ Background:
     Then User clicks on filter button
     Then User clicks on view dropdown and select view as "map"
     Then User clicks on filter button
-    Then User clicks on map tag
-    Then User clicks on view sites 
+    Then User clicks on map tag in dashboard
+    Then User clicks on view sites in dashboard
     Then User clicks on more info button
     Then User clicks on emplyee under all employees
     Then User verifies the shift details

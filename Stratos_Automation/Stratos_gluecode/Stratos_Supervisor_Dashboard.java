@@ -108,6 +108,7 @@ public class Stratos_Supervisor_Dashboard {
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, "first employee");
 		Thread.sleep(4000);
 	}
+	
 	@Then("User verifies the shift details")
 	public void user_verifies_the_shift_details() throws Throwable {
 		testBase.ScrollDownBottom();
@@ -143,6 +144,8 @@ public class Stratos_Supervisor_Dashboard {
 	}
 
 
-
-
+	@Then("User validates the error message")
+	public void user_validates_the_error_message() {
+		
+	}
 }

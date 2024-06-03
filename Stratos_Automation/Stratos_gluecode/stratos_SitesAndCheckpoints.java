@@ -524,7 +524,7 @@ public class stratos_SitesAndCheckpoints {
 	}
 
 	@Then("User clicks on Submit button")
-	public void user_click_on_submit_button() throws Exception {
+	public void user_click_on_submit_button_of_3rd_Party_Provider() throws Exception {
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.submitButton, "Submit Button");
 	    Thread.sleep(5000);
 	}

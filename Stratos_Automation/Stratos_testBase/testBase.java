@@ -509,17 +509,19 @@ public class testBase extends PageBase {
 	            // Handle exceptions, for example, log them or display an error message
 	            e.printStackTrace();
 	        }
+
+	    }
+		public static void FileUpload(By object,String filepath) throws Exception
+		{
+	       try {
+				Thread.sleep(3000);
+		        String absoluteFilePath = System.getProperty("user.dir") + "/" + filepath;
+				
+		        PageBase.driver.findElement(object).sendKeys(absoluteFilePath);
+		        Logs.info("File is selected Sucessfully");
+		        
+	       }catch (Exception e){
+				ExceptionHandling.HandleExecption(e, "Unable to select file");
+	       }
 		}
-	        public static void FileUpload(By object,String filepath) throws Exception
-	    	{
-	           try {
-	    			Thread.sleep(3000);
-	    	        String absoluteFilePath = System.getProperty("user.dir") + "/" + filepath;
-	    	        PageBase.driver.findElement(object).sendKeys(absoluteFilePath);
-	    	        Logs.info("File is uploaded Sucessfully");
-	    	        
-	           }catch (Exception e){
-	    			ExceptionHandling.HandleExecption(e, "Unable to upload file");
-	           }
-	    	}
-}
+}		
