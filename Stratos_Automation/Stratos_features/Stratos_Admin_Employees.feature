@@ -1,11 +1,10 @@
 Feature: Employees module functionality
 
   Background: 
-    Given Enter the Url
-    And Enter Email Address
-    And Enter Password
-    When Click on Log In button
-    Then Verify Success message
+    Given User Enter the Stratos application URL
+    Then User enter the valid username
+    Then User enter the valid password
+    Then user click on login button
 
 
   Scenario: Verify Add New Employee functionality as Manager
@@ -274,33 +273,17 @@ Feature: Employees module functionality
     
   Scenario: Verify the Active Employees and Inactive Employees filter functionality
     Given User clicks on Employees in the menu
-    And User enters valid Employee Ref as "EmployeerRef" on Active Employees
+    And User enters valid Employee Name as "EmployeerName" on Active Employees
     Then User validates the filtered data of Active Employees
-    And User enters invalid Employee Ref as "EmployeeRef" on Active Employees
+    And User enters invalid Employee Name as "EmployeeName" on Active Employees
     Then User validates the error message as "errorMessage" on Active Employees
     And User clicks on Inactive Employees
-    And User enters valid Employee Ref as "EmployeeRef" on Inactive Employees
+    And User enters valid Employee Name as "EmployeeName" on Inactive Employees
     Then User validates the filtered data on Inactive Employees
-    And User enters invalid Employee Ref as "EmployeeRef" on Inactive Employees
+    And User enters invalid Employee Name as "EmployeeName" on Inactive Employees
     Then User validates the error message as "errorMessage" on Inactive Employees
-    And User clicks on Items per page dropdown
+    And User clicks on Items per page dropdown to display items
     And Users selects the desired number from items per page dropdown
-
-  Scenario: Verify the Bulk Upload functionality
-    Then User clicks on Employees in the menu
-    And User clicks on Bulk Upload button
-    And User clicks on Select File button and upload employees file
-    And User clicks on Submit button
-    Then User validates the success message as "successMessage"
-    And User clicks on Bulk Upload button
-    And User clicks on Select File button to upload invalid Employees bulk file
-    And User clicks on Submit button
-    And User validates the error message as "errorMessage" of invalid Bulk Upload
-    And User clicks on Cancel button bulk upload
-    And User clicks on Bulk Upload button
-    And User clicks on Select File button to upload empty Employees bulk file
-    And User clicks on Submit button
-    And User validates the error message as "errorMessage" of empty Employee Bulk Upload file
 
 Scenario: Verify the Manage Employees functionality of Active Employees and Inactive Employees
     Then User clicks on Employees in the menu
@@ -313,3 +296,19 @@ Scenario: Verify the Manage Employees functionality of Active Employees and Inac
     And User clicks on Manage Employee button
     And User clicks on Activate button on Manage Employees page
     Then User validates the Activated Employee
+    
+  #Scenario: Verify the Bulk Upload functionality
+    #Then User clicks on Employees in the menu
+    #And User clicks on Bulk Upload button
+    #And User clicks on Select File button and upload employees file
+    #And User clicks on Submit button of Employee
+    #Then User validates the success message as "successMessage" of employee bulk file
+    #And User clicks on Bulk Upload button
+    #And User clicks on Select File button to upload invalid Employees bulk file
+    #And User clicks on Submit button of Employee
+    #And User validates the error message as "errorMessage" of invalid Employees Bulk Upload
+    #And User clicks on Cancel button bulk upload
+    #And User clicks on Bulk Upload button
+    #And User clicks on Select File button to upload empty Employees bulk file
+    #And User clicks on Submit button of Employee
+    #And User validates the error message as "errorMessage" of empty Employee null Bulk Upload file

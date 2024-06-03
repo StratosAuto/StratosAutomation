@@ -20,10 +20,8 @@ public class Stratos_Login {
 	@Given("User Enter the Stratos application URL")
 	public void admin_User_Enter_the_Stratos_application_URL() throws InterruptedException {
 			PageBase.OpenBrowser("Browser");
-			Thread.sleep(5000);
 			String url = Utils.getFileProperty("URL");
-			PageBase.driver.get(url);
-			Thread.sleep(5000);			
+			PageBase.driver.get(url);			
 			testBase.RefreshPage();
 	}
  
@@ -38,8 +36,8 @@ public class Stratos_Login {
 		
 	}
  
-	@Then("User enter the valid passsword")
-	public void admin_User_enter_the_valid_passsword() throws Exception {
+	@Then("User enter the valid password")
+	public void user_enter_the_valid_passsword() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.password, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
@@ -50,12 +48,11 @@ public class Stratos_Login {
 	public void admin_user_click_on_login_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
-		Thread.sleep(20000);
 	}
  
 	@Then("User navigates to home page")
 	public void Admin_User_navigates_to_home_page() throws Exception {
-		Thread.sleep(10000);
+			Thread.sleep(20000);
 			if (!(testBase.isElementVisible(Stratos_Login_PageObjects.validateLogin, "Login successfull"))) {
 				ExceptionHandling.HandleAssertion("User not Login into the application");
 			} else {

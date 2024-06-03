@@ -1,7 +1,6 @@
 package Stratos_gluecode;
 
 import org.openqa.selenium.By;
-
 import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
@@ -60,7 +59,7 @@ public class Stratos_Admin_3rdPartyProvider {
 //	  Invalid Postal Code
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, 20);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, postalCode, "Postal Code");
-		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, "");
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, "Mobile Number");
 	}
 
 	@Then("User Validates the error messages of Invalid data of all the feilds")
@@ -460,9 +459,9 @@ public class Stratos_Admin_3rdPartyProvider {
 	public void user_validates_the_filtered_data_of_Active_Provider() throws Exception {
 		String data = testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
 		if (!(activeFilterData.contains(data))) {
-			ExceptionHandling.HandleAssertion("Active Provider Ref element is not visible");
+			ExceptionHandling.HandleAssertion("Active Provider Name is not visible");
 		} else
-			Logs.info("Active Provider Ref element is visible");
+			Logs.info("Active Provider Name is visible");
 	}
 
 	@Then("User enters invalid Provider Name as {string} on Active Providers")
@@ -498,9 +497,9 @@ public class Stratos_Admin_3rdPartyProvider {
 	public void user_validates_the_filtered_data_of_Inactive_Provider() throws Exception {
 		String data = testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
 		if (!(inactiveFilterData.contains(data))) {
-			ExceptionHandling.HandleAssertion("Inactive Provider Ref element is not visible");
+			ExceptionHandling.HandleAssertion("Inactive Provider Name is not visible");
 		} else
-			Logs.info("Inactive Provider Ref element is visible");
+			Logs.info("Inactive Provider Name is visible");
 	}
 
 	@Then("User enters invalid Provider Name as {string} on Inactive Providers")
@@ -510,8 +509,8 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data1, "Filter");
 	}
 
-	@Then("User clicks on Items per page dropdown")
-	public void user_clicks_on_Items_per_page_dropdown() throws Exception {
+	@Then("User clicks on Items per page dropdown to display items")
+	public void user_clicks_on_Items_per_page_dropdown_to_display_items() throws Exception {
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, 20);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, "Items Dropdown");
 	}
@@ -540,8 +539,9 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.vatNumber, updatedVatNumber, "Vat Number");
 	}
 
-	@Given("User clicks on Update button")
-	public void user_clicks_on_Update_button() throws Exception {
+	@Given("User clicks on Update button on Edit Provider page")
+	public void user_clicks_on_Update_button_on_Edit_Provider_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.updateButton, 20);
 		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.updateButton, "Update");
 	}
@@ -634,34 +634,36 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.bulkUploadButton, "Bulk Upload");
 	}
 
-	@Given("User clicks on Select File button and upload file")
-	public void user_clicks_on_Select_File_button_and_upload_file() throws Exception {
+	@Given("User clicks on Select File button and upload 3rd Party Provider bulk file")
+	public void user_clicks_on_Select_File_button_and_upload_3rd_Party_Provider_bulk_file() throws Exception {
 		Thread.sleep(3000);
 //		testBase.clickonElement(Stratos_3rdPartyProviders_PageObjects.selectFile, "Select File");
 		String CSVFile = "Auto-IT/Bulk-Provider-Stable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 
-	@Given("User clicks on Submit button")
-	public void user_clicks_on_Submit_button() throws Exception {
+	@Given("User clicks on Submit button of 3rd Party Provider")
+	public void user_clicks_on_Submit_button_of_3rd_Party_Provider() throws Exception {
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.submitButton, "Submit");
 	}
 
-	@Then("User validates the success message as {string}")
-	public void user_validates_the_success_message_as(String string) {
-
-	}
-
-	@Then("User clicks on Select File button and not upload invalid file")
-	public void user_clicks_on_Select_File_button_and_not_upload_invalid_file() throws Exception {
+	@Then("User validates the success message as {string} of 3rd Party Provider bulk file")
+	public void user_validates_the_success_message_as_of_3rd_Party_Provider_bulk_file(String string) throws Exception {
+		if(!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.successFileUpload, "Bulk File Upload"))) {
+			ExceptionHandling.HandleAssertion("Bulk upload file is not uploaded");
+		}else
+			Logs.info("Bulk upload file is uploaded");
+		}
+	@Then("User clicks on Select File button and not upload invalid 3rd Party Provider bulk file")
+	public void user_clicks_on_Select_File_button_and_not_upload_invalid_3rd_Party_Provider_bulk_file() throws Exception {
 		String CSVFile = "Auto-IT/Bulk-Provider-Unstable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 
-	@Then("User validates the error message as {string} of invalid Bulk Upload")
-	public void user_validates_the_error_message_as_of_invalid_Bulk_Upload(String string) throws Exception {
+	@Then("User validates the error message as {string} of invalid Bulk Upload of 3rd Party Provider")
+	public void user_validates_the_error_message_as_of_invalid_Bulk_Upload_of_3rd_Party_Provider(String string) throws Exception {
 		if (!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.errorFileUpload, "File Upload"))) {
-			ExceptionHandling.HandleAssertion("Inavlid bulk upload file is uploaded");
+			ExceptionHandling.HandleAssertion("Invalid bulk upload file is uploaded");
 		} else
 			Logs.info("Invalid bulk upload file is not uploaded");
 	}
@@ -672,8 +674,8 @@ public class Stratos_Admin_3rdPartyProvider {
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.cancelBulkUpload, "Cancel");
 	}
 
-	@Then("User clicks on Select File button and not upload null file")
-	public void user_clicks_on_Select_File_button_and_not_upload_null_file() throws Exception {
+	@Then("User clicks on Select File button and not upload null 3rd Party Provider bulk file")
+	public void user_clicks_on_Select_File_button_and_not_upload_null_3rd_Party_Provider_bulk_file() throws Exception {
 		Thread.sleep(3000);
 		String CSVFile = "Auto-IT/Bulk-Provider-Null.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);

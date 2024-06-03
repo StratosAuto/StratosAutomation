@@ -4,11 +4,14 @@ import org.openqa.selenium.By;
 
 public class Stratos_Admin_Employees_PageObjects {
 	
+	public static final By invalidBulkFileError=By.xpath("//p[text()='Error']");
 	public static final By nullBulkFileError=By.xpath("//p[text()='Your Excel file is Empty.']");
+	public static final By submitButton=By.xpath("//button[text()='Submit']");
 	public static final By employeesMenu=By.xpath("//span[text()='Employees']");
 	public static final By addNewEmployeeButton=By.xpath("//button[text()=' Add New Employee ']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By saveButton=By.xpath("//button[text()=' Save ']");
+	public static final By employeeID=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td");
 	public static final By nullValidateEmployees=By.xpath("//h1[text()='Manage Employees']");
 	public static final By manageEmployee=By.xpath("//button[text()=' Manage Employee ']");
 	public static final By inactiveEmployees=By.xpath("//span[text()='Inactive Employees']");
@@ -17,6 +20,7 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By activateButton=By.xpath("//button[text()=' Activate ']");
 	public static final By generatePIN=By.xpath("//button[text()=' Generate Pin ']");
 	public static final By filterError=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td");
+	public static final By filterValidates=By.xpath("(//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td)[2]");
 	public static final By parentEmployee(String Object) {
 		By data=By.xpath("//div[@role='listbox']/descendant::mat-option/span[contains(text(),'"+Object+"')]");
 				return data;

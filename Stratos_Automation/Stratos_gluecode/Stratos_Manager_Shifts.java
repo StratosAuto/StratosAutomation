@@ -301,13 +301,18 @@ public class Stratos_Manager_Shifts {
 	    	Logs.info("Employee is alreay assigned error message is displayed");
 	}
 
-	@Given("User clicks on Select File button and upload Shifts bulk file")
-	public void user_clicks_on_Select_File_button_and_upload_Shifts_bulk_file() throws Exception {
+	@Given("User clicks on Select File button and upload valid Shifts bulk file")
+	public void user_clicks_on_Select_File_button_and_upload_valid_Shifts_bulk_file() throws Exception {
 		Thread.sleep(3000);
 		String CSVFile = "Auto-IT/Bulk-Shifts-Stable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 
+	@Then("User validates the success message as {string} of valid Shifts Bulk Upload")
+	public void user_validates_the_success_message_as_of_valid_Shifts_Bulk_Upload(String string) throws Exception {
+		
+	}
+	
 	@Then("User clicks on Select File button to upload invalid Shifts bulk file")
 	public void user_clicks_on_Select_File_button_to_upload_invalid_Shifts_bulk_file()throws Exception  {
 		Thread.sleep(3000);

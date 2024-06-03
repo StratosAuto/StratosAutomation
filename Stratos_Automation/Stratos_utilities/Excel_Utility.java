@@ -43,7 +43,7 @@ public class Excel_Utility {
 	public static String getCellData_Integer(int RowNum, int ColNum) throws Exception{
 try {
         Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-        int CellData = (int) Cell.getNumericCellValue();
+        long CellData = (long) Cell.getNumericCellValue();
         String CellValue=String.valueOf(CellData);
         return CellValue;
 }catch (Exception e){

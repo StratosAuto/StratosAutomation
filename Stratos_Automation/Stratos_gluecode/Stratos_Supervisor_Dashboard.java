@@ -85,24 +85,6 @@ public class Stratos_Supervisor_Dashboard {
 	public void user_validates_the_error_message() {
 		
 	}
-
-	@Then("User clicks on Items per page dropdown")
-	public void user_clicks_on_Items_per_page_dropdown() {
-	   
-	}
-
-	@Then("Users selects the desired number from items per page dropdown")
-	public void users_selects_the_desired_number_from_items_per_page_dropdown() {
-	   
-	}
-
-	@Then("User validates the displayed sites")
-	public void user_validates_the_displayed_sites() {
-	    
-	}
-
-
-
 }
 
 
