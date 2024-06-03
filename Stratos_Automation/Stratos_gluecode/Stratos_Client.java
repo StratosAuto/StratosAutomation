@@ -395,6 +395,11 @@ public void user_click_on_client_info_edit_button() throws Exception {
 	testBase.clickonElement(Stratos_Client_PageObjects.editManageClientDetails, "edit button");
     
 }
+@Then("User clicks on activate button")
+public void user_clicks_on_activate_button() throws Throwable {
+   testBase.waitForElement(Stratos_Client_PageObjects.activateButton, 20);
+   testBase.clickonElement(Stratos_Client_PageObjects.activateButton, "Activate client");
+}
 
 @Then("User change valid client name {string} in manage clients")
 public void user_change_valid_client_name_in_manage_clients(String string) throws Exception {

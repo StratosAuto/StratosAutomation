@@ -18,6 +18,7 @@ Feature: Sites & Checkpoints functionality
   And Verify that user able to enter invalid field length data in add new site page
   Then User Validates the error messages of Invalid field length data of add new site all the feilds 
   
+
   Given User click on add new equipment button
   Given User click on add new site button
   Then User Enter site Name as "site name" in add new site
@@ -34,6 +35,10 @@ Feature: Sites & Checkpoints functionality
   Then User enter contact last name as "last first name" in add new site
   Then User enter site contact information mobile number as "mobile number" in add new site
   Then User enter site contact information email address as "email adress" in add new site
+
+  #Then User Enter complete Address "complete address" in add new site
+  #Then User select city as "city" in add new site" in add new site
+
   Then User Enter complete Address "complete address" in add new site
   Then User select city as "city" in add new site" in add new site
   And User Click on Save and Continue Button
@@ -58,7 +63,8 @@ Feature: Sites & Checkpoints functionality
     And User clicks on Manage Site button
     And User enters Mobile Number as "MobileNumber" in Edit Site page
     And User clicks on Update button
-    #/And User clicks on Deactivate button
+
+    #And User clicks on Deactivate button
     Then User click on Inactive site tab
     Then User validates the deactivated site
     

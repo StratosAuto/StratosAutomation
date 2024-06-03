@@ -12,7 +12,6 @@ public class Stratos_Login_PageObjects {
 	public static final By loginPage=By.xpath("//span[text()='Sign in to your account']");
 	public static final By themes=By.xpath(" //button[text()=' Themes ']");
 	public static final By lightTheme=By.xpath("//button[@class=\"mat-mdc-menu-item mat-mdc-focus-indicator mdc-list-item btn_yellow\"]");
-//			("//span[text()=' Light Theme ']");
 	public static final By settings=By.xpath("//i[@aria-haspopup='menu']");
 	public static final By changePassword=By.xpath("//span[text()='Change password']");
 	public static final By currentPassword=By.xpath("//input[@formcontrolname='currentPassword']");
@@ -30,6 +29,5 @@ public class Stratos_Login_PageObjects {
 	public static final By forgotpinemailSuccessMessage=By.xpath("//p[text()='Please wait, your request is processing']");
 	public static final By passwordUpdatedSucesfullyMessage=By.xpath("//p[text()='Password Updated Successfully']");
 	public static final By updatedPasswordSuccessMessage=By.xpath("//p[text()='Password updated successfully']");
-	
-//	
+		
 }

@@ -18,6 +18,7 @@ public class stratos_SitesAndCheckpoints {
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
 	public static String sheetName = "SitesAndCheckpoints";
 	public static String SiteName;	
+	public static String sheetNameForClientName= "ClientModule";
 
 	@When("User Click on Sites & Checkpoints module")
 	public void user_Click_on_Sites_Checkpoints_module() throws Exception {
@@ -58,8 +59,7 @@ public class stratos_SitesAndCheckpoints {
 		testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.email, email , "email");
 		
 		
-	
-	    
+		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.mobile, "mobile");
 	    
 	
 	}
@@ -72,24 +72,18 @@ public class stratos_SitesAndCheckpoints {
 		} else
 			Logs.info("Give Correct postal code");
 		
-		
-		
 		if (!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.invalidMobileNumber, "postal code"))) {
 			ExceptionHandling.HandleAssertion("Give wrong mobile number");
 		} else
 			Logs.info("Give Correct mobile number");
 
-
-		
 		if (!(testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.invalidEmailAdressError, "postal code"))) {
 			ExceptionHandling.HandleAssertion("Give wrong email address");
 		} else
 			Logs.info("Give Correct email address");
 		
 		
-		
 	}
-	
 
 	@Given("Verify that user able to enter invalid field length data in add new site page")
 	public void verify_that_user_able_to_enter_invalid_field_length_data_in_add_new_site_page() throws Exception {
@@ -112,7 +106,7 @@ public class stratos_SitesAndCheckpoints {
 		    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.completeAdress, completeAdress, "completeAdress");
 		   
 		    
-			String firstName=testBase.randomAlphanumeric(16);
+			String firstName=testBase.randomAlphanumeric(26);
 			testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.firstName, 20);
 //			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.firstName, "first name");
 			testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.firstName, firstName, "firstName");
@@ -125,16 +119,16 @@ public class stratos_SitesAndCheckpoints {
 //			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.lastName, "first name");
 			testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.lastName, lastname, "lastname");
 			
-			
-		
-		
+			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.firstName, "first name");
+			Thread.sleep(2000);
+//		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.cancelButton, "cancelButton");
 		
 	}
 
 	@Then("User Validates the error messages of Invalid field length data of add new site all the feilds")
-	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_add_new_site_all_the_feilds() {
-	  
-		
+	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_add_new_site_all_the_feilds() throws Throwable {
+		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.CancelButtonForInvalid, "cancelbutton");
+		Thread.sleep(3000);
 	}
 
 //	@Given("User Click on Add New site Button")
@@ -239,10 +233,13 @@ public class stratos_SitesAndCheckpoints {
 
 	@Then("User select client name as {string} in add new site")
 	public void user_select_client_name_as_in_add_new_site(String string) throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetNameForClientName);
+		String ClientNamedropdown=Excel_Utility.getCellData(2, 0);
 		testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.clientName, 20);
 		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.clientName, "client name");
-		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.selectClientName, "client name");
-	    
+		
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_SitesAndCheckpoints_PageObjects.dropdownSelect(ClientNamedropdown), "clientname");
 	}
 
 	@Then("User enter contact first name as {string} in add new site")
@@ -338,7 +335,6 @@ public class stratos_SitesAndCheckpoints {
 		
 	}
 	
-
 	@Then("User Enter Checkpoint name as {string} in manage checkpoints")
 	public void user_Enter_Checkpoint_name_as_in_manage_checkpoints(String string) throws Exception {
 		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.checkPointName, "checkpointname");
@@ -358,9 +354,16 @@ public class stratos_SitesAndCheckpoints {
 			String checkPointAdress=Excel_Utility.getCellData(1, 2);
 			testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.checkpointsAdress, checkPointAdress, "checkpointsAdress");
 			Thread.sleep(10000);
-			testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, 20);
-			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, "checkpoints");
-			testBase.waitForElementToBevisible(Stratos_SitesAndCheckpoints_PageObjects.checkpointsLAtitude, 20);
+			
+			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.checkPointName, "checkpointname");
+			Thread.sleep(2000);
+			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.checkpointsAdress, "checkpoints");
+			Thread.sleep(2000);
+			testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.AdressdropDown, 20);
+			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.AdressdropDown, "Address drop down");
+//			testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, 20);
+//			testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.clickonCheckpoints, "checkpoints");
+//			testBase.waitForElementToBevisible(Stratos_SitesAndCheckpoints_PageObjects.checkpointsLAtitude, 20);
 			testBase.ScrollDownBottom();
 			Thread.sleep(5000);
 	}
@@ -385,7 +388,6 @@ public class stratos_SitesAndCheckpoints {
 		Thread.sleep(5000);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.manageSite, "Manage Site");
 	}
-	
 
 	@When("User enters Mobile Number as {string} in Edit Site page")
 	public void user_enters_Mobile_Number_as_in_Edit_Site_page(String string) throws Exception {
@@ -397,10 +399,11 @@ public class stratos_SitesAndCheckpoints {
 	   Thread.sleep(2000);
 	}
 
-	@Then("User clicks on Update button on Edit Provider ")
-	public void user_clicks_on_Update_button_on_Edit_Provider_page() throws Exception {
+	@Then("User clicks on Update button")
+	public void user_clicks_on_Update_button() throws Exception {
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.updateButton, "Update Button");
 	   Thread.sleep(10000);
+	   testBase.RefreshPage();
 	   
 	}
 	
@@ -426,6 +429,7 @@ public class stratos_SitesAndCheckpoints {
 	public void user_click_on_Inactive_site_tab() throws Exception {
 		Thread.sleep(3000);
 		testBase.RefreshPage();
+		Thread.sleep(2000);
 	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, 20);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "inactive site");
 	    Thread.sleep(20000);
@@ -524,7 +528,15 @@ public class stratos_SitesAndCheckpoints {
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.submitButton, "Submit Button");
 	    Thread.sleep(5000);
 	}
-
+	@Then("User validates the success message as {string}")
+	public void user_validates_the_success_message_as(String string) throws Throwable {
+		Thread.sleep(2000);
+	   if (!testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.BulkUploadSuccessMessage, "validates success message")) {
+		ExceptionHandling.HandleAssertion("file not uploaded");
+	   }else
+	   Logs.info("Successfully uploaded");
+	   
+	}
 	@Then("User Verifies the success message")
 	public void user_Verifies_the_success_message() throws InterruptedException {
 //	   Thread.sleep(10000);
@@ -532,8 +544,10 @@ public class stratos_SitesAndCheckpoints {
 
 	@Then("User validates the error message as {string} of invalid Bulk Upload")
 	public void user_validates_the_error_message_as_of_invalid_Bulk_Upload(String string) throws Exception {
-//		String s= testBase.getElementText(Stratos_SitesAndCheckpoints_PageObjects.nofileError, "error message");
-//		  System.out.println(s);
+		if (!testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.EmptyBulkFileErrorMessage, "validates error message")) {
+			ExceptionHandling.HandleAssertion("file uploaded");
+		   }else
+		   Logs.info("File not uploaded");
 	   
 	}
 	
@@ -547,8 +561,11 @@ public class stratos_SitesAndCheckpoints {
 
 	@Then("User validates the error message as {string} of null Bulk Upload")
 	public void user_validates_the_error_message_as_of_null_Bulk_Upload(String string) throws Exception {
-	  String s= testBase.getElementText(Stratos_SitesAndCheckpoints_PageObjects.nofileError, "error message");
-	  System.out.println(s);
+		if (!testBase.isElementVisible(Stratos_SitesAndCheckpoints_PageObjects.DuplicateBulkfileUploadErrrorMessage, "validates error message")) {
+			ExceptionHandling.HandleAssertion("file uploaded");
+		   }else
+		   Logs.info("File not uploaded");
+	
 	  
 	}
 	
