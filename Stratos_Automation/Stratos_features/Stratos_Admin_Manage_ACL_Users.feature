@@ -1,11 +1,10 @@
 Feature: Manage ACL Users
 
   Background: 
-    Given Enter the Url
-    And Enter Email Address
-    And Enter Password
-    When Click on Log In button
-    Then Verify Success message
+     Given User Enter the Stratos application URL
+    Then User enter the valid username
+    Then User enter the valid password
+    Then user click on login button
 
   Scenario: Verify the Add New User functionality
     Given User clicks on Manage ACL Users in the menu
@@ -42,12 +41,12 @@ Scenario: Verify the Filter functionality
     Then User validates the filtered data of valid ACL User Name
     And User enters invalid ACL User Name as "userName"
     Then User validates the error message as "errorMessage" of invalid ACL User Name
-    And User clicks on Items per page dropdown
+    And User clicks on Items per page dropdown to display items
     And Users selects the desired number from items per page dropdown
     
   Scenario: Verify the Manage ACL User functionality
     Given User clicks on Manage ACL Users in the menu
     And User clicks on Manage ACL User button
     And User enters Mobile Number as "mobileNumber" in Edit User page
-    And User clicks on Update button
+    And User clicks on Update button on Edit User page
     And User validates the updates

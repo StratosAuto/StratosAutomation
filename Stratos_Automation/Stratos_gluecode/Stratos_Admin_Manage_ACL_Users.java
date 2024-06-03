@@ -2,7 +2,6 @@ package Stratos_gluecode;
 
 import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
 import Stratos_pageObjects.Stratos_Admin_ManageACL_Users_PageObjects;
-import Stratos_pageObjects.Stratos_Admin_Manage_ACL_Roles_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
 import Stratos_utilities.ExceptionHandling;
@@ -18,6 +17,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 	
 	@Given("User clicks on Manage ACL Users in the menu")
 	public void user_clicks_on_Manage_ACL_Users_in_the_menu() throws Exception {
+		Thread.sleep(5000);
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.usersMenu, "Manage ACL Users");  
 	}
 
@@ -95,12 +95,6 @@ public class Stratos_Admin_Manage_ACL_Users {
 		   testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.confirmPassword, confirmPassword, "Confirm Password");
 		   testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
 	}
-
-	@And ("User clicks on Cancel button on Create User page")
-	public void user_clicks_on_Cancel_button_on_Create_User_page() throws Exception {
-		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.cancelButton, 20);
-		testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.cancelButton, "Cancel Button");
-	}
 	
 	@Then("User Validates the error messages of Invalid field length data of all the feilds in Create User page")
 	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_all_the_feilds_in_Create_User_page() throws Exception {
@@ -128,6 +122,12 @@ public class Stratos_Admin_Manage_ACL_Users {
 			ExceptionHandling.HandleAssertion("Minimum 6 characters allowed element is not visible");
 		}else
 	    Logs.info("Minimum 6 characters allowed is visible");
+	}
+	
+	@And ("User clicks on Cancel button on Create User page")
+	public void user_clicks_on_Cancel_button_on_Create_User_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.cancelButton, 20);
+		testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.cancelButton, "Cancel Button");
 	}
 	
 	@Then("User clicks on Add button to validate mandatory fields")
@@ -207,7 +207,8 @@ public class Stratos_Admin_Manage_ACL_Users {
 		String firstName=Excel_Utility.getCellData(1, 0);
 		String lastName=Excel_Utility.getCellData(1, 3);
 		name=firstName+" "+lastName;
-	    Thread.sleep(5000);
+	    Thread.sleep(6000);
+	    Thread.sleep(4000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 //	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filter data");
 //	    System.out.println(data);
@@ -230,7 +231,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 		testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.firstName, firstName, "First Name");
 		testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.emailAddress, emailAddress, "Email Address");
 		testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.password, String.valueOf(password), "Password");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		testBase.ClickViaMouse(Stratos_Admin_ManageACL_Users_PageObjects.role, "Role");
 		testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.selectRole, "Admin");
 		testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.lastName, lastName, "Last Name");
@@ -243,19 +244,21 @@ public class Stratos_Admin_Manage_ACL_Users {
 	
 	@And ("User validates the error message duplicate user")
 	public void user_validates_the_error_message_duplicate_user() throws Exception {
-		if(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.duplicateError, "Error")) {
-			ExceptionHandling.HandleAssertion("New User is not created");
+		Thread.sleep(4000);
+		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.duplicateError, "Error"))) {
+			ExceptionHandling.HandleAssertion("New User is created");
 		}
-		Logs.info("New User is created");
+		Logs.info("New User is not created");
 	}
 	
 	@Given("User clicks on Manage ACL User button")
 	public void user_clicks_on_Manage_ACL_User_button() throws Exception {
-	    Thread.sleep(6000);
-	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String firstName=Excel_Utility.getCellData(1, 0);
 		String lastName=Excel_Utility.getCellData(1, 3);
 		name=firstName+" "+lastName;
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+		Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 	    Thread.sleep(3000);
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.manageACLUserButton, "Manage ACL User");
@@ -269,18 +272,20 @@ public class Stratos_Admin_Manage_ACL_Users {
 	    testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber, updateMobileNumber, "Mobile Number");
 	}
 
+	@Given("User clicks on Update button on Edit User page")
+	public void user_clicks_on_Update_button_on_Edit_User_page() throws Exception {
+		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.updateButton, 20);
+		Thread.sleep(5000);
+		testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.updateButton, "Update");
+	}
+	
 	@Given("User validates the updates")
 	public void user_validates_the_updates() throws Exception {
 		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 		Thread.sleep(6000);
-		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-		String firstName=Excel_Utility.getCellData(1, 0);
-		String lastName=Excel_Utility.getCellData(1, 3);
-		name=firstName+" "+lastName;
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.manageACLUserButton, "Manage ACL User");
 	    String data=testBase.getElementText(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber, "Mobile Number");
-	    System.out.println(data);
 	    if(!(updateMobileNumber.contains(data))) {
 	    	ExceptionHandling.HandleAssertion("Mobile Number is not updated");
 	    }else
@@ -293,9 +298,9 @@ public class Stratos_Admin_Manage_ACL_Users {
 		String firstName=Excel_Utility.getCellData(1, 0);
 		String lastName=Excel_Utility.getCellData(1, 3);
 		name=firstName+" "+lastName;
-		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.filter, 20);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 		Thread.sleep(5000);
-		testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.filter, name, "Filter");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 	}
 
 	@Then("User validates the filtered data of valid ACL User Name")
@@ -310,6 +315,8 @@ public class Stratos_Admin_Manage_ACL_Users {
 	@Then("User enters invalid ACL User Name as {string}")
 	public void user_enters_invalid_ACL_User_Name_as(String string) throws Exception {
 	    String invalidUserRef=testBase.randomAlphanumeric(10);
+	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+	    Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, invalidUserRef, "Filter");
 	}
 

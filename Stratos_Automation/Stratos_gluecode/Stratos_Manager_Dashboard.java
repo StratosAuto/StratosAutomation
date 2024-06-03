@@ -13,29 +13,29 @@ public class Stratos_Manager_Dashboard {
 	public static String sheetName = "Manager Data";
 	public String data;
 	 
-	@Given("User clicks on Dashboard in the menu")
-	public void user_clicks_on_Dashboard_in_the_menu() throws Exception {
+	@Given("User clicks on manager Dashboard in the menu")
+	public void user_clicks_on_manager_Dashboard_in_the_menu() throws Exception {
 	 Thread.sleep(6000);
 	 testBase.clickonElement(Stratos_Manager_Dashboard_Pageobjects.dashboardMenu, "Dashboard");
 	 
 	}
 
-	@Given("User clicks on All Clients dropdown and selects All clients as {string}")
-	public void user_clicks_on_All_Clients_dropdown_and_selects_All_clients_as(String string) throws Exception {
+	@Given("User clicks on All Clients dropdown and selects All clients as {string} on manager dashboard")
+	public void user_clicks_on_All_Clients_dropdown_and_selects_All_clients_as_on_manager_dashboard(String string) throws Exception {
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.allClients, "All Clients");
 	 testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.selectClient, 20);
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.selectClient, "John Third");
 	}
 
-	@Given("User clicks on Country dropdown and selects Country as \"country")
-	public void user_clicks_on_Country_dropdown_and_selects_Country_as_country() throws Exception {
+	@Given("User clicks on Country dropdown and selects Country as {string} on manager dashboard")
+	public void user_clicks_on_Country_dropdown_and_selects_Country_as_on_manager_dashboard() throws Exception {
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.country, "Country");
 	 Thread.sleep(3000);
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.selectCountry, "South Africa");
 	}
 
-	@Given("User clicks on All Provinces dropdown and selects All Provinces as {string}")
-	public void user_clicks_on_All_Provinces_dropdown_and_selects_All_Provinces_as(String string) throws Exception {
+	@Given("User clicks on All Provinces dropdown and selects All Provinces as {string} on manager dashboard")
+	public void user_clicks_on_All_Provinces_dropdown_and_selects_All_Provinces_as_on_manager_dashboard(String string) throws Exception {
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.allProvinces, "All Provinces");
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.selectProvince, "Gauteng");
 	}
@@ -46,13 +46,13 @@ public class Stratos_Manager_Dashboard {
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.listView, "List View");
 	}
 
-	@Then("User clicks on filter button")
-	public void user_clicks_on_filter_button() throws Exception {
+	@Then("User clicks on filter button on manager dashboard")
+	public void user_clicks_on_filter_button_on_manager_dashboard() throws Exception {
 	 testBase.clickonElement(Stratos_Manager_Dashboard_Pageobjects.filter, "Filter");
 	}
 
-	@Then("User enters valid data in filter field")
-	public void user_enters_valid_data_in_filter_field() throws Exception {
+	@Then("User enters valid data in filter field on manager dashboard")
+	public void user_enters_valid_data_in_filter_field_on_manager_dashboard() throws Exception {
 	 Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	 data=Excel_Utility.getCellData(1, 0);
 	 testBase.typeinTextBox(Stratos_Manager_Dashboard_Pageobjects.filterdata, data, "Filter Data");
@@ -67,15 +67,15 @@ public class Stratos_Manager_Dashboard {
 		 Logs.info("Valid filtered details are displayed");
 	}
 
-	@Then("User enters invalid data in filter field")
-	public void user_enters_invalid_data_in_filetr_field() throws Exception {
+	@Then("User enters invalid data in filter field on manager dashboard")
+	public void user_enters_invalid_data_in_filetr_field_on_manager_dashboard() throws Exception {
 	 testBase.clearTextbox(Stratos_Manager_Dashboard_Pageobjects.filterdata, "Filter");
 	 String invalidfilterdata=testBase.randomAlphanumeric(7);
 	 testBase.typeinTextBox(Stratos_Manager_Dashboard_Pageobjects.filterdata, invalidfilterdata, "Filter Data");
 	}
 
-	@Then("User validates the error message")
-	public void user_validates_the_error_message() {
+	@Then("User validates the error message on manager dashboard")
+	public void user_validates_the_error_message_on_manager_dashboard() {
 	 
 	 
 	}
@@ -96,12 +96,6 @@ public class Stratos_Manager_Dashboard {
 	public void user_clicks_on_view_sites() throws Exception {
 	 testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.viewSites, 20);
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.viewSites, "View Sites");
-	}
-
-	@Then("User validates the site details")
-	public void user_validates_the_site_details() {
-	 
-	 
 	}
 
 	@Then("User clicks on More Info")

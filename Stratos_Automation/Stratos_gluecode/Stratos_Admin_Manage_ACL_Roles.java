@@ -95,6 +95,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	    Thread.sleep(3000);
 	    testBase.clearTextbox(Stratos_Admin_Manage_ACL_Roles_PageObjects.name, name);
 	    testBase.waitForElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.name, 20);
+	    Thread.sleep(3000);
 	    testBase.typeinTextBox(Stratos_Admin_Manage_ACL_Roles_PageObjects.name, name, "Name");
 	}
 
@@ -108,7 +109,6 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	public void User_validates_changes_made()throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	    String name=Excel_Utility.getCellData(1, 1);
-	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 	    Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 	    if(!(testBase.isElementVisible(Stratos_Admin_Manage_ACL_Roles_PageObjects.validateRoles, "Role"))) {

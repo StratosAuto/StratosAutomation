@@ -33,6 +33,7 @@ public class Stratos_Manager_JobCards_Pageobjects {
 	public static final By editSymbol=By.xpath("//i[@class='fa-solid fa-pen']");
 	public static final By validateTask=By.xpath("//div[@class='table']/table/tbody/tr/td");
 	public static final By cancelSymbol=By.xpath("//i[@class='fa-solid fa-xmark']");
+	public static final By filterValidates=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td");
 	
 	public static final By lengthJobCardName=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
 	public static final By lengthJobCardDescription=By.xpath("//span[text()='Maximum 250 Characters Allowed.']");
@@ -40,5 +41,8 @@ public class Stratos_Manager_JobCards_Pageobjects {
 	public static final By lengthTaskDescription=By.xpath("//span[text()='Maximum 250 characters allowed.']");
 	public static final By filterError=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/table/tbody/tr/td");
 	
-	public static final By invalidFileError=By.xpath("//p[text()='Error']");
+	public static final By invalidBulkUpload=By.xpath("//p[text()='Error']");
+	public static final By successBulkUpload=By.xpath("//p[text()='Job cards Uploaded Successfully']");
+	public static final By nullBulkUpload=By.xpath("//p[text()='Your Excel file is Empty.']");
+	
 }

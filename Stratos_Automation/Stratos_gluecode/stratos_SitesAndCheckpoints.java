@@ -397,8 +397,8 @@ public class stratos_SitesAndCheckpoints {
 	   Thread.sleep(2000);
 	}
 
-	@Then("User clicks on Update button")
-	public void user_clicks_on_Update_button() throws Exception {
+	@Then("User clicks on Update button on Edit Provider ")
+	public void user_clicks_on_Update_button_on_Edit_Provider_page() throws Exception {
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.updateButton, "Update Button");
 	   Thread.sleep(10000);
 	   
@@ -493,8 +493,8 @@ public class stratos_SitesAndCheckpoints {
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.activateButton, "Activate");
 	}
 
-	@Then("User validates the activated provider")
-	public void user_validates_the_activated_provider() throws Exception {
+	@Then("User validates the activated site")
+	public void user_validates_the_activated_site() throws Exception {
 //		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 //		siteName = Excel_Utility.getCellData(1, 0);
 //	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.filterButton, siteName, "Filter");
@@ -520,7 +520,7 @@ public class stratos_SitesAndCheckpoints {
 	}
 
 	@Then("User clicks on Submit button")
-	public void user_click_on_submit_button() throws Exception {
+	public void user_click_on_submit_button_of_3rd_Party_Provider() throws Exception {
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.submitButton, "Submit Button");
 	    Thread.sleep(5000);
 	}

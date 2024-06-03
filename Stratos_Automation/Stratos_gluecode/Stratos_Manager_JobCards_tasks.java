@@ -111,7 +111,7 @@ public class Stratos_Manager_JobCards_tasks {
 		String jobCardName = Excel_Utility.getCellData(1, 1);
 		Thread.sleep(6000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, jobCardName, "Filter");
-		if (!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.errorFilter,"Validate Job Card"))) {
+		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.filterValidates,"Validate Job Card"))) {
 			ExceptionHandling.HandleAssertion("New Job Card is not created");
 		} else
 			Logs.info("New Job Card is created");
@@ -129,7 +129,7 @@ public class Stratos_Manager_JobCards_tasks {
 
 	@Then("User validates the filtered data of Active Job Cards")
 	public void user_validates_the_filtered_data_of_Active_Job_Cards() throws Exception {
-		String data = testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.errorFilter, "Filter validate");
+		String data = testBase.getElementText(Stratos_Manager_JobCards_Pageobjects.filterValidates, "Filter validate");
 		if (!(data.contains(jobCardName))) {
 			ExceptionHandling.HandleAssertion("Filtered Job Card is not displayed");
 		} else
@@ -143,7 +143,6 @@ public class Stratos_Manager_JobCards_tasks {
 		String invalidJobCard = testBase.randomAplhabet(10);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, invalidJobCard, "Filter");
-	//	testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, invalidJobCard, "Filter");
 	}
 
 	@Then("User validates the error message as {string} of Active Job Cards")
@@ -171,8 +170,7 @@ public class Stratos_Manager_JobCards_tasks {
 
 	@Then("User validates the filtered data of Inactive Job Cards")
 	public void user_validates_the_filtered_data_of_Inactive_Job_Cards() throws Exception {
-		String data = testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.errorFilter,
-				"Filter validate");
+		String data = testBase.getElementText(Stratos_Manager_JobCards_Pageobjects.filterValidates, "Filter validate");
 		if (!(data.contains(jobCardName))) {
 			ExceptionHandling.HandleAssertion("Filterd Job Card is not displayed");
 		} else
@@ -286,11 +284,11 @@ public class Stratos_Manager_JobCards_tasks {
 
 	@Then("User clicks on Manage Tasks button")
 	public void user_clicks_on_Manage_Tasks_button() throws Exception {
-//		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
-//		String jobCardName = Excel_Utility.getCellData(1, 1);
-//		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
-//		Thread.sleep(5000);
-//		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, jobCardName, "Job Card Name");
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String jobCardName = Excel_Utility.getCellData(1, 1);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
+		Thread.sleep(5000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, jobCardName, "Job Card Name");
 		testBase.waitForElement(Stratos_Manager_JobCards_Pageobjects.manageTasksButton, 20);
 		testBase.clickonElement(Stratos_Manager_JobCards_Pageobjects.manageTasksButton, "Manage Tasks Button");
 	}
@@ -405,11 +403,16 @@ public class Stratos_Manager_JobCards_tasks {
 			Logs.info("Task Description is updated");
 	}
 
-	@Given("User clicks on Select File button and upload Job Card & Tasks file")
-	public void user_clicks_on_Select_File_button_and_upload_Job_Card_Tasks_file() throws Exception {
+	@Given("User clicks on Select File button and upload valid Job Card & Tasks file")
+	public void user_clicks_on_Select_File_button_and_upload_valid_Job_Card_Tasks_file() throws Exception {
 		Thread.sleep(3000);
 		String CSVFile = "Auto-IT/Bulk-Jobs-Stable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
+	}
+	
+	@Then("User validates the success message as {string} of valid Bulk Upload of Job Cards")
+	public void user_validates_the_success_message_as_of_valid_Bulk_Upload_of_Job_Cards(String string) throws Exception {
+		
 	}
 
 	@Then("User clicks on Select File button to upload invalid Job Cards bulk file")
@@ -421,7 +424,7 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Then("User validates the error message as {string} of invalid Bulk Upload of Job Cards")
 	public void user_validates_the_error_message_as_of_invalid_Bulk_Upload_of_Job_Cards(String string) throws Exception {
-		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.invalidFileError, "File Upload"))) {
+		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.invalidBulkUpload, "File Upload"))) {
 			ExceptionHandling.HandleAssertion("Inavlid bulk upload file is uploaded");
 		} else
 			Logs.info("Invalid bulk upload file is not uploaded");
@@ -436,7 +439,7 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Given("User validates the error message as {string} of empty Bulk Upload file of Job Cards")
 	public void user_validates_the_error_message_as_of_empty_Bulk_Upload_file_of_Job_Cards(String string) throws Exception {
-		if (!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.nullFileUpload, "File Upload"))) {
+		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.nullBulkUpload, "File Upload"))) {
 			ExceptionHandling.HandleAssertion("Null bulk upload file is uploaded");
 		} else
 			Logs.info("Null file upload file is not uploaded");

@@ -94,4 +94,66 @@ public class Stratos_Manager_Login {
 		   Logs.info("User is navigated to Login page");
 	}
 	
+	@Given("User clicks on Forgin PIN link and navigate to Forgot Your Pin page")
+	public void user_clicks_on_Forgin_PIN_link_and_navigate_to_Forgot_Your_Pin_page() throws Exception {
+	    testBase.waitForElement(Stratos_Manager_Login_PageObjects.forgotPin, 20);
+	    testBase.clickonElement(Stratos_Manager_Login_PageObjects.forgotPin, "Forgot PIN");
+	}
+
+	@Given("User enter invalid Employee ID as {string}")
+	public void user_enter_invalid_Employee_ID_as(String string) throws Exception {
+	    String invalidEmployeeID=testBase.randomAlphanumeric(10);
+	    testBase.typeinTextBox(Stratos_Manager_Login_PageObjects.employeeID, invalidEmployeeID, "Invalid Employee ID");
+
+	}
+
+	@Then("User clicks on Request New PIN button on Forgot Your Pin page")
+	public void user_clicks_on_Request_New_PIN_button_on_Forgot_Your_Pin_page() throws Exception {
+		testBase.waitForElement(Stratos_Manager_Login_PageObjects.requestNewPin, 20);
+	    testBase.clickonElement(Stratos_Manager_Login_PageObjects.requestNewPin, "Request New Pin");
+	}
+
+	@Then("User validates the error message as {string} of invalid Employee ID")
+	public void user_validates_the_error_message_as_of_invalid_Employee_ID(String string) throws Exception {
+	   if (!(testBase.isElementVisible(Stratos_Manager_Login_PageObjects.invalidEmployeeIDError, "Invalid Employee ID"))) {
+		   	ExceptionHandling.HandleAssertion("Error message not displayed");
+	} else
+			Logs.info("Error message displayed");   
+	}
+
+	@Then("User clicks on Go To Login link and navigate to Manager Login page")
+	public void user_clicks_on_Go_To_Login_link_and_navigate_to_Manager_Login_page() throws Exception {
+	    testBase.waitForElement(Stratos_Manager_Login_PageObjects.goToLogin, 20);
+	    testBase.clickonElement(Stratos_Manager_Login_PageObjects.goToLogin, "Go To Login");
+	}
+
+	@Then("User clicks on Request New PIN button on Forgot Your Pin page to validate null Employee ID")
+	public void user_clicks_on_Request_New_PIN_button_on_Forgot_Your_Pin_page_to_validate_null_Employee_ID() throws Exception {
+		testBase.waitForElement(Stratos_Manager_Login_PageObjects.requestNewPin, 20);
+	    testBase.clickonElement(Stratos_Manager_Login_PageObjects.requestNewPin, "Request New Pin");
+	}
+
+	@Then("User validates the error message as {string} of null Employee ID")
+	public void user_validates_the_error_message_as_of_null_Employee_ID(String string) throws Exception {
+		if (!(testBase.isElementVisible(Stratos_Manager_Login_PageObjects.invalidEmployeeIDError, "Invalid Employee ID"))) {
+		   	ExceptionHandling.HandleAssertion("Error message not displayed");
+	} else
+			Logs.info("Error message displayed");
+	}
+
+	@Then("User enters valid Employee ID as {string}")
+	public void user_enters_valid_Employee_ID_as(String string) throws Exception {
+	   testBase.waitForElement(Stratos_Manager_Login_PageObjects.employeeID, 20);
+	   testBase.typeinTextBox(Stratos_Manager_Login_PageObjects.employeeID, Stratos_Admin_Employees.employeeID, "Employee ID");
+	}
+
+	@Then("User validates the success message as {string} of valid Employee ID")
+	public void user_validates_the_success_message_as_of_valid_Employee_ID(String string) throws Exception {
+		if (!(testBase.isElementVisible(Stratos_Manager_Login_PageObjects.validEmployeeIDSuccess, "Valid Employee ID"))) {
+		   	ExceptionHandling.HandleAssertion("Success message not displayed");
+	} else
+			Logs.info("Success message displayed");
+	    
+	}
+	
 }

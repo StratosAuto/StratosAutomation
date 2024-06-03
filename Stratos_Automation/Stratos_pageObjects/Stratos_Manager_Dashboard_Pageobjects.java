@@ -28,5 +28,4 @@ public class Stratos_Manager_Dashboard_Pageobjects {
 	public static final By validateSupervisorName=By.xpath("(//app-employee-details[@class='ng-star-inserted']/div/div/div/div/div/div/div/p)[5]");
 	public static final By validateTask=By.xpath("(//div[@class='row'])[3]/div/li");
 	public static final By validateTaskDescription=By.xpath("(//div[@class='row'])[3]/div[2]/p");
-	
 }

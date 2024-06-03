@@ -13,6 +13,7 @@ public class Stratos_Admin_Employees {
 	public static String excelFileLocation ="./TestData/Excel_data/Stratos_Test_Data.xlsx";
 	public static String sheetName ="EMPLOYEES";
 	public static String sheetName1="3RD PARTY PROVIDER";
+	public static String employeeID;
 	public String mobileNumber;
 	public String otherContactNumber;
 	public String employeeName;
@@ -566,12 +567,16 @@ public class Stratos_Admin_Employees {
 	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthYear, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthYear, "Year");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthMonth, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthMonth, "Month");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthDate, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthDate, "Date");
 	}
 
@@ -609,14 +614,19 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Passport_Expiry_Date_date_picker_button_and_selects_Passport_Expiry_Date_as_in_Employee_Details(String string) throws Exception {
 	    Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
+		 Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, "Year");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, "Month");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, "Date");
 	}
 
@@ -629,6 +639,7 @@ public class Stratos_Admin_Employees {
 
 	@Then("User enters SA ID as {string} in Employee Details")
 	public void user_enters_SA_ID_as_in_Employee_Details(String string) throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		String saID=Excel_Utility.getCellData_Integer(2, 12);
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.saID, 20);
 	    testBase.typeinTextBox(Stratos_Admin_Employees_PageObjects.saID, saID, "SA ID");
@@ -882,10 +893,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryDate, "Date");  
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryDate, "Date");  
 	}
 
 	@Then("User clicks on First Aid Details")
@@ -906,9 +921,13 @@ public class Stratos_Admin_Employees {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
 	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryDate, "Date");
 	}
 
@@ -930,9 +949,13 @@ public class Stratos_Admin_Employees {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
 	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryDate, "Date");
 	}
 
@@ -948,9 +971,13 @@ public class Stratos_Admin_Employees {
 	  testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
 	  Thread.sleep(2000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
+	  Thread.sleep(1000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
+	  Thread.sleep(1000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
+	  Thread.sleep(1000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryMonth, "Month");
+	  Thread.sleep(1000);
 	  testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryDate, "Date");
 	}
 	
@@ -1014,9 +1041,13 @@ public class Stratos_Admin_Employees {
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, 20);
 	    Thread.sleep(2000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartYear, "Year");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartDate, "Date");
 	}
 
@@ -1025,9 +1056,13 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarButton, "Contract End Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarArrow, "Contract End Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndCalendarArrow, "Contract End Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndYear, "Year");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractEndDate, "Date"); 
 	}
 
@@ -1055,7 +1090,7 @@ public class Stratos_Admin_Employees {
 		String managerName = Excel_Utility.getCellData(2, 0);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Filter");
-		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+		String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(managerName))) {
 			ExceptionHandling.HandleAssertion("New Manager is not created");
 		} else
@@ -1125,9 +1160,13 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.supervisorBirthdayYear, "Year");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.supervisorBirthdayMonth, "Month");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.supervisorBirthdayDate, "Date");
 	}
 
@@ -1167,12 +1206,16 @@ public class Stratos_Admin_Employees {
 		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, "Year");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, "Month");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, "Date");
 	    
 	}
@@ -1445,9 +1488,13 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
 		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
+		Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryDate, "Date");
 	}
 
@@ -1469,10 +1516,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryDate, "Date");
 	}
 
 	@Given("User clicks on Compliance / Training / Certification Details of Supervisor")
@@ -1493,10 +1544,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryDate, "Date");
 	}
 
 	@Given("User enters Gun Licence as {string} in Compliance / Training / Certification Details of Supervisor")
@@ -1511,9 +1566,13 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryMonth, "Month");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryDate, "Date");
 	}
 
@@ -1577,10 +1636,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarButton, "Contract Start Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartCalendarArrow, "Contract Start Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.contractStartDate, "Date");
 	}
 
 	@Given("User clicks on Parent Employee Details of Supervisor")
@@ -1609,7 +1672,7 @@ public class Stratos_Admin_Employees {
 		Thread.sleep(5000);
 		Thread.sleep(3000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, supervisorName, "Filter");
-		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+		String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(supervisorName))) {
 			ExceptionHandling.HandleAssertion("New Supervisor is not created");
 		} else
@@ -1678,12 +1741,17 @@ public class Stratos_Admin_Employees {
 	public void user_clicks_on_Birthday_date_picker_button_and_selects_Birthday_as_in_Employee_Details_of_Employee(String string) throws Exception{
 		Thread.sleep(3000);
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, 20);
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarButton, "Birthday Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.birthdayCalendarArrow, "Birthday Calendar Arrow");
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayYear, "Year");
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayMonth, "Month");
-		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayDate, "Date");
+	    Thread.sleep(1000);
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayYear, "Year");
+	    Thread.sleep(1000);
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayMonth, "Month");
+	    Thread.sleep(1000);
+	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.employeeBirthdayDate, "Date");
 	}
 
 	@Given("User selects Role as {string} from Role dropdown in Employee Details of Employee")
@@ -1722,12 +1790,16 @@ public class Stratos_Admin_Employees {
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarButton, "Passport Calendar Button");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportCalendarArrow, "Passport Calendar Arrow");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryYear, "Year");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryMonth, "Month");
 	    testBase.waitForElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, 20);
+	    Thread.sleep(1000);
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.passportExpiryDate, "Date");
 	}
 
@@ -1980,10 +2052,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarButton, "Security Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityCalendarArrow, "Security Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.securityExpiryDate, "Date");
 	}
 
 	@Given("User clicks on First Aid Details of Employee")
@@ -2005,10 +2081,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarButton, "First Aid Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidCalendarArrow, "First Aid Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.firstAidExpiryDate, "Date");
 	}
 
 	@Given("User clicks on Compliance / Training / Certification Details of Employee")
@@ -2030,10 +2110,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarButton, "Driver Licence Calendar Button");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
-	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceCalendarArrow, "Driver Licence Calendar Arrow");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.driverLicenceExpiryDate, "Date");
 	}
 
 	@Given("User enters Gun Licence as {string} in Compliance / Training / Certification Details of Employee")
@@ -2048,11 +2132,14 @@ public class Stratos_Admin_Employees {
 		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, 20);
 		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarButton, "Gun Licence Calendar Button");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceCalendarArrow, "Gun Licence Calendar Arrow");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryYear, "Year");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryMonth, "Month");
+		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.gunLicenceExpiryDate, "Date");
-	    
 	}
 
 	@Given("User clicks on Equipment Details of Employee")
@@ -2150,7 +2237,7 @@ public class Stratos_Admin_Employees {
 		Thread.sleep(5000);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filter");
-		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+		String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 		if (!(data.contains(employeeName))) {
 			ExceptionHandling.HandleAssertion("New Employee is not created");
 		} else
@@ -2159,26 +2246,28 @@ public class Stratos_Admin_Employees {
 
 // Active Employees Filter
 	
-	@Given("User enters valid Employee Ref as {string} on Active Employees")
-	public void user_enters_valid_Employee_Ref_as_on_Active_Employees(String string) throws Exception{
+	@Given("User enters valid Employee Name as {string} on Active Employees")
+	public void user_enters_valid_Employee_Name_as_on_Active_Employees(String string) throws Exception{
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		employeeName = Excel_Utility.getCellData(2, 0);
 	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 	    Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
+	    
+	    employeeID=testBase.getElementText(Stratos_Admin_Employees_PageObjects.employeeID, "EmployeeID");
 	}
 
 	@Then("User validates the filtered data of Active Employees")
 	public void user_validates_the_filtered_data_of_Active_Employees() throws Exception{
-	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	    String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 	    if(!(employeeName.contains(data))) {
 	    	ExceptionHandling.HandleAssertion("Filtered data is not displayed");
 	    }else
 	    	Logs.info("Filtered data is displayed");
 	}
 
-	@Then("User enters invalid Employee Ref as {string} on Active Employees")
-	public void user_enters_invalid_Employee_Ref_as_on_Active_Employees(String string)throws Exception {
+	@Then("User enters invalid Employee Name as {string} on Active Employees")
+	public void user_enters_invalid_Employee_Name_as_on_Active_Employees(String string)throws Exception {
 	    String data1=testBase.randomAlphanumeric(10);
 	    testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Clear Filters");
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data1, "Filter");
@@ -2209,8 +2298,8 @@ public class Stratos_Admin_Employees {
 	    testBase.clickonElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, "Inactive Employees");
 	}
 
-	@Then("User enters valid Employee Ref as {string} on Inactive Employees")
-	public void user_enters_valid_Employee_Ref_as_on_Inactive_Employees(String string)throws Exception {
+	@Then("User enters valid Employee Name as {string} on Inactive Employees")
+	public void user_enters_valid_Employee_Name_as_on_Inactive_Employees(String string)throws Exception {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		employeeName = Excel_Utility.getCellData(2, 0);
 		Thread.sleep(5000);
@@ -2220,15 +2309,15 @@ public class Stratos_Admin_Employees {
 	
 	@Then("User validates the filtered data on Inactive Employees")
 	public void user_validates_the_filtered_data_of_Inactive_Employees() throws Exception{
-	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	    String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 	    if(!(employeeName.contains(data))) {
 	    	ExceptionHandling.HandleAssertion("Filtered data is not displayed");
 	    }else
 	    	Logs.info("Filtered data is displayed");
 	}
 
-	@Then("User enters invalid Employee Ref as {string} on Inactive Employees")
-	public void user_enters_invalid_Employee_Ref_as_on_Inactive_Employees(String string)throws Exception {
+	@Then("User enters invalid Employee Name as {string} on Inactive Employees")
+	public void user_enters_invalid_Employee_Name_as_on_Inactive_Employees(String string)throws Exception {
 	    String data=testBase.randomAlphanumeric(10);
 	    testBase.clearTextbox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, "Filter");
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data, "Filter");
@@ -2292,13 +2381,12 @@ public class Stratos_Admin_Employees {
 	public void user_validates_the_Deactivated_Employee() throws Exception {
 	   Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	   String employeerName = Excel_Utility.getCellData(4, 0);
-	   Thread.sleep(3000);
 	   Thread.sleep(5000);
 	   testBase.waitForElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, 20);
 	   testBase.clickonElement(Stratos_Admin_Employees_PageObjects.inactiveEmployees, "Inactive Employees");
 	   Thread.sleep(5000);
 	   testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeerName, "Employee Name");
-	   String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+	   String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 	   if(!(data.contains(employeerName))) {
 		   ExceptionHandling.HandleAssertion("Employee is not Deactivated");
 	   }else
@@ -2317,7 +2405,7 @@ public class Stratos_Admin_Employees {
 		String managerName = Excel_Utility.getCellData(4, 0);
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
-		String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data");
+		String data=testBase.getElementText(Stratos_Admin_Employees_PageObjects.filterValidates, "Filtered Data");
 		if(!(managerName.contains(data))) {
 			ExceptionHandling.HandleAssertion("Employee is not Activated");
 		}else
@@ -2332,12 +2420,32 @@ public class Stratos_Admin_Employees {
 		String CSVFile = "Auto-IT/Bulk_Employee-Stable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
+	
+	@Given("User clicks on Submit button of Employee")
+	public void user_clicks_on_Submit_button_of_Employee() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Employees_PageObjects.submitButton, 20);
+		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.submitButton, "Submit");
+	}
+	
+	@Then("User validates the success message as {string} of employee bulk file")
+	public void user_validates_the_success_message_as_of_employee_bulk_file(String string) {
+
+	}
 
 	@Then("User clicks on Select File button to upload invalid Employees bulk file")
 	public void user_clicks_on_selects_File_button_to_upload_invalid_Employees_bulk_file() throws Exception {
 		Thread.sleep(3000);
 		String CSVFile = "Auto-IT/Bulk-Employee-Unstable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
+	}
+	
+	@Then("User validates the error message as {string} of invalid Employees Bulk Upload")
+	public void user_validates_the_error_message_as_of_invalid_EmployeesBulk_Upload(String string) throws Exception {
+		Thread.sleep(2000);
+		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "Invalid Bulk File Upload"))) {
+			ExceptionHandling.HandleAssertion("Invalid bulk upload file is uploaded");
+		}else
+			Logs.info("Invalid bulk file upload file is not uploaded");
 	}
 
 	@Then("User clicks on Select File button to upload empty Employees bulk file")
@@ -2347,12 +2455,11 @@ public class Stratos_Admin_Employees {
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 	
-	@Given("User validates the error message as {string} of empty Employee Bulk Upload file")
-	public void user_validates_the_error_message_as_of_empty_Employee_Bulk_Upload_file(String string) throws Exception {
-		if (!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "File Upload"))) {
+	@Given("User validates the error message as {string} of empty Employee null Bulk Upload file")
+	public void user_validates_the_error_message_as_of_empty_Employee_null_Bulk_Upload_file(String string) throws Exception {
+		if (!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "Null Bulk File Upload"))) {
 			ExceptionHandling.HandleAssertion("Null bulk upload file is uploaded");
 		} else
-			Logs.info("Null file upload file is not uploaded");
-	}
-	
+			Logs.info("Null bulk upload file is not uploaded");
+	}	
 }
