@@ -7,7 +7,6 @@ Feature: Equipment functionality
     Then user click on login button
     When User Click on Equipment module
     
-#//--add new equipment for valid in valid data-----
 
   Scenario: Verify add new equipemt functionality
     When User Click on Equipment module
@@ -33,33 +32,24 @@ Feature: Equipment functionality
     Then User Verifies the created equipment to validate equipment is created
     
    
-   #//---manage equipment for active inactive deativate functionality
-   
     Scenario: Verify the manage equipment functionality
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-    #///Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
+    
     And Admin User click on update Button
     Then Admin User validates the updated manage equipment
     Then Click on inactive page in equipment
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-    #//Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
+   
     And Admin User click on update Button
     Then Click on inactive page in equipment
-    #//And Admin User click on  deactivate Button
+   
     Then Admin User validates the deactivate manage equipment
     Then Click on faulty page in equipment
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-    #//Then Admin User enter equipment license number as "license number" in manage equipment
-    #Then Admin User select the clent name in manage equipment
-    #Then Admin User select the site name in manage equipment
-    #//And Admin User click on  faulty Button
+   
     And Admin User click on update Button
     Then Click on faulty page in equipment
     Then Admin User validates the faulty manage equipment
@@ -82,23 +72,7 @@ Feature: Equipment functionality
     And User validates the error message as "errorMessage" of null Bulk Upload in equipment page
     And User clicks on cancel button in equipment page
     
-    
-    
-    #
-     #//Scenario: Verify the Bulk Upload functionality
-    #//And User clicks on Bulk Upload button in equpment page
-    #//And User clicks on Select File button and upload file in equipment page
-    #//And User clicks on Submit button in equipment page
-    #//Then User validates the success message as "successMessage" in bulk upload
-    #//And User clicks on Bulk Upload button in equpment page
-    #//And User clicks on Submit button in equipment page
-    #///And User validates the error message as "errorMessage" of invalid Bulk Upload in equipment page
-    #//And User clicks on cancel button in bulk upload equipment page
-    #//And User clicks on Bulk Upload button in equpment page
-     #//And User clicks on Submit button in equipment page
-    #//And User validates the error message as "errorMessage" of null Bulk Upload in equipment page
-    #//
-    #
+  
     
     Scenario: Verify the Assign Equipment and Return equipment functionality
     Given User click on add new equipment button
@@ -160,5 +134,4 @@ Feature: Equipment functionality
     
     
    
-    
-
+ 

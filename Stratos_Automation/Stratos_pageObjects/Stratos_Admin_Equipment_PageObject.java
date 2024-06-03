@@ -3,6 +3,16 @@ package Stratos_pageObjects;
 import org.openqa.selenium.By;
 
 public class Stratos_Admin_Equipment_PageObject {
+	
+	public static final By dropdownSelect(String Object) {
+
+		By data=By.xpath("//div[@role='listbox']/descendant::mat-option/span[contains(text(),'"+Object+"')]");
+
+				return data;
+
+	}
+
+	
 	public static final By equipmentModule=By.xpath("//span[text()='Equipment']");
 	public static final By addNewEquipment=By.xpath("//button[text()=' Add New Equipment ']");
 	public static final By equipmentDescription=By.xpath("//input[@formcontrolname='equipmentDescription']");
@@ -13,7 +23,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentLicenceNumber=By.xpath("//mat-label[text()='Equipment Licence Number']");
 	public static final By equipmentSerialNumber=By.xpath("//input[@formcontrolname='serialNumber']");
 	public static final By equipmentAutoallocate=By.xpath("//mat-select[@formcontrolname='autoAllocate']");
-//			By.xpath("//mat-select[@formcontrolname='autoAllocate']");
+//  By.xpath("//mat-select[@formcontrolname='autoAllocate']");
 	public static final By equipmentType=By.xpath("//mat-select[@formcontrolname='equipmentType']");
 	public static final By licenceExpiryDate=By.xpath("[class='mat-mdc-button-touch-target']");
 	public static final By saveAndContinue=By.xpath("//button[@form='myForm']");
@@ -25,7 +35,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentDescriptionerror=By.xpath("//span[text()='Maximum 250 Characters Allowed.']");
 	public static final By equipmentTypeError=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
 	public static final By licenseExpirydateButton=By.xpath("//button[@type='button']");
-	public static final By selectlicenseExpirydate=By.xpath("//span[text()=' 29 ']");
+	public static final By selectlicenseExpirydate=By.xpath("//span[text()=' 30 ']");
 	public static final By saveAndContinueButton=By.xpath("//button[text()=' Save and Continue ']");
 	public static final By manageEquipment=By.xpath("//button[text()=' Manage Equipment ']");
 	public static final By equipmentLicenseNumberInput=By.xpath("//input[@formcontrolname='licenseNumber']");
@@ -53,7 +63,6 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By invalidSerialNumberError=By.xpath("//span[text()='No Special Characters Allowed.']");
 	public static final By clearButton=By.xpath("//button[text()=' Clear ']");
 	public static final By bulkUploadCancelButton=By.xpath("//button[text()='Cancel']");
-
 	public static final By inactiveManageEquipment=By.xpath("//button[text()=' Manage Equipment ']");
 	public static final By assignEquipment=By.xpath("//button[text()=' Assign Employee ']");
 	public static final By employeeNameInAssignEmployee=By.xpath("//input[@formcontrolname='employeeName']");
@@ -61,8 +70,6 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By returnDateInAssignEmployee=By.xpath("(//button[@type='button'])[2]");
 	public static final By selectreturnDateInAssignEmployee=By.xpath("//span[text()=' 30 ']");
 	public static final By submitButtonAssignEmployee=By.xpath("//button[text()=' Submit ']");
-	
-
 	public static final By manageEquipmentInActiveEquipment=By.xpath("(//button[text()=' Manage Equipment '])[1]");
 	public static final By returnEquipmentButton=By.xpath(" //button[text()=' Return Equipment ']");
 	public static final By returnComments=By.xpath("//input[@formcontrolname='comments']");
@@ -78,10 +85,17 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By returnStatrSuccessMessage=By.xpath("//p[text()='Equipment updated successfully']");
 	
 	
+	public static By SelectWithoptions(String text) {
+	   	  final By textXpath = By.xpath("//mat-select[@formcontrolname='clientName']/mat-option/span[text()='"+text+"']");
+	   	  return textXpath;
+	        }
 	
 	
-	
-	
+	public static final By equipmentCalendarButton=By.xpath("//span[@class='mat-mdc-button-touch-target']");
+	public static final By equipmentCalendarArrow=By.className("mdc-button__label");
+	public static final By equipmentExpiryYear=By.xpath("//span[text()=' 2032 ']");
+	public static final By equipmentExpiryMonth=By.xpath("//span[text()=' FEB ']");
+	public static final By equipmentExpiryDate=By.xpath("//span[text()=' 17 ']");
 
 
 

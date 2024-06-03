@@ -6,8 +6,6 @@ Feature: Clients functionality
     Then User enter the valid passsword
     Then user click on login button
     When User Click on Clients module
-
-  #### add new client for valid invalid data
   
   Scenario: Verify add new Clients functionality with in valid data and valid data
     And User click on add new client button
@@ -16,7 +14,6 @@ Feature: Clients functionality
     And Validates the error messages of Invalid data of add new client all the feilds
     And Verify that user able to enter invalid field length data in add new client page
     Then User Validates the error messages of Invalid field length data of add new client all the feilds 
-    
     
     And User click client add new client button
     Then User Enter Client Name "Client Name" in add client page
@@ -35,8 +32,6 @@ Feature: Clients functionality
     Then User Enter comments "Comments" in add client page
     And User Click on Save and Continue Button in add client page
     Then User Verifies the client Success Message as "Client added successfully"
-    
-    ##/ manage client for active inactive clients
 
   Scenario: Verify update client info in manage client functionality with update and deactivate
     Then User click on manage client
@@ -58,9 +53,14 @@ Feature: Clients functionality
     Then User click on inactive button
     Then User verifies the success message
     
+    Then User click on inactive button
+    Then User verifies the success message
+    Then User click on manage client
+    Then User click on client info edit button
+    Then User clicks on activate button
     
     
-    ##/ client bulkupload
+   
     
     Scenario: Verify the Bulk Upload functionality
     And User clicks on Bulk Upload button in clients page
@@ -74,6 +74,3 @@ Feature: Clients functionality
     And User clicks on Bulk Upload button in clients page
     And User clicks on Submit button in clients page
     And User validates the error message as "errorMessage" of null Bulk Upload in clients page
-    #
-#
-  #

@@ -57,6 +57,7 @@ Feature: Sites & Checkpoints functionality
     And User clicks on Manage Site button
     And User enters Mobile Number as "MobileNumber" in Edit Site page
     And User clicks on Update button
+    
     #/And User clicks on Deactivate button
     Then User click on Inactive site tab
     Then User validates the deactivated site

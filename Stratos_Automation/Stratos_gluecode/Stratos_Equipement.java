@@ -14,9 +14,11 @@ public class Stratos_Equipement {
 	
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
 	public static String sheetName = "EquipmentModule";
+	public static String sheetName1 = "ClientModule";
+	public static String SiteAndCheckointsSheet = "SitesAndCheckpoints";
 	public static String EquipmentDescription;	
 	public static String EquipmentName;
-	public static String ClientName;
+	//public static String ClientName;
 	public static String SiteName;
 	public static String EquipmentCategory;
 	public static String EquipmentLicenseNumber;
@@ -32,6 +34,7 @@ public class Stratos_Equipement {
 	@When("User Click on Equipment module")
 	public void user_Click_on_Equipment_module() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentModule, 20);
+		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentModule, "Equipment Module");
 		
 	}
@@ -39,6 +42,7 @@ public class Stratos_Equipement {
 	@Given("User click on add new equipment button")
 	public void user_click_on_add_new_equipment_button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, 20);
+		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");   
 	}
 
@@ -112,7 +116,6 @@ public class Stratos_Equipement {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentName, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentName, "Equipment name");
 		testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentName, equipmentName, "equipment name");
-		testBase.takeScreenshot("Equipment");
 		String s=testBase.getElementText(Stratos_Admin_Equipment_PageObject.equipmentDescriptionerror, "Descroption error message");	   
 		System.out.println(s);
 		
@@ -204,28 +207,28 @@ public class Stratos_Equipement {
 			testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentName, 20);
 		    testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentName, "equipment description");
 		    testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentName, EquipmentName, "EquipmentDescription");
-		    Thread.sleep(2000);
+		    Thread.sleep(4000);
 		}
 
 	@Then("Admin User Select Client Name from Drop Down")
 	public void admin_User_Select_Client_Name_from_Drop_Down() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName1);
+		String ClientName = Excel_Utility.getCellData(2, 0);
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
 		Thread.sleep(2000);
-
-		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
-		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.dropdownSelect(ClientName), "ClientName");
 	}
 
 	@Then("Admin User Select the Site Name from Drop Down")
 	public void admin_User_Select_the_Site_Name_from_Drop_Down() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, SiteAndCheckointsSheet);
+		String siteName = Excel_Utility.getCellData(1, 0);
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.siteNameDropdown, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.siteNameDropdown, "site name selected");
-//		Thread.sleep(2000);
-//		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectSiteName, 20);
-		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectSiteName, "sativa");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectSiteName, "sativa");
+		Thread.sleep(4000);
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.siteNameDropdown, "Site Name");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.dropdownSelect(siteName), "SiteName");
+		
 
 		}
 
@@ -291,13 +294,27 @@ public class Stratos_Equipement {
 	public void admin_User_Select_auto_allocate_from_Drop_Down() throws Exception {
 	   testBase.waitForElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, 20);
 	   testBase.clickonElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, "expiry date");
+	   Thread.sleep(2000);
 	}
 
 	@Then("Admin User Select the Expiry Date from Drop Down")
 	public void admin_User_Select_the_Expiry_Date_from_Drop_Down() throws Exception {
-		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectlicenseExpirydate, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectlicenseExpirydate, "select the expiry date");
-		Thread.sleep(2000);
+		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, 20);
+		//Thread.sleep(3000);
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, "select the expiry date");
+		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, 20);
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, "select the expiry date");
+		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, 20);
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, "select the expiry date");
+		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, 20);
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, "select the expiry date");
+		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryDate, 20);
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryDate, "select the expiry date");
+		
 	}
 
 	@Then("Admin User Click on Save and Continue Button")

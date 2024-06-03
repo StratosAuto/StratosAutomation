@@ -73,4 +73,14 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By DuplicateBulkfileUploadErrrorMessage=By.xpath("//p[text()='The Emails are already exist']");
     public static final By EmptyBulkFileErrorMessage=By.xpath("//p[text()='No File Selected']");
     
+    
+    
+
+    public static final By dropdownSelect(String Object) {
+
+		By data=By.xpath("//div[@role='listbox']/descendant::mat-option/span[contains(text(),'"+Object+"')]");
+
+				return data;
+    
+}
 }

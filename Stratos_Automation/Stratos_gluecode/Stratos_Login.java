@@ -35,7 +35,6 @@ public class Stratos_Login {
 		testBase.waitForElement(Stratos_Login_PageObjects.email, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.email, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.email, valid_Username, "Enter Email id");
-		Thread.sleep(20000);
 	}
  
 	@Then("User enter the valid passsword")
@@ -44,19 +43,16 @@ public class Stratos_Login {
 		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
 				"Enter password");
-		Thread.sleep(20000);
 	}
  
 	@Then("user click on login button")
 	public void admin_user_click_on_login_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
-		Thread.sleep(20000);
 	}
  
 	@Then("User navigates to home page")
 	public void Admin_User_navigates_to_home_page() throws Exception {
-		Thread.sleep(10000);
 			if (!(testBase.isElementVisible(Stratos_Login_PageObjects.validateLogin, "Login successfull"))) {
 				ExceptionHandling.HandleAssertion("User not Login into the application");
 			} else {
