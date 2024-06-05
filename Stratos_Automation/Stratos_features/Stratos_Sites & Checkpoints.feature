@@ -1,10 +1,10 @@
 Feature: Sites & Checkpoints functionality
 
   Background: 
-    Given User Enter the Stratos application URL
-    Then User enter the valid username
-    Then User enter the valid password
-    Then user click on login button
+    Given Admin User Enter the Stratos application URL
+    Then Admin User enter the valid username
+    Then Admin User enter the valid password
+    Then Admin User click on Submit button
     When User Click on Sites & Checkpoints module
     
    
@@ -17,9 +17,7 @@ Feature: Sites & Checkpoints functionality
   And User Validates the error messages of Invalid data of add new site all the feilds
   And Verify that user able to enter invalid field length data in add new site page
   Then User Validates the error messages of Invalid field length data of add new site all the feilds 
-  
 
-  Given User click on add new equipment button
   Given User click on add new site button
   Then User Enter site Name as "site name" in add new site
   Then User Enter site description as"site description" in add new site
@@ -38,9 +36,6 @@ Feature: Sites & Checkpoints functionality
 
   #Then User Enter complete Address "complete address" in add new site
   #Then User select city as "city" in add new site" in add new site
-
-  Then User Enter complete Address "complete address" in add new site
-  Then User select city as "city" in add new site" in add new site
   And User Click on Save and Continue Button
   Then User Verifies the created site to validate site is created
   
@@ -64,7 +59,7 @@ Feature: Sites & Checkpoints functionality
     And User enters Mobile Number as "MobileNumber" in Edit Site page
     And User clicks on Update button
 
-    #And User clicks on Deactivate button
+  
     Then User click on Inactive site tab
     Then User validates the deactivated site
     
@@ -84,3 +79,4 @@ Feature: Sites & Checkpoints functionality
     And User clicks on Select File button and upload file
     And User clicks on Submit button
     And User validates the error message as "errorMessage" of null Bulk Upload
+    Then User Click on cancel button in sites and checkpoints bulk upload

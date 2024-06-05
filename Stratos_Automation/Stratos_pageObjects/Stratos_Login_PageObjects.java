@@ -6,12 +6,12 @@ public class Stratos_Login_PageObjects {
 
 	public static final By email = By.xpath("//input[@type='email'][@name='email']");
 	public static final By password = By.xpath("//input[@type='password']");
-	public static final By login_button = By.xpath("//input[@type='submit'] [@name='login']");
-	public static final By errorMessage = By.xpath("//p[text()='Error']");
+	public static final By loginSubmitutton = By.xpath("//button[@type='submit']");
+	public static final By errorMessage = By.xpath("//p[text()='Entered Email/Password is Incorrect']");
 	public static final By validateLogin = By.xpath("//span[text()='Home']");
 	public static final By loginPage=By.xpath("//span[text()='Sign in to your account']");
-	public static final By themes=By.xpath(" //button[text()=' Themes ']");
-	public static final By lightTheme=By.xpath("//button[@class=\"mat-mdc-menu-item mat-mdc-focus-indicator mdc-list-item btn_yellow\"]");
+	public static final By themes=By.xpath("//button[@id='themes_btn']");
+	public static final By lightTheme=By.xpath("//button[@class='mat-mdc-menu-item mat-mdc-focus-indicator mdc-list-item btn_yellow']");
 	public static final By settings=By.xpath("//i[@aria-haspopup='menu']");
 	public static final By changePassword=By.xpath("//span[text()='Change password']");
 	public static final By currentPassword=By.xpath("//input[@formcontrolname='currentPassword']");
@@ -23,7 +23,7 @@ public class Stratos_Login_PageObjects {
 	public static final By emptyLoginerrormessageForEmpltyFileds=By.xpath("//p[text()='Please fill in all required fields.']");
 	public static final By forgotPasswordLink=By.xpath("//a[text()='Forgot your password?']");
 	public static final By forgotPinEmailAddress=By.xpath("//input[@formcontrolname='email']");
-	public static final By forgotPinSubmitButton=By.xpath("//input[@name='submit']");
+	public static final By forgotPinSubmitButton=By.xpath("//button[text()='Submit']");
 	public static final By forgotPinCreatPasswordfield=By.xpath("//input[@formcontrolname='password']");
 	public static final By forgotPinConfirmPAssword=By.xpath("//input[@formcontrolname='confirmPassword']");
 	public static final By forgotpinemailSuccessMessage=By.xpath("//p[text()='Please wait, your request is processing']");

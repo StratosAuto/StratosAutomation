@@ -13,7 +13,7 @@ Feature: Supervisor Login functionality
     Then User click on log in as employee
     Then User click on login button
     Then User verifies the error message as "Please fill in all required fields"
-    #----------------
+   
     Then User enter the invalid pin as " invalid pin " in employee login page
     Then User click on login button
     Then User verifies the invalid data error message as "4 attempts remaining."
@@ -26,7 +26,7 @@ Feature: Supervisor Login functionality
 		Then User enter the invalid employee id as "employee id" in request new pin page
 		Then User click on request new pin button
 		Then User verifies the error message
-		#----------------
+	
 		Then User enter the valid employee id
 		Then User click on request new pin button
 		Then User verifies the success message and navigates to request new pin page

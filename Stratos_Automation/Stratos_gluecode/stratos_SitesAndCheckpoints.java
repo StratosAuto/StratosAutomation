@@ -127,7 +127,7 @@ public class stratos_SitesAndCheckpoints {
 	@Then("User Validates the error messages of Invalid field length data of add new site all the feilds")
 	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_add_new_site_all_the_feilds() throws Throwable {
 		testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.CancelButtonForInvalid, "cancelbutton");
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 	}
 
 //	@Given("User Click on Add New site Button")
@@ -140,7 +140,7 @@ public class stratos_SitesAndCheckpoints {
 		testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.siteName, 20);
 	    Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		siteName = Excel_Utility.getCellData(1, 0);
-	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.siteName, "equipment name");
+	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.siteName, "sitename name");
 	    testBase.typeinTextBox(Stratos_SitesAndCheckpoints_PageObjects.siteNameInput, siteName, "Equipmentname");
 	}
 
@@ -567,6 +567,11 @@ public class stratos_SitesAndCheckpoints {
 	
 	  
 	}
+
+@Then("User Click on cancel button in sites and checkpoints bulk upload")
+public void user_Click_on_cancel_button_in_sites_and_checkpoints_bulk_upload() throws Throwable {
+    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.cancelButtonInBulkUpload, 20);
+    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.cancelButtonInBulkUpload, "Click on CancelButton");
 	
 //	@When("User Click on manage site")
 //	public void user_Click_on_manage_site1() throws Exception {
@@ -631,4 +636,4 @@ public class stratos_SitesAndCheckpoints {
 //		Logs.info("data should not vissible");
 //	    
 	}
-
+}
