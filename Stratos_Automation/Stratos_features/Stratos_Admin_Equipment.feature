@@ -6,8 +6,7 @@ Feature: Equipment functionality
     Then Admin User enter the valid password
     Then Admin User click on Submit button
     When Admin User navigates to home page
-    
-
+  
   Scenario: Verify add new equipemt functionality
     When User Click on Equipment module
     Given User click on add new equipment button
@@ -30,51 +29,44 @@ Feature: Equipment functionality
     And Admin User Click on Save and Continue Button
     Then Admin User Clicks on Inactive Equipments
     Then User Verifies the created equipment to validate equipment is created
-    
-   
+
     Scenario: Verify the manage equipment functionality
+    When User Click on Equipment module
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-    
     And Admin User click on update Button
     Then Admin User validates the updated manage equipment
     Then Click on inactive page in equipment
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-   
     And Admin User click on update Button
     Then Click on inactive page in equipment
-   
     Then Admin User validates the deactivate manage equipment
     Then Click on faulty page in equipment
     Then admin User click on manage equipment
     Then Admin User enter Equipement name as "equipment name" in Active equipment
-   
     And Admin User click on update Button
     Then Click on faulty page in equipment
     Then Admin User validates the faulty manage equipment
    
-   
   Scenario: Verify the equipment bulk functionality
+    When User Click on Equipment module
     When User clicks on Bulk Upload button in equpment page
-   When User clicks on Select File button and upload file in equipment page
+    When User clicks on Select File button and upload file in equipment page
     When User clicks on Submit button in equipment page
     Then User Verifies the success message in bulk upload
-    
     When User clicks on Bulk Upload button in equpment page
     When User clicks on Submit button in equipment page
     And User validates the error message as "errorMessage" of invalid Bulk Upload in equipment page
     And User clicks on cancel button in equipment page
-    
     When User clicks on Bulk Upload button in equpment page
     When User clicks on Select File button and upload file in equipment page
     When User clicks on Submit button in equipment page
     And User validates the error message as "errorMessage" of null Bulk Upload in equipment page
     And User clicks on cancel button in equipment page
     
-  
-    
-    Scenario: Verify the Assign Equipment and Return equipment functionality
+  Scenario: Verify the Assign Equipment and Return equipment functionality
+    When User Click on Equipment module
     Given User click on add new equipment button
     Then Admin User Enter the Equipment Description
     Then Admin User Enter the Equipment Name
@@ -87,7 +79,6 @@ Feature: Equipment functionality
     Then Admin User Select the Equipment Type from drop down
     Then Admin User Select Expiry Date from Drop Down
     And Admin User Click on Save and Continue Button
-    
     Then Admin User Clicks on Inactive Equipments
     Then Admin User Search the created Working equipment in filter
     Then Admin User Clicks Manage equipment button in Inactive equipment
@@ -96,8 +87,6 @@ Feature: Equipment functionality
     Then Admin User Select the Return date
     Then Admin User Clicks on submit button
     Then Admin User capture the success message
-   
-   
     Then Admin User Search the created Working equipment in filter
     Then Admin User Clicks on manage equipment in Active equipment
     Then Admin User Clicks on Return Equipment
@@ -105,7 +94,6 @@ Feature: Equipment functionality
     Then Admin User Select the Return State as Faulty
     Then Admin User Clicks on Submit button
     Then Admin User Captures the Return state success message
-    
     Then Click on faulty page in equipment
     Then Admin User Validates the Return state Working equipment 
     Then Click on Manage Equipment in Faulty equipment
@@ -118,7 +106,6 @@ Feature: Equipment functionality
     Then Admin User Select the Return date
     Then Admin User Clicks on submit button
     Then Admin User capture the success message
-    
     Then Admin User Search the created Working equipment in filter
     Then Admin User Clicks on manage equipment in Active equipment
     Then Admin User Clicks on Return Equipment
@@ -128,10 +115,3 @@ Feature: Equipment functionality
     Then Admin User Captures the Return state success message
     Then Admin User Clicks on Inactive Equipments
     Then Admin User Search the created Working equipment in filter
-    
-    
-    
-    
-    
-   
- 

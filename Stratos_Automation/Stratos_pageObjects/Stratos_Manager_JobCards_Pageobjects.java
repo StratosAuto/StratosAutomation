@@ -11,9 +11,9 @@ public class Stratos_Manager_JobCards_Pageobjects {
 	public static final By jobCardName=By.xpath("//input[@formcontrolname='jobCardName']");
 	public static final By jobCardDescription=By.xpath("//input[@formcontrolname='jobCardDescription']");
 	public static final By clientName=By.xpath("//mat-select[@formcontrolname='clientName']");
-	public static final By selectClientName=By.xpath("//span[text()='John Fred']");
+	public static final By selectClientName=By.xpath("//span[text()='Sadio']");
 	public static final By siteName=By.xpath("//mat-select[@formcontrolname='siteName']");
-	public static final By selectSiteName=By.xpath("//span[text()='sativa']");
+	public static final By selectSiteName=By.xpath("//span[text()='Zina']");
 	public static final By saveAndContinueButton=By.xpath("//button[text()=' Save and Continue ']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By validateNull=By.xpath("//h1[text()='Job Cards And Tasks']");

@@ -1,11 +1,11 @@
 Feature: Home functionality
 
   Background: 
-   Given Admin User Enter the Stratos application URL
+    Given Admin User Enter the Stratos application URL
     Then Admin User enter the valid username
     Then Admin User enter the valid password
     Then Admin User click on Submit button
-    
+   
   Scenario: Verify the Home module Theme functionality
     And Admin User click on themes
     Then Admin User Select a theme
