@@ -70,14 +70,16 @@ public class Stratos_Manager_Dashboard {
 	@Then("User enters invalid data in filter field on manager dashboard")
 	public void user_enters_invalid_data_in_filetr_field_on_manager_dashboard() throws Exception {
 	 testBase.clearTextbox(Stratos_Manager_Dashboard_Pageobjects.filterdata, "Filter");
-	 String invalidfilterdata=testBase.randomAlphanumeric(7);
+	 String invalidfilterdata=testBase.randomAlphanumeric(10);
 	 testBase.typeinTextBox(Stratos_Manager_Dashboard_Pageobjects.filterdata, invalidfilterdata, "Filter Data");
 	}
 
 	@Then("User validates the error message on manager dashboard")
-	public void user_validates_the_error_message_on_manager_dashboard() {
-	 
-	 
+	public void user_validates_the_error_message_on_manager_dashboard() throws Exception {
+	 if(!(testBase.isElementVisible(Stratos_Manager_Dashboard_Pageobjects.filterValidates, "Filter error"))) {
+		 ExceptionHandling.HandleAssertion("Invalid filter error is not displayed");
+	 }else
+		 Logs.info("Invalid filter error message is displayed");
 	}
 
 	@Then("User clicks on view dropdown and selects view as {string} to view map")

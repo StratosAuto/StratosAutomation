@@ -26,6 +26,7 @@ public class Stratos_Manager_Shifts {
 	public void user_clicks_on_Add_New_Shifts_button() throws Exception {
 	    testBase.waitForElement(Stratos_Manager_Shifts_Pageobjects.addNewShiftsButton, 20);
 	    testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.addNewShiftsButton, "Add New Shift");
+	    Thread.sleep(4000);
 	}
 
 	@Given("User selects Supervisor Name & Surname as {string} from Supervisor Name & Surname dropdown")
@@ -46,7 +47,8 @@ public class Stratos_Manager_Shifts {
 	public void user_selects_clients_as_from_Clients_dropdown(String string) throws Exception {
 	    testBase.waitForElement(Stratos_Manager_Shifts_Pageobjects.clientName, 20);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.clientName, "Client Name");
-	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.selectClientName, "John Fred");
+	    Thread.sleep(2000);
+	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.selectClientName, "Client Name");
 	}
 
 	@Given("User selects Site Name & Address as {string} from Site Name & Address dropdown")
@@ -54,6 +56,7 @@ public class Stratos_Manager_Shifts {
 		Thread.sleep(5000);
 	    testBase.waitForElement(Stratos_Manager_Shifts_Pageobjects.siteName, 20);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.siteName, "Site Name & Address");
+	    Thread.sleep(2000);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.selectSiteName, "Site Name & Address");
 	}
 
@@ -62,9 +65,13 @@ public class Stratos_Manager_Shifts {
 		testBase.waitForElement(Stratos_Manager_Shifts_Pageobjects.checkInDateCalendarButton, 20);
 	    Thread.sleep(5000);
 		testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.checkInDateCalendarButton, "Calendar Button");
-	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.calendarArrow, "Calendar");
-	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.checkInYear, "Year");
+		Thread.sleep(1000);
+		testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.calendarArrow, "Calendar");
+		Thread.sleep(1000);
+		testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.checkInYear, "Year");
+		Thread.sleep(1000);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.checkInMonth, "Month");
+	    Thread.sleep(1000);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.checkInDate, "Date");
 	}
 
@@ -82,10 +89,14 @@ public class Stratos_Manager_Shifts {
 		testBase.waitForElement(Stratos_Manager_Shifts_Pageobjects.checkOutdateCalendarButton, 20);
 		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutdateCalendarButton, "Calendar Button");
-	    testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.calendarArrow, "Calendar");
-	    testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutYear, "Year");
-	    testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutMonth, "Month");
-	    testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutDate, "Date");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.calendarArrow, "Calendar");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutYear, "Year");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutMonth, "Month");
+		Thread.sleep(1000);
+		testBase.clickonElement(Stratos_Manager_Shifts_Pageobjects.checkOutDate, "Date");
 	}
 
 	@Given("User enters check-out time as {string}")
@@ -294,11 +305,11 @@ public class Stratos_Manager_Shifts {
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.employeeName, "Employee Name & Surname");
 	    Thread.sleep(2000);
 	    testBase.ClickViaMouse(Stratos_Manager_Shifts_Pageobjects.shiftsDropdown(employeeName), "Employee Name & Surname");
-	    
-	    if(!(testBase.isElementVisible(Stratos_Manager_Shifts_Pageobjects.duplicateShift, "Employee is alreay assigned"))) {
-	    	ExceptionHandling.HandleAssertion("Employee is alreay assigned error message is not displayed");
+	    Thread.sleep(5000);
+	    if(!(testBase.isElementVisible(Stratos_Manager_Shifts_Pageobjects.duplicateShift, "Employee is already assigned"))) {
+	    	ExceptionHandling.HandleAssertion("Employee is already assigned error message is not displayed");
 	    }else
-	    	Logs.info("Employee is alreay assigned error message is displayed");
+	    	Logs.info("Employee is already assigned error message is displayed");
 	}
 
 	@Given("User clicks on Select File button and upload valid Shifts bulk file")
