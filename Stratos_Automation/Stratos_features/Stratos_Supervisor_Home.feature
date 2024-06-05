@@ -12,7 +12,7 @@ Feature: Supervisor Home Functionality
     Then User selects the theme from options
     And User can verify the theme should update
     
- #-------Logout functionality
+
  
     Given User click on settings button
     Then User select the logout button

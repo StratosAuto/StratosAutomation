@@ -1,13 +1,12 @@
 package Stratos_gluecode;
 
 import Stratos_pageObjects.Stratos_Login_PageObjects;
-import Stratos_testBase.PageBase;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
 import Stratos_utilities.ExceptionHandling;
 import Stratos_utilities.Logs;
-import Stratos_utilities.Utils;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 public class Stratos_Home {
 	public static String excelFileLocation = "./TestData/Excel_data/Stratos_Test_Data.xlsx";
@@ -21,8 +20,9 @@ public class Stratos_Home {
 	public static String ConfirmPassword;
 	
 
-	@Given("Admin User  click on Themes")
-	public void admin_User_click_on_Themes() throws Exception {
+	@Given("Admin User click on themes")
+	public void Admin_User_click_on_themes() throws Exception {
+		Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Login_PageObjects.themes, 40);
 		testBase.clickonElement(Stratos_Login_PageObjects.themes, "click on themes");
 	}
@@ -41,7 +41,7 @@ public class Stratos_Home {
 	}
 
 	@Given("Admin User click on settings")
-	public void admin_User_click_on_settings1() throws Throwable {
+	public void admin_User_click_on_settings() throws Throwable {
 		testBase.waitForElement(Stratos_Login_PageObjects.settings, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.settings, "click on settings");
 	}

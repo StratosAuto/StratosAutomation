@@ -72,7 +72,7 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By BulkUploadSuccessMessage=By.xpath("//p[text()='File Uploaded Successfully']");
     public static final By DuplicateBulkfileUploadErrrorMessage=By.xpath("//p[text()='The Emails are already exist']");
     public static final By EmptyBulkFileErrorMessage=By.xpath("//p[text()='No File Selected']");
-    
+    public static final By cancelButtonInBulkUpload=By.xpath("//button[text()='Cancel']");
     
     
 

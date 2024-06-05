@@ -1,10 +1,10 @@
 Feature: Clients functionality
 
   Background: 
-    Given User Enter the Stratos application URL
-    Then User enter the valid username
-    Then User enter the valid passsword
-    Then user click on login button
+    Given Admin User Enter the Stratos application URL
+    Then Admin User enter the valid username
+    Then Admin User enter the valid password
+    Then Admin User click on Submit button
     When User Click on Clients module
   
   Scenario: Verify add new Clients functionality with in valid data and valid data
@@ -22,7 +22,7 @@ Feature: Clients functionality
     Then User Enter Fax Number "Fax Number" in add client page
     And User Enter Vat Number "Vat Number" in add client page
     Then User Enter Account Manager "Account Manager" in add client page
-    #//Then User Select Status "Status" in add client page
+    
     And User Enter street "Street" in add client page
     Then User Enter street1 "Street1" in add client page
     Then User Select city "City" in add client page
@@ -39,16 +39,16 @@ Feature: Clients functionality
     Then User change valid client name "Client Name" in manage clients
     Then User change street "Street" When in manage clients
     Then User change street1 "Street1" in manage client page
-    #/Then User select city "City" in manage clients
+   
     Then User click on update button
     Then User verifies the success message
-    #/---------
+    
     Then User click on manage client
     Then User click on client info edit button
     Then User change valid client name "Client Name" in manage clients
     Then User change street "Street" When in manage clients
     Then User change street1 "Street1" in manage client page
-    #/Then User select city "City" in manage clients
+    
     Then User click on deactivate button
     Then User click on inactive button
     Then User verifies the success message
@@ -59,8 +59,6 @@ Feature: Clients functionality
     Then User click on client info edit button
     Then User clicks on activate button
     
-    
-   
     
     Scenario: Verify the Bulk Upload functionality
     And User clicks on Bulk Upload button in clients page
@@ -74,3 +72,4 @@ Feature: Clients functionality
     And User clicks on Bulk Upload button in clients page
     And User clicks on Submit button in clients page
     And User validates the error message as "errorMessage" of null Bulk Upload in clients page
+    Then User click on cancel button in clients bulk upload
