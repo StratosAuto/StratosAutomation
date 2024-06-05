@@ -1,6 +1,5 @@
 package Stratos_gluecode;
 
-import Stratos_pageObjects.Stratos_Admin_Equipment_PageObject;
 import Stratos_pageObjects.Stratos_Client_PageObjects;
 import Stratos_pageObjects.Stratos_SitesAndCheckpoints_PageObjects;
 import Stratos_testBase.testBase;

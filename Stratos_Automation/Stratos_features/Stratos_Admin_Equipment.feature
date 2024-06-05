@@ -3,7 +3,7 @@ Feature: Equipment functionality
   Background: 
    Given User Enter the Stratos application URL
     Then User enter the valid username
-    Then User enter the valid passsword
+    Then User enter the valid password
     Then user click on login button
     When User Click on Equipment module
     

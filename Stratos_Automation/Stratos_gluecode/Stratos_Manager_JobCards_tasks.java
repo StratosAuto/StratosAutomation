@@ -412,7 +412,11 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Then("User validates the success message as {string} of valid Bulk Upload of Job Cards")
 	public void user_validates_the_success_message_as_of_valid_Bulk_Upload_of_Job_Cards(String string) throws Exception {
-		
+		Thread.sleep(2000);
+		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.successBulkUpload, "File Upload"))) {
+			ExceptionHandling.HandleAssertion("Bulk upload file is not uploaded");
+		} else
+			Logs.info("Bulk upload file is uploaded");
 	}
 
 	@Then("User clicks on Select File button to upload invalid Job Cards bulk file")
@@ -424,6 +428,7 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Then("User validates the error message as {string} of invalid Bulk Upload of Job Cards")
 	public void user_validates_the_error_message_as_of_invalid_Bulk_Upload_of_Job_Cards(String string) throws Exception {
+		Thread.sleep(2000);
 		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.invalidBulkUpload, "File Upload"))) {
 			ExceptionHandling.HandleAssertion("Inavlid bulk upload file is uploaded");
 		} else
@@ -439,6 +444,7 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Given("User validates the error message as {string} of empty Bulk Upload file of Job Cards")
 	public void user_validates_the_error_message_as_of_empty_Bulk_Upload_file_of_Job_Cards(String string) throws Exception {
+		Thread.sleep(2000);
 		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.nullBulkUpload, "File Upload"))) {
 			ExceptionHandling.HandleAssertion("Null bulk upload file is uploaded");
 		} else
