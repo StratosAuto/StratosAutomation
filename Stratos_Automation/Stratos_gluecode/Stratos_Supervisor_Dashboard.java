@@ -9,12 +9,10 @@ public class Stratos_Supervisor_Dashboard {
 
 	@Given("User clicks on Dashboard in the menu")
 	public void user_clicks_on_Dashboard_in_the_menu() throws Exception {
-		
-		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.dashBoard, 40);
-		Thread.sleep(4000);
-		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.dashBoard, " dashboard");
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.dashboardMenu, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.dashboardMenu, "dashboard");
 		Thread.sleep(10000);
-	   
+
 	}
 
 	@Given("User clicks on All Clients dropdown and selects All clients as {string}")
@@ -62,30 +60,92 @@ public class Stratos_Supervisor_Dashboard {
 		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.filterButton, 20);
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.filterButton, "filterButton");
 	    testBase.takeScreenshot("list view");
+	    Thread.sleep(9000);
 	    
 	}
+	@Then("User clicks on view dropdown and select view as {string}")
+	public void user_clicks_on_view_dropdown_and_select_view_as(String string) throws Exception {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.clickView, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.clickView, "select all clients");
+	    testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.selectMApView, 20);
+	    testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.selectMApView, "map view");
+	    Thread.sleep(6000);
+	}
+
 
 	@Then("User enters valid data in filter field")
 	public void user_enters_valid_data_in_filter_field() throws Exception {
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.map, "map");
 	   
 	}
+	@Then("User clicks on map tag")
+	public void user_clicks_on_map_tag() throws Exception {
+	 testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.mapTag, 20);
+	 testBase.ClickViaMouse(Stratos_Supervisor_Dashboard_PageObject.mapTag, "Map Tag");
+	 testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.mapPopup, 20);
+	 testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.mapPopup, "Ok button");
+   	}
+ 
+	@Then("User clicks on view sites")
+	public void user_clicks_on_view_sites() throws Exception {
+	 testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.viewSites, 20);
+	 testBase.ClickViaMouse(Stratos_Supervisor_Dashboard_PageObject.viewSites, "View Sites");
+	 Thread.sleep(4000);
+	 
+	 
+	 
+	}
+	@Then("User clicks on more info button")
+	public void user_clicks_on_more_info_button() throws Exception {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.moreInfo, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.moreInfo, "more info button");
+	    Thread.sleep(4000);
+	}
 
-	@Then("User validates the filtered data")
-	public void user_validates_the_filtered_data() {
+	@Then("User clicks on emplyee under all employees")
+	public void user_clicks_on_emplyee_under_all_employees() throws Exception {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, "first employee");
+		Thread.sleep(4000);
+	}
+	
+	@Then("User verifies the shift details")
+	public void user_verifies_the_shift_details() throws Throwable {
+		testBase.ScrollDownBottom();
+		testBase.takeScreenshot("Employee details");
+	   
+	}
+
+	@Then("User clicks on Back button")
+	public void user_clicks_on_Back_button() throws Exception {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.backButton, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.backButton, "back button");
+	   
+	}
+
+	@Then("User clicks on more info button in Active shift info")
+	public void user_clicks_on_more_info_button_in_Active_shift_info() throws Exception {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.moreInfoButtonInActiveShift, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.moreInfoButtonInActiveShift, "more info button");
+		Thread.sleep(4000);
+	}
+
+	@Then("User verifies the assigned task list")
+	public void user_verifies_the_assigned_task_list() throws Throwable {
+		testBase.ScrollDownBottom();
+		testBase.takeScreenshot("assigned task list");
 	    
 	}
 
-	@Then("User enters invalid data in filetr field")
-	public void user_enters_invalid_data_in_filetr_field() {
-	    
+	@Then("User clicks on back button")
+	public void user_clicks_on_back_button() throws Exception {
+	    testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, 20);
+	    testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, "back button");
 	}
+
 
 	@Then("User validates the error message")
 	public void user_validates_the_error_message() {
 		
 	}
 }
-
-
-

@@ -88,14 +88,14 @@ public class Stratos_Manager_Dashboard {
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.mapView, "Map View");
 	}
 
-	@Then("User clicks on map tag")
-	public void user_clicks_on_map_tag() throws Exception {
+	@Then("User clicks on map tag in dashboard")
+	public void user_clicks_on_map_tag_in_dashboard() throws Exception {
 	 testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.mapTag, 20);
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.mapTag, "Map Tag");
 	}
 
-	@Then("User clicks on view sites")
-	public void user_clicks_on_view_sites() throws Exception {
+	@Then("User clicks on view sites in dashboard")
+	public void user_clicks_on_view_sites_in_dashboard() throws Exception {
 	 testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.viewSites, 20);
 	 testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.viewSites, "View Sites");
 	}

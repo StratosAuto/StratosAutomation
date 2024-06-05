@@ -16,7 +16,7 @@ Feature: Supervisor Shifts functionality
     Then User select the job card
     Then User click on assign button
     Then User vaidates the invalid employee
-    ##------------------##-------------------##
+ 
     Then User click on cancel button
     Then User click on unassigned employee button
     Then User select the valid employee name

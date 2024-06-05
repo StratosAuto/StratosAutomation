@@ -33,7 +33,6 @@ public class Stratos_Login {
 		testBase.waitForElement(Stratos_Login_PageObjects.email, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.email, "clicked");
 		testBase.typeinTextBox(Stratos_Login_PageObjects.email, valid_Username, "Enter Email id");
-		
 	}
  
 	@Then("User enter the valid password")
@@ -156,38 +155,5 @@ public class Stratos_Login {
 	
 
 
-
-
-//	@Then("Admin User give the empty username")
-//	public void admin_User_give_the_empty_username() throws Throwable {
-//		invalid_Username = Excel_Utility.getCellData(1, 0);
-//		invalid_Password = Excel_Utility.getNumericCellData(1, 1);
-//		testBase.waitForElement(Stratos_Login_PageObjects.email, 20);
-//		testBase.clickonElement(Stratos_Login_PageObjects.email, "clicked");
-//	}
-// 
-//	@Then("Admin User give the empty passsword")
-//	public void admin_User_give_the_empty_passsword() throws Exception {
-//		testBase.waitForElement(Stratos_Login_PageObjects.password, 20);
-//		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
-//		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
-//				"Enter password");
-//	}
- 
-//	@Then("User click on login button")
-//	public void admin_User_click_on_login_button() throws Exception {
-//		testBase.RefreshPage();
-//		testBase.waitForElement(Stratos_Login_PageObjects.login_button, 20);
-//		testBase.clickonElement(Stratos_Login_PageObjects.login_button, "Login");
-//		Thread.sleep(10000);
-//	}
-//	@Then("User verifies the error message {string}")
-//	public void admin_User_verifies_the_error_message1(String string) throws Exception {
-//		testBase.getElementText(Stratos_Login_PageObjects.emptyLoginerrormessage, "error message");
-//		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.emptyLoginerrormessageForEmpltyFileds, "Login successfully"))) {
-//			ExceptionHandling.HandleAssertion("Login not successfull");
-//		}else
-//			Logs.info("Login successful");		
-//	}
-
 }
+

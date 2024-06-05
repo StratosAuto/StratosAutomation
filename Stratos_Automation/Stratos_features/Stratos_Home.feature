@@ -3,28 +3,19 @@ Feature: Home functionality
   Background: 
    Given User Enter the Stratos application URL
     Then User enter the valid username
-    Then User enter the valid passsword
+    Then User enter the valid password
     Then user click on login button
-    
-    ##------Theme functionalty---------
 
   Scenario: Verify the Home module Theme functionality
     And Admin User  click on Themes
     Then Admin User Select a theme
     Then Admin User verifies the theme
     
-     
-    ##------Logout functionality----------
-
   Scenario: Verify the Home module logout functionality
     Then Admin User  verify user navigates to homepage
     And Admin User click on settings
     Then Admin User click on logout
     Then Admin User navigates to Login Page
-    
-    
-    
-    ##------home module settings functionality
 
   Scenario: Verify the Home module Settings change password functionality
     And Admin User click on settings

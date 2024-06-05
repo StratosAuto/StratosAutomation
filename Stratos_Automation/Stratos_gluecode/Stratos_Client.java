@@ -1,6 +1,5 @@
 package Stratos_gluecode;
 
-import Stratos_pageObjects.Stratos_Admin_Equipment_PageObject;
 import Stratos_pageObjects.Stratos_Client_PageObjects;
 import Stratos_pageObjects.Stratos_SitesAndCheckpoints_PageObjects;
 import Stratos_testBase.testBase;
@@ -394,6 +393,11 @@ public void user_click_on_client_info_edit_button() throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.editManageClientDetails, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.editManageClientDetails, "edit button");
     
+}
+@Then("User clicks on activate button")
+public void user_clicks_on_activate_button() throws Throwable {
+   testBase.waitForElement(Stratos_Client_PageObjects.activateButton, 20);
+   testBase.clickonElement(Stratos_Client_PageObjects.activateButton, "Activate client");
 }
 
 @Then("User change valid client name {string} in manage clients")

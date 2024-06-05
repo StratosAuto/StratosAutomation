@@ -1,11 +1,7 @@
 package Stratos_gluecode;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import Stratos_pageObjects.Stratos_Login_PageObjects;
 import Stratos_pageObjects.Stratos_SignUp_PageObjects;
-import Stratos_pageObjects.Stratos_SitesAndCheckpoints_PageObjects;
 import Stratos_testBase.PageBase;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
