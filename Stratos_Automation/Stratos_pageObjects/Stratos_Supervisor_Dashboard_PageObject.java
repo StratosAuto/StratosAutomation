@@ -19,12 +19,14 @@ public class Stratos_Supervisor_Dashboard_PageObject {
 	public static final By maps=By.xpath("//div[@role='region']");
 	public static final By mapTag=By.xpath("//IMG[@draggable='false']");
 	public static final By viewSites=By.xpath("(//div[text()=' view sites '])[1]");
-	public static final By moreInfo=By.xpath("//button[text()='More Info']");
+	public static final By moreInfo=By.xpath("(//button[text()='More Info'])[1]");
 	public static final By firstEmployee=By.xpath("//mat-icon[@fonticon='person']");
 	public static final By backButton=By.xpath("//span[text()='Back']");
 	public static final By moreInfoButtonInActiveShift=By.xpath("(//button[text()='More Info'])[2]");
 	public static final By backButton2=By.xpath("//span[text()='Back']");
 	public static final By selectMApView=By.xpath("//span[text()='Map View']");
 	public static final By mapPopup=By.xpath("//button[text()='OK']");
+	
+	
 	
 }

@@ -426,9 +426,9 @@ public class stratos_SitesAndCheckpoints {
 	}
 	@Then("User click on Inactive site tab")
 	public void user_click_on_Inactive_site_tab() throws Exception {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		testBase.RefreshPage();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	    testBase.waitForElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, 20);
 	    testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.inactiveSite, "inactive site");
 	    Thread.sleep(20000);

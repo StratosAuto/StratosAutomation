@@ -78,11 +78,13 @@ public class Stratos_Home {
 		testBase.waitForElement(Stratos_Login_PageObjects.confirmPassword, 20);
 //	    testBase.clickonElement(Stratos_Login_PageObjects.confirmPassword, "confirm password");
 	    testBase.typeinTextBox(Stratos_Login_PageObjects.confirmPassword, String.valueOf(ConfirmPassword), "confirm password");
+	     Thread.sleep(2000);
 	}
 	@Then("Admin User click update button")
 	public void admin_User_click_update_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.updateButton, 20);
-		testBase.clickonElement(Stratos_Login_PageObjects.updateButton, "click");
+		testBase.ClickViaMouse(Stratos_Login_PageObjects.updateButton, "click");
+		Thread.sleep(10000);
 	}
 	@Then("Admin User verifies the success message")
 	public void admin_User_verifies_the_success_message() throws Exception {

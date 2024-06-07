@@ -16,7 +16,7 @@ public class Stratos_Login_PageObjects {
 	public static final By changePassword=By.xpath("//span[text()='Change password']");
 	public static final By currentPassword=By.xpath("//input[@formcontrolname='currentPassword']");
 	public static final By newPassword=By.xpath("//input[@formcontrolname='newPassword']");
-	public static final By updateButton=By.xpath("//button[@class='btn btn-outline-success m-1']");
+	public static final By updateButton=By.xpath("//button[text()='Update']");
 	public static final By confirmPassword=By.xpath("//input[@class='mat-mdc-input-element ng-tns-c20-5 mat-mdc-form-field-input-control mdc-text-field__input ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored']");
 	public static final By logOut=By.xpath("//span[text()='Logout']");
 	public static final By emptyLoginerrormessage=By.xpath("//div[@class='container-2']");

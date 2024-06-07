@@ -81,7 +81,7 @@ public class Stratos_Login {
 	@Then("Admin User verifies the error message {string}")
 	public void Admin_User_verifies_the_error_message(String string) throws Exception {
 		Thread.sleep(2000);
-		if ((testBase.isElementVisible(Stratos_Login_PageObjects.errorMessage, "Login unsuccesfull"))) {
+		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.errorMessage, "Login unsuccesfull"))) {
 			ExceptionHandling.HandleAssertion("Login successfull");
 		}else
 			Logs.info("Login unsuccessfull");	   

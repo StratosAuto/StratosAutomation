@@ -10,15 +10,9 @@ Feature: Signu Up functionality
     And Verify that user able to enter invalid field length data in Registration page
     Then User Validates the error messages of Invalid field length data of all the feilds on sign up page
     Then User click on goback button
-    
- 
-   
     And User clicks on Sign Up link
     Then User clicks on Register button
     Then User click on goback button
-    
-   
-    
     When User clicks on Sign Up link
     And User enters First Name as "First name" in registrtion page
     And User enters Last Name as "Last name" in registrtion page
@@ -36,8 +30,8 @@ Feature: Signu Up functionality
     Given User Enters URL
     When User clicks on Sign Up link
     And User enters First Name as "First name" in registrtion page
-    And User enters Last Name
-    And User enters in valid Email address
+    And User enters Last Name as "Last name" in registrtion page
+    And User enters in Email address as "Email address" in registrtion page
     And User enters Mobile number
     And User enters Password on Sign Up page
     And User enters Confirm Password
