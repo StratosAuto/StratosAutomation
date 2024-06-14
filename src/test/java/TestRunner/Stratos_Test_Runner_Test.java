@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features="Stratos_Automation/Stratos_features/Stratos_Sites & Checkpoints.feature",
+		features="Stratos_Automation/Stratos_features/Stratos_Supervisor_Login.feature",
 		glue={"Stratos_gluecode", "TestRunner"},
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","progress","summary"},
 		tags= {""},

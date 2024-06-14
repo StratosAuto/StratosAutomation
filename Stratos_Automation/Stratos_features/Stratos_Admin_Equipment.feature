@@ -24,7 +24,6 @@ Feature: Equipment functionality
     Then Admin User Enter Equipment Serial Number
     Then Admin User Select Auto Allocate from Drop Down
     Then Admin User Select Equipment Type from drop down
-    Then Admin User Select auto allocate from Drop Down
     Then Admin User Select the Expiry Date from Drop Down
     And Admin User Click on Save and Continue Button
     Then Admin User Clicks on Inactive Equipments

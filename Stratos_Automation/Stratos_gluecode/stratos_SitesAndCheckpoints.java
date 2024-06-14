@@ -462,7 +462,7 @@ public class stratos_SitesAndCheckpoints {
 	    	ExceptionHandling.HandleAssertion("Site is not deactivated");
 	    }else
 	    	Logs.info("Site is deactivated");
-		
+	    testBase.RefreshPage();		
 	}
 
 	@Then("User enters Other Contact Number as {string} in Edit Site page")

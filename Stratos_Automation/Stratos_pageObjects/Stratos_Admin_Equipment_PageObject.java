@@ -92,7 +92,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	
 	
 	public static final By equipmentCalendarButton=By.xpath("//span[@class='mat-mdc-button-touch-target']");
-	public static final By equipmentCalendarArrow=By.className("mdc-button__label");
+	public static final By equipmentCalendarArrow=By.xpath("//span[@class='mdc-button__label']");
 	public static final By equipmentExpiryYear=By.xpath("//span[text()=' 2032 ']");
 	public static final By equipmentExpiryMonth=By.xpath("//span[text()=' FEB ']");
 	public static final By equipmentExpiryDate=By.xpath("//span[text()=' 17 ']");

@@ -33,7 +33,6 @@ public class Stratos_Equipement {
 	@When("User Click on Equipment module")
 	public void user_Click_on_Equipment_module() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentModule, 20);
-		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentModule, "Equipment Module");
 		
 	}
@@ -41,8 +40,8 @@ public class Stratos_Equipement {
 	@Given("User click on add new equipment button")
 	public void user_click_on_add_new_equipment_button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, 20);
-		Thread.sleep(3000);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");   
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");
+		Thread.sleep(5000);
 	}
 
 	@Given("Verify that user able to enter invalid data in Add new equipment page")
@@ -289,24 +288,17 @@ public class Stratos_Equipement {
 //		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectEquipmentType, "Pistol");
 	}
 
-	@Then("Admin User Select auto allocate from Drop Down")
-	public void admin_User_Select_auto_allocate_from_Drop_Down() throws Exception {
-	   testBase.waitForElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, 20);
-	   testBase.clickonElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, "expiry date");
-	   Thread.sleep(2000);
-	}
-
 	@Then("Admin User Select the Expiry Date from Drop Down")
 	public void admin_User_Select_the_Expiry_Date_from_Drop_Down() throws Exception {
-		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, 20);
-		//Thread.sleep(3000);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, "select the expiry date");
-		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, 20);
+		//testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, 20);
+		Thread.sleep(3000);
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentCalendarButton, "select the expiry date");
+		//testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, 20);
+		Thread.sleep(5000);
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, "select the expiry date");
+		//testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, 20);
 		Thread.sleep(1000);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, "select the expiry date");
-		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, 20);
-		Thread.sleep(1000);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, "select the expiry date");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, "select the expiry date");
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, 20);
 		Thread.sleep(1000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, "select the expiry date");
@@ -659,21 +651,22 @@ public class Stratos_Equipement {
 
      @Then("Admin User Select the Client Name from Drop Down")
        public void admin_User_Select_the_Client_Name_from_Drop_Down() throws Throwable {
-    	 testBase.waitForElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, 20);
- 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
- 		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "John Fred");
- 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectClientName, "John Fred");
+    	 Excel_Utility.setExcelFile(excelFileLocation, sheetName1);
+ 		String ClientName = Excel_Utility.getCellData(2, 0);
+ 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.clientNameDropdown, 20);
+ 		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.clientNameDropdown, "client name selected");
  		Thread.sleep(2000);
+ 		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.dropdownSelect(ClientName), "ClientName");
 }
 
       @Then("Admin User Select Site Name from Drop Down")
       public void admin_User_Select_Site_Name_from_Drop_Down() throws Throwable {
-    	  testBase.waitForElement(Stratos_Admin_Equipment_PageObject.siteNameDropdown, 20);
-  		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.siteNameDropdown, "site name selected");
-//  		Thread.sleep(2000);
-//  		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectSiteName, 20);
-  		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectSiteName, "sativa");
-  		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectSiteName, "sativa");
+    	  Excel_Utility.setExcelFile(excelFileLocation, SiteAndCheckointsSheet);
+  		String siteName = Excel_Utility.getCellData(1, 0);
+  		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.siteNameDropdown, 20);
+  		Thread.sleep(4000);
+  		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.siteNameDropdown, "Site Name");
+  		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.dropdownSelect(siteName), "SiteName");
 }
 
      @Then("Admin User Select Equipment Category")
@@ -829,8 +822,17 @@ public void admin_User_Select_the_Return_date() throws Throwable {
 	testBase.waitForElement(Stratos_Admin_Equipment_PageObject.returnDateInAssignEmployee, 20);
 	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.returnDateInAssignEmployee, "EquipmentName");
 	
-	testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectreturnDateInAssignEmployee, 20);
-	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectreturnDateInAssignEmployee, "EquipmentName");
+	testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentCalendarArrow, "select the expiry date");
+	//testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, 20);
+	Thread.sleep(1000);
+	testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentExpiryYear, "select the expiry date");
+	testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, 20);
+	Thread.sleep(1000);
+	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryMonth, "select the expiry date");
+	testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryDate, 20);
+	Thread.sleep(1000);
+	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryDate, "select the expiry date");
+	
     
 }
 

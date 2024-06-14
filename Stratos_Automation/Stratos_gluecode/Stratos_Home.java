@@ -24,7 +24,7 @@ public class Stratos_Home {
 	public void Admin_User_click_on_themes() throws Exception {
 		Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Login_PageObjects.themes, 40);
-		testBase.clickonElement(Stratos_Login_PageObjects.themes, "click on themes");
+		testBase.ClickViaMouse(Stratos_Login_PageObjects.themes, "click on themes");
 	}
 
 	@Then("Admin User Select a theme")
@@ -83,6 +83,8 @@ public class Stratos_Home {
 	@Then("Admin User click update button")
 	public void admin_User_click_update_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.updateButton, 20);
+		testBase.ClickViaMouse(Stratos_Login_PageObjects.updateButton, "click");
+		Thread.sleep(10000);
 		testBase.ClickViaMouse(Stratos_Login_PageObjects.updateButton, "click");
 		Thread.sleep(10000);
 	}
