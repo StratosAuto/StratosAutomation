@@ -6,7 +6,7 @@ public class Stratos_Login_PageObjects {
 
 	public static final By email = By.xpath("//input[@type='email'][@name='email']");
 	public static final By password = By.xpath("//input[@type='password']");
-	public static final By login_button = By.xpath("//input[@type='submit'] [@name='login']");
+	public static final By login_button = By.xpath("//button[@type='submit'] [@name='login']");
 	public static final By errorMessage = By.xpath("//p[text()='Error']");
 	public static final By validateLogin = By.xpath("//span[text()='Home']");
 	public static final By loginPage=By.xpath("//span[text()='Sign in to your account']");

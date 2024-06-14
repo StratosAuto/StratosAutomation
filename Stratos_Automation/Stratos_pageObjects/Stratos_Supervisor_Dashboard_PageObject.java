@@ -26,5 +26,6 @@ public class Stratos_Supervisor_Dashboard_PageObject {
 	public static final By backButton2=By.xpath("//span[text()='Back']");
 	public static final By selectMApView=By.xpath("//span[text()='Map View']");
 	public static final By mapPopup=By.xpath("//button[text()='OK']");
+	public static final By validateEmployee= By.xpath("//p[text()='Dela Employee One']");
 	
 }

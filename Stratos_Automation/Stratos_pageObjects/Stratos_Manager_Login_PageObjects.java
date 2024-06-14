@@ -15,7 +15,7 @@ public class Stratos_Manager_Login_PageObjects {
 	public static final By validateHomepage=By.xpath("//div[text()=' MANAGER ']");
 	public static final By settingsButton=By.xpath("//i[@aria-haspopup='menu']");
 	public static final By logout=By.xpath("//span[text()='Logout']");
-	public static final By validateLogin=By.xpath("//a[text()='Stratos']");
+	public static final By validateLogin=By.xpath("//h2[text()='Sign in']");
 	
 	public static final By invalidEmployeeIDError=By.xpath("//p[text()='Error']");
 	public static final By validEmployeeIDSuccess=By.xpath("//p[text()='Requested for new pin']");

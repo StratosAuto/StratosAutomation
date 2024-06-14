@@ -285,7 +285,8 @@ public class Stratos_Admin_Manage_ACL_Users {
 		Thread.sleep(6000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.manageACLUserButton, "Manage ACL User");
-	    String data=testBase.getElementText(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber, "Mobile Number");
+	    Thread.sleep(6000);
+	    String data=testBase.getTextFromPropertis(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber);
 	    if(!(updateMobileNumber.contains(data))) {
 	    	ExceptionHandling.HandleAssertion("Mobile Number is not updated");
 	    }else

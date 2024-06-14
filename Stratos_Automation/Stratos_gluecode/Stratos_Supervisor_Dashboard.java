@@ -142,10 +142,28 @@ public class Stratos_Supervisor_Dashboard {
 	    testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, 20);
 	    testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, "back button");
 	}
+	
+	@Then("User clicks on Active Employee")
+	public void user_clicks_on_Active_Employee() {
+	    
+	    
+	}
 
+	@Then("User validates the displayed employee details")
+	public void user_validates_the_displayed_employee_details() {
+	    
+	    
+	}
 
-	@Then("User validates the error message")
-	public void user_validates_the_error_message() {
-		
+	@Then("User clicks on Active Shifts More Info")
+	public void user_clicks_on_Active_Shifts_More_Info() {
+	    
+	    
+	}
+
+	@Then("User validates Assigned Tasklist")
+	public void user_validates_Assigned_Tasklist() {
+	    
+	    
 	}
 }
