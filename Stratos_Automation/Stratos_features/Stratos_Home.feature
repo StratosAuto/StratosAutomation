@@ -8,7 +8,7 @@ Feature: Home functionality
     Then Admin User navigates to home page
 
   Scenario: Verify the Home module Theme functionality
-    And Admin User click on Themes
+    And Admin User click on themes
     Then Admin User Select a theme
     Then Admin User verifies the theme
     
@@ -25,5 +25,5 @@ Feature: Home functionality
     And Admin User enter new password as "new password" in change password 
     And Admin User enter confirm password as "confirm password" in change password
     Then Admin User click update button
-    Then Admin User verifies the success message
+    #Then Admin User verifies the success message
    

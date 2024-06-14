@@ -121,12 +121,6 @@ public class Stratos_Supervisor_Dashboard {
 		testBase.ScrollDownBottom();
 		testBase.takeScreenshot("assigned task list");
 	}
-
-	@Then("User clicks on back button in Supervisor dashboard")
-	public void user_clicks_on_back_button_in_Supervisor_dashboard() throws Throwable {
-		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, 20);
-	    testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, "back button");
-	}
 	
 	@Then("User clicks on Active Employee")
 	public void user_clicks_on_Active_Employee() {
@@ -151,8 +145,12 @@ public class Stratos_Supervisor_Dashboard {
 	    
 	    
 	}
-	}
 
+	@Then("User clicks on back button in Supervisor dashboard")
+	public void user_clicks_on_back_button_in_Supervisor_dashboard() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, 20);
+	    testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.backButton2, "back button");
+	    }}
 //	@Given("User clicks on All Clients dropdown and selects All clients {string} in Supervisor dashboard")
 //	public void user_clicks_on_All_Clients_dropdown_and_selects_All_clients_in_Supervisor_dashboard(String string) throws Exception {
 //		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.clickAllClients, 20);
@@ -286,4 +284,7 @@ public class Stratos_Supervisor_Dashboard {
 //	public void user_validates_the_error_message() {
 //		
 //	}
+
+//}
+
 //}

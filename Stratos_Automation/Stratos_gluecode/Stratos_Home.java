@@ -20,7 +20,9 @@ public class Stratos_Home {
 	public static String ConfirmPassword;
 	
 
-	@Given("Admin User click on Themes")
+
+
+	@Given("Admin User click on themes")
 	public void Admin_User_click_on_themes() throws Exception {
 		Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Login_PageObjects.themes, 40);
