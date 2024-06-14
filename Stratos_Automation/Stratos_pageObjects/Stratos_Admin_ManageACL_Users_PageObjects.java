@@ -13,6 +13,7 @@ public class Stratos_Admin_ManageACL_Users_PageObjects {
 	public static final By selectRole=By.xpath("//span[text()='Admin']");
 	public static final By lastName=By.xpath("//input[@formcontrolname='lastName']");
 	public static final By mobileNumber=By.xpath("//input[@formcontrolname='phoneNumber']");
+	public static final By update=By.xpath("//input[@id='mat-input-23']");
 	public static final By confirmPassword=By.xpath("//input[@formcontrolname='confirmPassword']");
 	public static final By gender=By.xpath("//mat-label[text()='Gender']");
 	public static final By selectGender=By.xpath("//span[text()='Male']");

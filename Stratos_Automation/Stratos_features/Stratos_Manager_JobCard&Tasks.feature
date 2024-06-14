@@ -65,18 +65,18 @@ Feature: Manager Job Card & Tasks
     And User clicks on Update button on Tasks page
     Then User validates the tasks updates
 
-  #Scenario: Verify the Bulk Upload functionality
-    #Given User clicks on Job Card & Tasks in the menu
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button and upload valid Job Card & Tasks file
-    #And User clicks on Submit button
-    #Then User validates the success message as "successMessage" of valid Bulk Upload of Job Cards
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button to upload invalid Job Cards bulk file
-    #And User clicks on Submit button
-    #And User validates the error message as "errorMessage" of invalid Bulk Upload of Job Cards
-    #And User clicks on Cancel button bulk upload
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button to upload empty Job Cards bulk file
-    #And User clicks on Submit button
-    #And User validates the error message as "errorMessage" of empty Bulk Upload file of Job Cards
+  Scenario: Verify the Bulk Upload functionality
+    Given User clicks on Job Card & Tasks in the menu
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button and upload valid Job Card & Tasks file
+    And User clicks on Submit button
+    Then User validates the success message as "successMessage" of valid Bulk Upload of Job Cards
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button to upload invalid Job Cards bulk file
+    And User clicks on Submit button
+    And User validates the error message as "errorMessage" of invalid Bulk Upload of Job Cards
+    And User clicks on Cancel button bulk upload
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button to upload empty Job Cards bulk file
+    And User clicks on Submit button
+    And User validates the error message as "errorMessage" of empty Bulk Upload file of Job Cards

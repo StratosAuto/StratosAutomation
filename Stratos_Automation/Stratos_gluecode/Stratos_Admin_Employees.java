@@ -2253,7 +2253,7 @@ public class Stratos_Admin_Employees {
 	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 	    Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, employeeName, "Filters");
-	    
+
 	    employeeID=testBase.getElementText(Stratos_Admin_Employees_PageObjects.employeeID, "EmployeeID");
 	}
 
@@ -2365,7 +2365,8 @@ public class Stratos_Admin_Employees {
 		String managerName = Excel_Utility.getCellData(4, 0);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, managerName, "Manager Name");
 		testBase.clickonElement(Stratos_Admin_Employees_PageObjects.manageEmployee, "Manage Employee");
-		String updatedOtherContactNumber=testBase.getElementText(Stratos_Admin_Employees_PageObjects.otherContactNumber, "Other Contact Number");
+		Thread.sleep(5000);
+		String updatedOtherContactNumber=testBase.getTextFromPropertis(Stratos_Admin_Employees_PageObjects.otherContactNumber);
 		   if(!(otherContactNumber.contains(updatedOtherContactNumber))) {
 			   ExceptionHandling.HandleAssertion("Other Contact Number is not updated");
 		   }else

@@ -33,7 +33,6 @@ public class Stratos_Equipement {
 	@When("User Click on Equipment module")
 	public void user_Click_on_Equipment_module() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentModule, 20);
-		Thread.sleep(5000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentModule, "Equipment Module");
 		
 	}
@@ -41,8 +40,8 @@ public class Stratos_Equipement {
 	@Given("User click on add new equipment button")
 	public void user_click_on_add_new_equipment_button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, 20);
-		Thread.sleep(3000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");   
+		Thread.sleep(5000);
 	}
 
 	@Given("Verify that user able to enter invalid data in Add new equipment page")
@@ -272,11 +271,11 @@ public class Stratos_Equipement {
 	public void admin_User_Select_Auto_Allocate_from_Drop_Down() throws Throwable {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "equipment type name selected");
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 //		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectSiteName, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
 //		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
+//		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
 	}
 
 	@Then("Admin User Select Equipment Type from drop down")
@@ -287,13 +286,6 @@ public class Stratos_Equipement {
 	//	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentType, "equipment type name selected");
 		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectEquipmentType1, "Doubel Barrel");
 //		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectEquipmentType, "Pistol");
-	}
-
-	@Then("Admin User Select auto allocate from Drop Down")
-	public void admin_User_Select_auto_allocate_from_Drop_Down() throws Exception {
-	   testBase.waitForElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, 20);
-	   testBase.clickonElement(Stratos_Admin_Equipment_PageObject.licenseExpirydateButton, "expiry date");
-	   Thread.sleep(2000);
 	}
 
 	@Then("Admin User Select the Expiry Date from Drop Down")

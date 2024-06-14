@@ -29,7 +29,7 @@ public class Stratos_Manager_Shifts_Pageobjects {
 	public static final By supervisorName=By.xpath("//mat-select[@formcontrolname='employeeName']");
 	public static final By selectSupervisorName=By.xpath("//span[text()='Dela Supervisor Supervisor']");
 	public static final By clientName=By.xpath("//mat-select[@formcontrolname='client']");
-	public static final By selectClientName=By.xpath("//span[text()='Sadio']");
+	public static final By selectClientName=By.xpath("//span[text()='sadio']");
 	public static final By siteName=By.xpath("//mat-label[text()='Site Name & Address']");
 	public static final By selectSiteName=By.xpath("//span[text()='Zina']");
 	public static final By checkInDateCalendarButton=By.xpath("//span[@class='mat-mdc-button-touch-target']");

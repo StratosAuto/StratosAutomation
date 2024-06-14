@@ -6,6 +6,8 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By provider =By.xpath("//span[text()='3rd Party Provider']");
 	public static final By addNewProviderButton =By.xpath("//button[text()=' Add New Provider ']");
 	
+	// Invalid data error messages
+	
 	public static final By errorMobileNumber=By.xpath("//span[text()='Give Correct Mobile Number']");
 	public static final By errorOtherContactNumber=By.xpath("(//span[text()='Give Correct Mobile Number'])[2]");
 	public static final By errorEmailAddress=By.xpath("//span[text()='Enter valid Email Address.']");
@@ -15,6 +17,7 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By lengthProviderName=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
 	public static final By lengthStreet=By.xpath("//span[text()='Maximum 100 Characters Allowed.']");
 	public static final By lengthStreet2=By.xpath("//span[text()='Maximum 100 characters Allowed.']");
+	public static final By lengthComments=By.xpath("//span[text()='Maximum 250 characters allowed.']");
 	
 	public static final By providerName =By.xpath("//input[@formcontrolname='providerName']");
 	public static final By mobileNumber =By.xpath("//input[@formcontrolname='mobileNumber']");
@@ -22,6 +25,7 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By emailAddress =By.xpath("//input[@formcontrolname='email']");
 	public static final By faxNumber =By.xpath("//input[@formcontrolname='fax']");
 	public static final By vatNumber =By.xpath("//input[@formcontrolname='vat']");
+	public static final By updateVatNumber =By.xpath("//mat-label[text()='Vat Number']");
 	public static final By status =By.xpath("//span[text()='Active']");
 	public static final By active=By.xpath("(//span[text()='Active'])[2]");
 	public static final By inactive=By.xpath("//span[text()='Inactive']");

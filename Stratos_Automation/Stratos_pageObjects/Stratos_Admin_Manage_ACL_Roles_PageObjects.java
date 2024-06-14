@@ -24,11 +24,4 @@ public class Stratos_Admin_Manage_ACL_Roles_PageObjects {
 	public static final By selectRole=By.xpath("//span[text()='Provider Role-01']");
 	public static final By role=By.xpath("//mat-label[text()='Role']");
 	public static final By manageACLUser=By.xpath("//h1[text()='Manage ACL Users']");
-//	public static final By 
-//	public static final By 
-//	public static final By 
-//	public static final By 
-//	public static final By 
-//	public static final By 
-//	public static final By 
 }
