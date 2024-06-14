@@ -8,8 +8,9 @@ Feature: Equipment functionality
     Then Admin User navigates to home page
     When User Click on Equipment module
     When Admin User navigates to home page
-  
-
+ 
+    When Admin User navigates to home page
+ 
   Scenario: Verify add new equipemt functionality
     When User Click on Equipment module
     #Given User click on add new equipment button
@@ -225,4 +226,5 @@ Feature: Equipment functionality
     Then Admin User Clicks on Submit button
     Then Admin User Captures the Return state success message
     Then Admin User Clicks on Inactive Equipments
+    Then Admin User Search the created Working equipment in filter
     Then Admin User Search the created Working equipment in filter

@@ -15,6 +15,7 @@ Feature: Admin Login functionality
     Then Admin User verifies the error message "Please fill in all required fields."
     Then User click on login button
     Then Admin User verifies the error message "Please fill in all required fields"
+
     
     Scenario: Verify the forgot pin functionality
     Given Admin User Enter the Stratos application URL
