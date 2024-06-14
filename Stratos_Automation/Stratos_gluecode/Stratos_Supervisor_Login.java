@@ -64,8 +64,7 @@ public class Stratos_Supervisor_Login {
 		testBase.waitForElement(Stratos_supervisor_login.invalidDataErrorMessage, 20);
 	    String s=testBase.getElementText(Stratos_supervisor_login.invalidDataErrorMessage, "errorMessageForEmpty");
 	    System.out.println(s);
-	   
-	   
+	     
 	}
 	
 	@Then("User enter the invalid pin as {string} in employee login page")

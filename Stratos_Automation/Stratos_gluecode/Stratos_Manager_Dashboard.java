@@ -1,7 +1,5 @@
 package Stratos_gluecode;
 
-import org.openqa.selenium.By;
-
 import Stratos_pageObjects.Stratos_Manager_Dashboard_Pageobjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;

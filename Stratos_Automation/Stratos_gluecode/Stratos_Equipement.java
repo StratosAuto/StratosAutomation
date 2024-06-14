@@ -5,7 +5,9 @@ import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
 import Stratos_utilities.ExceptionHandling;
 import Stratos_utilities.Logs;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class Stratos_Equipement {
 	

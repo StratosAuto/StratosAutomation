@@ -392,7 +392,7 @@ public void user_Verifies_the_client_Success_Message_as(String string) throws Ex
 public void user_click_on_client_info_edit_button() throws Exception {
 	testBase.waitForElement(Stratos_Client_PageObjects.editManageClientDetails, 20);
 	testBase.clickonElement(Stratos_Client_PageObjects.editManageClientDetails, "edit button");
-    
+    Thread.sleep(2000);
 }
 @Then("User clicks on activate button")
 public void user_clicks_on_activate_button() throws Throwable {
@@ -405,6 +405,7 @@ public void user_change_valid_client_name_in_manage_clients(String string) throw
 	Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 	ClientName = Excel_Utility.getCellData(2, 0);
 	testBase.waitForElement(Stratos_Client_PageObjects.clientName, 20);
+	Thread.sleep(2000);
 	testBase.clickonElement(Stratos_Client_PageObjects.clientName, "client name");
 	testBase.typeinTextBox(Stratos_Client_PageObjects.clientName, ClientName, "Client Name");
 }
@@ -467,6 +468,7 @@ public void user_click_on_deactivate_button() throws Exception {
 @Then("User click on inactive button")
 public void user_click_on_inactive_button() throws Exception {
    testBase.RefreshPage();
+   Thread.sleep(2000);
    testBase.waitForElement(Stratos_Client_PageObjects.inactiveClients, 20);
    testBase.clickonElement(Stratos_Client_PageObjects.inactiveClients, "inactive clients");
    Thread.sleep(10000);
@@ -516,6 +518,11 @@ public void user_validates_the_error_message_as_of_null_Bulk_Upload_in_clients_p
     
 }
 
+@Then("User click on cancel button in clients bulk upload")
+public void user_click_on_cancel_button_in_clients_bulk_upload() throws Throwable {
+    testBase.waitForElement(Stratos_Client_PageObjects.bulkUploadCancelButton, 20);
+    testBase.clickonElement(Stratos_Client_PageObjects.bulkUploadCancelButton, "cancel button");
+}
 
 
 }
