@@ -1,10 +1,11 @@
 Feature: Manage ACL Users
 
   Background: 
-     Given User Enter the Stratos application URL
-    Then User enter the valid username
-    Then User enter the valid password
-    Then user click on login button
+    Given Admin User Enter the Stratos application URL
+    Then Admin User enter the valid username
+    Then Admin User enter the valid password
+    Then Admin User click on Submit button
+    Then Admin User navigates to home page
 
   Scenario: Verify the Add New User functionality
     Given User clicks on Manage ACL Users in the menu

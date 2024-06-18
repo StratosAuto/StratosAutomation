@@ -232,8 +232,8 @@ public class Stratos_Manager_JobCards_tasks {
 		Thread.sleep(5000);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, jobCardName, "Job Card Name");
 		testBase.clickonElement(Stratos_Manager_JobCards_Pageobjects.manageJobCardsButton, "Manage Job Cards");
-		String data=testBase.getElementText(Stratos_Manager_JobCards_Pageobjects.jobCardDescription, "Updated Job Card Description");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
+		String data=testBase.getTextFromPropertis(Stratos_Manager_JobCards_Pageobjects.jobCardDescription);
 		if(!(updateJobCardDescription.contains(data))) {
 			ExceptionHandling.HandleAssertion("Job Card Description is not updated");
 		}else

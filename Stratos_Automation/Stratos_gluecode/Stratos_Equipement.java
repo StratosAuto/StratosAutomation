@@ -40,7 +40,11 @@ public class Stratos_Equipement {
 	@Given("User click on add new equipment button")
 	public void user_click_on_add_new_equipment_button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, 20);
+<<<<<<< HEAD
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");
+=======
+		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");   
+>>>>>>> df135186f38d20776151afab36aa4e77dad9352d
 		Thread.sleep(5000);
 	}
 
@@ -271,11 +275,11 @@ public class Stratos_Equipement {
 	public void admin_User_Select_Auto_Allocate_from_Drop_Down() throws Throwable {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "equipment type name selected");
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 //		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectSiteName, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
 //		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
+//		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
 	}
 
 	@Then("Admin User Select Equipment Type from drop down")

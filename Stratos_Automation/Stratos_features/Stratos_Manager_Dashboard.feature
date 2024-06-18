@@ -21,11 +21,12 @@ Background:
     And User validates the error message on manager dashboard
     And User clicks on view dropdown and selects view as "map" to view map
     Then User clicks on filter button on manager dashboard
-    Then User clicks on map tag
-    And User clicks on view sites
-    And User clicks on More Info
-    #And User clicks on Active Employee
-    #And User validates the displayed employee details
-    #And User clicks on Back button
-    #Then User clicks on Active Shifts More Info 
-    #And User validates Assigned Tasklist
+    Then User clicks on map tag on manager dashboard
+    And User clicks on view sites on manager dashboard
+    And User clicks on More Info button on Dashboard / Site Details page
+    And User clicks on Active Employee on Dashboard / Site Details page
+    And User validates the displayed employee details on Dashboard / Site Details page
+    And User clicks on Back button on Dashboard / Site Details page
+    Then User clicks on Active Shifts More Info on Dashboard / Site Details page
+    And User clicks on Active Employee on Dashboard / Site Details page
+    And User validates Assigned Tasklist on Dashboard / Site Details page

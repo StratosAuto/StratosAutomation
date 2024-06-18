@@ -52,7 +52,11 @@ public class Stratos_Login {
  
 	@Then("Admin User navigates to home page")
 	public void Admin_User_navigates_to_home_page() throws Exception {
+<<<<<<< HEAD
 			Thread.sleep(5000);
+=======
+			Thread.sleep(3000);
+>>>>>>> df135186f38d20776151afab36aa4e77dad9352d
 			if (!(testBase.isElementVisible(Stratos_Login_PageObjects.validateLogin, "Login successfull"))) {
 				ExceptionHandling.HandleAssertion("User not Login into the application");
 			} else {

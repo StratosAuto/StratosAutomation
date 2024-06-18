@@ -115,6 +115,7 @@ public class Stratos_Manager_Login {
 
 	@Then("User validates the error message as {string} of invalid Employee ID")
 	public void user_validates_the_error_message_as_of_invalid_Employee_ID(String string) throws Exception {
+		Thread.sleep(3000);
 	   if (!(testBase.isElementVisible(Stratos_Manager_Login_PageObjects.invalidEmployeeIDError, "Invalid Employee ID"))) {
 		   	ExceptionHandling.HandleAssertion("Error message not displayed");
 	} else

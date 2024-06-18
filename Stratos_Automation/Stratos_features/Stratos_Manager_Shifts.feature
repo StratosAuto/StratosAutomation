@@ -60,18 +60,18 @@ Feature: Manager Shifts
     And User clicks on Cancel Button on Assign Job Card Page
 	  And Verify user able to assign multiple shifts to the same Employee with same shift timings  
 	  
-  #Scenario: Verify the Bulk Upload functionality
-    #Given User clicks on Shifts in the menu
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button and upload valid Shifts bulk file
-    #And User clicks on Submit button
-    #Then User validates the success message as "successMessage" of valid Shifts Bulk Upload
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button to upload invalid Shifts bulk file
-    #And User clicks on Submit button
-    #And User validates the error message as "errorMessage" of invalid Shifts Bulk Upload
-    #And User clicks on Cancel button bulk upload
-    #And User clicks on Bulk Upload button
-    #And User clicks on Select File button to upload empty Shifts bulk file
-    #And User clicks on Submit button
-    #And User validates the error message as "errorMessage" of empty Shifts Bulk Upload file
+  Scenario: Verify the Bulk Upload functionality
+    Given User clicks on Shifts in the menu
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button and upload valid Shifts bulk file
+    And User clicks on Submit button
+    Then User validates the success message as "successMessage" of valid Shifts Bulk Upload
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button to upload invalid Shifts bulk file
+    And User clicks on Submit button
+    And User validates the error message as "errorMessage" of invalid Shifts Bulk Upload
+    And User clicks on Cancel button bulk upload
+    And User clicks on Bulk Upload button
+    And User clicks on Select File button to upload empty Shifts bulk file
+    And User clicks on Submit button
+    And User validates the error message as "errorMessage" of empty Shifts Bulk Upload file
