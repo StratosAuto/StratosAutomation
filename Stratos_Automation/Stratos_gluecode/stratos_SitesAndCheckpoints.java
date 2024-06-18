@@ -402,8 +402,7 @@ public class stratos_SitesAndCheckpoints {
 	public void user_clicks_on_Update_button() throws Exception {
 	   testBase.clickonElement(Stratos_SitesAndCheckpoints_PageObjects.updateButton, "Update Button");
 	   Thread.sleep(10000);
-	   testBase.RefreshPage();
-	   
+	   testBase.RefreshPage(); 
 	}
 	
 	@Then("User validates the updates of Active Site")

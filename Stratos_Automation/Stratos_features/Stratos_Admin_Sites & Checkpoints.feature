@@ -5,9 +5,9 @@ Feature: Sites & Checkpoints functionality
     Then Admin User enter the valid username
     Then Admin User enter the valid password
     Then Admin User click on Submit button
-    When User Click on Sites & Checkpoints module
     
   Scenario: Verify add new site functionality with valid data
+    When User Click on Sites & Checkpoints module
     Given User click on add new site button
     And Verify that user able to enter invalid data in Add new site page
     And User Validates the error messages of Invalid data of add new site all the feilds
@@ -32,6 +32,7 @@ Feature: Sites & Checkpoints functionality
     Then User Verifies the created site to validate site is created
   
   Scenario: Verify manage checkpoints functionality
+    When User Click on Sites & Checkpoints module
     And User Click on Manage check points button
     And Verify that user able to enter invalid data in manage checkpoints page
     And User Click on Manage check points button
@@ -41,6 +42,7 @@ Feature: Sites & Checkpoints functionality
     Then User Click on Done
   
   Scenario: Verify manage site functionality
+    When User Click on Sites & Checkpoints module
     And User clicks on Manage Site button
     And User enters Mobile Number as "MobileNumber" in Edit Site page
     And User clicks on Update button
@@ -53,6 +55,7 @@ Feature: Sites & Checkpoints functionality
     Then User validates the deactivated site
     
   Scenario: Verify the Bulk Upload functionality
+    When User Click on Sites & Checkpoints module
     And User click on bulk Upload button
     And User clicks on Select File button and upload file
     And User clicks on Submit button

@@ -5,7 +5,7 @@ Feature: Clients functionality
     Then Admin User enter the valid username
     Then Admin User enter the valid password
     Then Admin User click on Submit button
-    When User Click on Clients module
+   
   
   Scenario: Verify add new Clients functionality with in valid data and valid data
     When User Click on Clients module

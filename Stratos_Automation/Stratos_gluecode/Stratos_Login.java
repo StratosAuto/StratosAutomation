@@ -43,8 +43,8 @@ public class Stratos_Login {
 				"Enter password");
 	}
  
-	@Then("Admin User click on Submit button")
-	public void Admin_User_click_on_Submit_button() throws Exception {
+	@Then("Admin User click on Login button")
+	public void Admin_User_click_on_Login_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.loginSubmitutton, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.loginSubmitutton, "Login");
 		Thread.sleep(20000);

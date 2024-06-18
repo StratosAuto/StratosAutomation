@@ -2044,3 +2044,386 @@
  INFO [2024-06-14 12:28:36,962] (%D:22) - Clicked on Activate client
  INFO [2024-06-14 12:28:36,965] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  INFO [2024-06-14 12:28:36,965] (%D:18) -     
+ INFO [2024-06-14 12:46:08,085] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:46:08,090] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify add new Clients functionality with in valid data and valid data      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:46:08,090] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:46:18,829] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:46:19,244] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:46:19,390] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:46:19,521] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:46:19,661] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:46:39,988] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:46:40,667] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:46:40,925] (%D:22) - Clicked on click on add new client
+ INFO [2024-06-14 12:46:40,926] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:41,093] (%D:22) - Clicked on Mobile Number
+ INFO [2024-06-14 12:46:41,300] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-06-14 12:46:41,301] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:41,430] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:41,604] (%D:22) - Text Entered into Email Adress
+ INFO [2024-06-14 12:46:41,853] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:42,024] (%D:22) - Text Entered into Fax Number
+ INFO [2024-06-14 12:46:42,024] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:42,171] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:42,350] (%D:22) - Text Entered into Vat Number
+ INFO [2024-06-14 12:46:42,350] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:42,503] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:42,683] (%D:22) - Text Entered into Account manager
+ INFO [2024-06-14 12:46:47,688] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:47,844] (%D:22) - Clicked on postalCode
+ INFO [2024-06-14 12:46:48,013] (%D:22) - Text Entered into postalCode
+ INFO [2024-06-14 12:46:48,156] (%D:22) - Clicked on save and continue
+ INFO [2024-06-14 12:46:48,179] (%D:22) - give correct mobile number
+ INFO [2024-06-14 12:46:48,197] (%D:22) - give correct email address
+ INFO [2024-06-14 12:46:48,217] (%D:22) - give correct fax number
+ INFO [2024-06-14 12:46:48,235] (%D:22) - give correct vat number
+ INFO [2024-06-14 12:46:48,251] (%D:22) - give correct account manager
+ INFO [2024-06-14 12:46:48,269] (%D:22) - give correct postal code
+ INFO [2024-06-14 12:46:51,161] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:51,341] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:51,548] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:46:51,548] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:51,697] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:46:52,223] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:46:52,224] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:52,351] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:46:52,747] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:46:52,747] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:46:52,888] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:46:53,588] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:46:53,703] (%D:22) - Clicked on save and continue
+ INFO [2024-06-14 12:46:53,725] (%D:22) - Maximum 25 Characters Allowed.
+ INFO [2024-06-14 12:46:53,741] (%D:22) - Max length is 100 characters
+ INFO [2024-06-14 12:46:53,762] (%D:22) - Max length is 100 characters
+ INFO [2024-06-14 12:46:53,780] (%D:22) - Max length is 250 characters
+ INFO [2024-06-14 12:46:53,979] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:46:54,188] (%D:22) - Clicked on click on add new client
+ INFO [2024-06-14 12:46:54,435] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:54,586] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:46:54,861] (%D:22) - Clicked on Mobile Number
+ INFO [2024-06-14 12:46:55,020] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-06-14 12:46:55,284] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:55,474] (%D:22) - Text Entered into Email Adress
+ INFO [2024-06-14 12:46:55,682] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:55,833] (%D:22) - Text Entered into Fax Number
+ INFO [2024-06-14 12:46:56,088] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:56,256] (%D:22) - Text Entered into Vat Number
+ INFO [2024-06-14 12:46:56,489] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:56,632] (%D:22) - Text Entered into Account Manager
+ INFO [2024-06-14 12:46:56,870] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:46:57,155] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:46:57,446] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:46:57,588] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:46:59,959] (%D:22) - Clicked on Johannesburg
+ INFO [2024-06-14 12:47:00,060] (%D:22) - Text got from Province selected
+ INFO [2024-06-14 12:47:00,234] (%D:22) - Clicked on country selected
+ INFO [2024-06-14 12:47:00,375] (%D:22) - Clicked on South Africa
+ INFO [2024-06-14 12:47:00,652] (%D:22) - Clicked on postal code
+ INFO [2024-06-14 12:47:00,849] (%D:22) - Text Entered into PostalCode
+ INFO [2024-06-14 12:47:01,068] (%D:22) - Clicked on comments
+ INFO [2024-06-14 12:47:01,236] (%D:22) - Text Entered into PostalCode
+ INFO [2024-06-14 12:47:01,345] (%D:22) - Clicked on  save and continue
+ INFO [2024-06-14 12:47:06,566] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:47:11,591] (%D:22) - client is created
+ INFO [2024-06-14 12:47:11,592] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:47:11,593] (%D:18) -     
+ INFO [2024-06-14 12:47:11,697] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:47:11,698] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify update client info in manage client functionality with update and deactivate      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:47:11,699] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:47:19,410] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:47:19,586] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:47:19,720] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:47:19,829] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:47:19,950] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:47:40,218] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:47:40,895] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:47:41,043] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:47:41,311] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:47:45,514] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:47:45,746] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:47:45,934] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:47:46,224] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:47:46,415] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:47:46,631] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:47:46,799] (%D:22) - Clicked on update button
+ INFO [2024-06-14 12:47:52,022] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:47:57,057] (%D:22) - client is created
+ INFO [2024-06-14 12:47:57,202] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:47:57,458] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:48:01,673] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:48:01,892] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:48:02,093] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:48:02,362] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:48:02,527] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:48:02,734] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:48:02,865] (%D:22) - Clicked on deactivate button
+ INFO [2024-06-14 12:48:10,937] (%D:22) - Clicked on inactive clients
+ INFO [2024-06-14 12:48:21,177] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:48:26,192] (%D:22) - client is created
+ INFO [2024-06-14 12:48:29,093] (%D:22) - Clicked on inactive clients
+ INFO [2024-06-14 12:48:39,371] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:48:44,397] (%D:22) - client is created
+ INFO [2024-06-14 12:48:44,566] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:48:44,942] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:48:47,117] (%D:22) - Clicked on Activate client
+ INFO [2024-06-14 12:48:47,118] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:48:47,118] (%D:18) -     
+ INFO [2024-06-14 12:48:47,219] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:48:47,219] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Bulk Upload functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:48:47,220] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:48:55,891] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:48:56,059] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:48:56,177] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:48:56,288] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:48:56,409] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:49:16,670] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:49:17,339] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:49:17,488] (%D:22) - Clicked on bulk upload button
+ INFO [2024-06-14 12:49:25,594] (%D:22) - File is selected Sucessfully
+ INFO [2024-06-14 12:49:25,763] (%D:22) - Clicked on submit button
+ INFO [2024-06-14 12:49:34,998] (%D:30) - Unable to click on element bulk upload button
+ INFO [2024-06-14 12:49:35,179] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:49:35,179] (%D:18) -     
+ INFO [2024-06-14 12:53:04,904] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:53:04,910] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify add new Clients functionality with in valid data and valid data      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:53:04,910] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:53:15,167] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:53:15,351] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:53:15,475] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:53:15,591] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:53:15,725] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:53:36,020] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:53:36,712] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:53:36,964] (%D:22) - Clicked on click on add new client
+ INFO [2024-06-14 12:53:36,965] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:37,155] (%D:22) - Clicked on Mobile Number
+ INFO [2024-06-14 12:53:37,356] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-06-14 12:53:37,357] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:37,504] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:37,686] (%D:22) - Text Entered into Email Adress
+ INFO [2024-06-14 12:53:37,930] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:38,101] (%D:22) - Text Entered into Fax Number
+ INFO [2024-06-14 12:53:38,101] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:38,250] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:38,450] (%D:22) - Text Entered into Vat Number
+ INFO [2024-06-14 12:53:38,451] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:38,603] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:38,791] (%D:22) - Text Entered into Account manager
+ INFO [2024-06-14 12:53:43,796] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:43,951] (%D:22) - Clicked on postalCode
+ INFO [2024-06-14 12:53:44,115] (%D:22) - Text Entered into postalCode
+ INFO [2024-06-14 12:53:44,256] (%D:22) - Clicked on save and continue
+ INFO [2024-06-14 12:53:44,287] (%D:22) - give correct mobile number
+ INFO [2024-06-14 12:53:44,304] (%D:22) - give correct email address
+ INFO [2024-06-14 12:53:44,320] (%D:22) - give correct fax number
+ INFO [2024-06-14 12:53:44,337] (%D:22) - give correct vat number
+ INFO [2024-06-14 12:53:44,354] (%D:22) - give correct account manager
+ INFO [2024-06-14 12:53:44,370] (%D:22) - give correct postal code
+ INFO [2024-06-14 12:53:47,139] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:47,291] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:47,513] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:53:47,514] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:47,682] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:53:48,209] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:53:48,210] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:48,336] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:53:48,722] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:53:48,724] (%D:22) - Generated Alphanumeric values
+ INFO [2024-06-14 12:53:48,850] (%D:22) - Clicked on street
+ INFO [2024-06-14 12:53:49,568] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:53:49,685] (%D:22) - Clicked on save and continue
+ INFO [2024-06-14 12:53:49,709] (%D:22) - Maximum 25 Characters Allowed.
+ INFO [2024-06-14 12:53:49,728] (%D:22) - Max length is 100 characters
+ INFO [2024-06-14 12:53:49,746] (%D:22) - Max length is 100 characters
+ INFO [2024-06-14 12:53:49,765] (%D:22) - Max length is 250 characters
+ INFO [2024-06-14 12:53:49,964] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:53:50,177] (%D:22) - Clicked on click on add new client
+ INFO [2024-06-14 12:53:50,410] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:50,565] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:53:50,814] (%D:22) - Clicked on Mobile Number
+ INFO [2024-06-14 12:53:51,023] (%D:22) - Text Entered into Mobile Number
+ INFO [2024-06-14 12:53:51,281] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:51,515] (%D:22) - Text Entered into Email Adress
+ INFO [2024-06-14 12:53:51,766] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:51,922] (%D:22) - Text Entered into Fax Number
+ INFO [2024-06-14 12:53:52,131] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:52,297] (%D:22) - Text Entered into Vat Number
+ INFO [2024-06-14 12:53:52,527] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:52,652] (%D:22) - Text Entered into Account Manager
+ INFO [2024-06-14 12:53:52,867] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:53:53,097] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:53:53,341] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:53:53,490] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:53:55,826] (%D:22) - Clicked on Johannesburg
+ INFO [2024-06-14 12:53:55,911] (%D:22) - Text got from Province selected
+ INFO [2024-06-14 12:53:56,057] (%D:22) - Clicked on country selected
+ INFO [2024-06-14 12:53:56,170] (%D:22) - Clicked on South Africa
+ INFO [2024-06-14 12:53:56,453] (%D:22) - Clicked on postal code
+ INFO [2024-06-14 12:53:56,635] (%D:22) - Text Entered into PostalCode
+ INFO [2024-06-14 12:53:56,848] (%D:22) - Clicked on comments
+ INFO [2024-06-14 12:53:57,056] (%D:22) - Text Entered into PostalCode
+ INFO [2024-06-14 12:53:57,173] (%D:22) - Clicked on  save and continue
+ INFO [2024-06-14 12:54:02,404] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:54:07,432] (%D:22) - client is created
+ INFO [2024-06-14 12:54:07,434] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:54:07,434] (%D:18) -     
+ INFO [2024-06-14 12:54:07,621] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:54:07,621] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify update client info in manage client functionality with update and deactivate      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:54:07,621] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:54:14,723] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:54:14,903] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:54:15,036] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:54:15,147] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:54:15,260] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:54:35,540] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:54:36,231] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:54:36,385] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:54:36,621] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:54:40,829] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:54:41,056] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:54:41,342] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:54:41,641] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:54:41,857] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:54:42,060] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:54:42,255] (%D:22) - Clicked on update button
+ INFO [2024-06-14 12:54:47,474] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:54:52,497] (%D:22) - client is created
+ INFO [2024-06-14 12:54:52,646] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:54:52,921] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:54:57,117] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:54:57,333] (%D:22) - Text Entered into Client Name
+ INFO [2024-06-14 12:54:57,532] (%D:22) - Clicked on Street
+ INFO [2024-06-14 12:54:57,802] (%D:22) - Text Entered into Street
+ INFO [2024-06-14 12:54:57,966] (%D:22) - Clicked on client name
+ INFO [2024-06-14 12:54:58,172] (%D:22) - Text Entered into Street1
+ INFO [2024-06-14 12:54:58,301] (%D:22) - Clicked on deactivate button
+ INFO [2024-06-14 12:55:06,495] (%D:22) - Clicked on inactive clients
+ INFO [2024-06-14 12:55:16,769] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:55:21,790] (%D:22) - client is created
+ INFO [2024-06-14 12:55:24,540] (%D:22) - Clicked on inactive clients
+ INFO [2024-06-14 12:55:34,771] (%D:22) - Text Entered into mobile number in filters
+ INFO [2024-06-14 12:55:39,788] (%D:22) - client is created
+ INFO [2024-06-14 12:55:39,983] (%D:22) - Clicked on manage client
+ INFO [2024-06-14 12:55:40,352] (%D:22) - Clicked on edit button
+ INFO [2024-06-14 12:55:42,489] (%D:22) - Clicked on Activate client
+ INFO [2024-06-14 12:55:42,491] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:55:42,491] (%D:18) -     
+ INFO [2024-06-14 12:55:42,573] (%D:10) - **********************************************************************************************
+ INFO [2024-06-14 12:55:42,574] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the Bulk Upload functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:55:42,574] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-14 12:55:50,301] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:55:50,537] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-14 12:55:50,658] (%D:22) - Clicked on clicked
+ INFO [2024-06-14 12:55:50,763] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-14 12:55:50,886] (%D:22) - Clicked on Login
+ INFO [2024-06-14 12:56:11,167] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:56:11,828] (%D:22) - Clicked on click on client module
+ INFO [2024-06-14 12:56:11,945] (%D:22) - Clicked on bulk upload button
+ INFO [2024-06-14 12:56:20,158] (%D:22) - File is selected Sucessfully
+ INFO [2024-06-14 12:56:20,279] (%D:22) - Clicked on submit button
+ INFO [2024-06-14 12:56:28,492] (%D:22) - Clicked on bulk upload button
+ INFO [2024-06-14 12:56:28,832] (%D:22) - Clicked on submit button
+ INFO [2024-06-14 12:56:36,998] (%D:22) - Clicked on cancel button
+ INFO [2024-06-14 12:56:37,158] (%D:22) - Clicked on bulk upload button
+ INFO [2024-06-14 12:56:37,321] (%D:22) - Clicked on submit button
+ INFO [2024-06-14 12:56:39,457] (%D:22) - Clicked on cancel button
+ INFO [2024-06-14 12:56:39,458] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-14 12:56:39,458] (%D:18) -     
+ INFO [2024-06-18 14:05:09,929] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:05:09,935] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with valid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:05:09,935] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:05:23,046] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:05:23,258] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-18 14:05:23,417] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:05:23,559] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-18 14:05:23,708] (%D:22) - Clicked on Login
+ INFO [2024-06-18 14:05:48,755] (%D:22) - User navigated to Homepage
+ INFO [2024-06-18 14:05:51,758] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:05:51,758] (%D:18) -     
+ INFO [2024-06-18 14:05:52,044] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:05:52,044] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with invalid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:05:52,044] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:05:59,908] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:06:00,166] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-18 14:06:00,324] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:06:00,457] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-18 14:06:00,599] (%D:22) - Clicked on Login
+ INFO [2024-06-18 14:06:22,635] (%D:22) - Login unsuccessfull
+ INFO [2024-06-18 14:06:22,636] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:06:22,636] (%D:18) -     
+ INFO [2024-06-18 14:06:22,720] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:06:22,721] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the forgot pin functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:06:22,721] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:06:31,411] (%D:22) - Clicked on forgot password
+ INFO [2024-06-18 14:06:31,703] (%D:22) - Clicked on email address
+ INFO [2024-06-18 14:06:31,884] (%D:22) - Text Entered into valid_Username
+ INFO [2024-06-18 14:06:32,029] (%D:22) - Clicked on submt button
+ INFO [2024-06-18 14:06:32,029] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:06:32,029] (%D:18) -     
+ INFO [2024-06-18 14:06:47,401] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:06:47,406] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with valid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:06:47,407] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:07:44,898] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:07:44,903] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with valid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:07:44,904] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:07:48,418] (%D:30) - Failed to Launch Browserorg.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 124
+Current browser version is 126.0.6478.62 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-0T7DS19', ip: '192.168.68.56'
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: [], prefs: {download.default_directory: C:\Users\USER\Stratos_Works..., profile.default_content_settings.popups: 0}}}]}]
+ INFO [2024-06-18 14:07:48,445] (%D:30) - Unable to run After scenario
+ INFO [2024-06-18 14:07:48,724] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:07:48,724] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with invalid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:07:48,724] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:07:50,337] (%D:30) - Failed to Launch Browserorg.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 124
+Current browser version is 126.0.6478.62 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-0T7DS19', ip: '192.168.68.56'
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: [], prefs: {download.default_directory: C:\Users\USER\Stratos_Works..., profile.default_content_settings.popups: 0}}}]}]
+ INFO [2024-06-18 14:07:50,339] (%D:30) - Unable to run After scenario
+ INFO [2024-06-18 14:07:50,434] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:07:50,434] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the forgot pin functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:07:50,438] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:07:52,130] (%D:30) - Failed to Launch Browserorg.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 124
+Current browser version is 126.0.6478.62 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-0T7DS19', ip: '192.168.68.56'
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: [], prefs: {download.default_directory: C:\Users\USER\Stratos_Works..., profile.default_content_settings.popups: 0}}}]}]
+ INFO [2024-06-18 14:07:52,132] (%D:30) - Unable to run After scenario
+ INFO [2024-06-18 14:35:11,560] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:35:11,566] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with valid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:35:11,566] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:35:22,500] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:35:22,746] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-18 14:35:22,900] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:35:23,076] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-18 14:35:23,216] (%D:22) - Clicked on Login
+ INFO [2024-06-18 14:35:48,319] (%D:22) - User navigated to Homepage
+ INFO [2024-06-18 14:35:51,324] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:35:51,325] (%D:18) -     
+ INFO [2024-06-18 14:35:51,449] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:35:51,449] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the login functionality with invalid credentials      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:35:51,449] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:35:59,102] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:35:59,280] (%D:22) - Text Entered into Enter Email id
+ INFO [2024-06-18 14:35:59,401] (%D:22) - Clicked on clicked
+ INFO [2024-06-18 14:35:59,511] (%D:22) - Text Entered into Enter password
+ INFO [2024-06-18 14:35:59,628] (%D:22) - Clicked on Login
+ INFO [2024-06-18 14:36:21,684] (%D:22) - Login unsuccessfull
+ INFO [2024-06-18 14:36:21,685] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:36:21,686] (%D:18) -     
+ INFO [2024-06-18 14:36:21,762] (%D:10) - **********************************************************************************************
+ INFO [2024-06-18 14:36:21,763] (%D:11) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Verify the forgot pin functionality      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:36:21,764] (%D:12) - ***********************************************************************************************
+ INFO [2024-06-18 14:36:29,246] (%D:22) - Clicked on forgot password
+ INFO [2024-06-18 14:36:29,483] (%D:22) - Clicked on email address
+ INFO [2024-06-18 14:36:29,637] (%D:22) - Text Entered into valid_Username
+ INFO [2024-06-18 14:36:29,757] (%D:22) - Clicked on submt button
+ INFO [2024-06-18 14:36:29,759] (%D:17) - $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$---END---$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ INFO [2024-06-18 14:36:29,760] (%D:18) -     
