@@ -15,5 +15,10 @@ public class Stratos_Supervisor_SHifts_PageObjects {
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By assignButton2=By.xpath("(//button[text()=' Assign '])[2]");
 	public static final By validAssignEmployee=By.xpath("(//mat-option[@role='option'])[1]");
+	public static final By assignEmployeeSuccessMessage=By.xpath("//P[text()='Assigned an employee successfully']");
+	public static final By employeeNameForValidatiob=By.xpath("//table//tbody//tr[1]//td[3]");
+	public static final By invalidemployeeName=By.xpath("//table//tbody//tr/td");
+	public static final By itemsDropdownSup=By.xpath("//span[text()='5']");
+	public static final By itemsDropdownOptionsup=By.xpath("//span[text()=' 10 ']");
 	
 }

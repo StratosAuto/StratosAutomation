@@ -36,7 +36,7 @@ public class Stratos_Supervisor_Login {
 	public void user_click_on_login_button() throws Exception {
 		testBase.waitForElement(Stratos_supervisor_login.loginButton, 20);
 		testBase.clickonElement(Stratos_supervisor_login.loginButton, "login button");
-//		Thread.sleep(8000);
+		Thread.sleep(2000);
 	    
 	}
 	

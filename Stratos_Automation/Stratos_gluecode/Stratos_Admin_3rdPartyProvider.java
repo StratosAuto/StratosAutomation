@@ -3,6 +3,7 @@ package Stratos_gluecode;
 
 import org.openqa.selenium.By;
 import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
+import Stratos_pageObjects.Stratos_Supervisor_SHifts_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.Excel_Utility;
 import Stratos_utilities.ExceptionHandling;
@@ -517,7 +518,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Then("User clicks on Items per page dropdown to display items")
 	public void user_clicks_on_Items_per_page_dropdown_to_display_items() throws Exception {
-		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, 20);
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.itemsDropdownSup, 20);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.itemsDropdown, "Items Dropdown");
 	}
 

@@ -25,5 +25,3 @@ Background:
     Then User clicks on emplyee under all employees in Supervisor dashboard
     Then User verifies the assigned task list in Supervisor dashboard
     Then User clicks on back button in Supervisor dashboard
-    
-    

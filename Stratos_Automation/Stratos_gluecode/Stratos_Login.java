@@ -52,11 +52,8 @@ public class Stratos_Login {
  
 	@Then("Admin User navigates to home page")
 	public void Admin_User_navigates_to_home_page() throws Exception {
-<<<<<<< HEAD
 			Thread.sleep(5000);
-=======
 			Thread.sleep(3000);
->>>>>>> df135186f38d20776151afab36aa4e77dad9352d
 			if (!(testBase.isElementVisible(Stratos_Login_PageObjects.validateLogin, "Login successfull"))) {
 				ExceptionHandling.HandleAssertion("User not Login into the application");
 			} else {
@@ -67,6 +64,7 @@ public class Stratos_Login {
 	}
 	@Then("Admin User enter the invalid username")
 	public void Admin_User_enter_the_invalid_username() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		invalid_Username = Excel_Utility.getCellData(2, 0);
 		testBase.waitForElement(Stratos_Login_PageObjects.email, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.email, "clicked");
@@ -130,7 +128,6 @@ public class Stratos_Login {
 		String valid_Password = Excel_Utility.getCellData_Integer(1, 1);
 		testBase.typeinTextBox(Stratos_Login_PageObjects.forgotPinCreatPasswordfield, valid_Password, "password");
 		
-	    
 	}
 
 	@Then("Admin User enter the confirm new password as {string} in confirm password page")
@@ -139,7 +136,6 @@ public class Stratos_Login {
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		 String valid_Password = Excel_Utility.getCellData_Integer(1, 1);
 		testBase.typeinTextBox(Stratos_Login_PageObjects.forgotPinConfirmPAssword, valid_Password, "forgotPinConfirmPAssword");
-		
 	    
 	}
 
@@ -147,6 +143,7 @@ public class Stratos_Login {
 	public void Admin_User_Click_on_the_submit_button() throws Exception {
 	   testBase.waitForElement(Stratos_Login_PageObjects.forgotPinSubmitButton, 20);
 	   testBase.clickonElement(Stratos_Login_PageObjects.forgotPinSubmitButton, "submit button");
+	   Thread.sleep(2000);
 	}
 
 	@Then("Admin User verifies the success message as\"Password Updated Successfully\"")
@@ -158,7 +155,13 @@ public class Stratos_Login {
 		Logs.info("password not changed successfully");		     
 	}
 	
-
+	@Then("Admin User verifies the valid email success message")
+	public void admin_User_verifies_the_valid_email_success_message() throws Throwable {
+		testBase.waitForElement(Stratos_Login_PageObjects.emailSuccessMessageForforgotpin, 20);
+		if (!(testBase.isElementVisible(Stratos_Login_PageObjects.emailSuccessMessageForforgotpin, "successmesage"))) {
+			ExceptionHandling.HandleAssertion("Email not updated");
+	}else
+		Logs.info("email updated");	
+	}
 
 }
-

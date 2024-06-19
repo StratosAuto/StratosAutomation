@@ -1,5 +1,6 @@
 package Stratos_gluecode;
 
+import Stratos_pageObjects.Stratos_Admin_3rdPartyProviders_PageObjects;
 import Stratos_pageObjects.Stratos_Supervisor_SHifts_PageObjects;
 import Stratos_testBase.testBase;
 import Stratos_utilities.ExceptionHandling;
@@ -55,7 +56,7 @@ public class Stratos_Supervisor_Shifts {
 	public void user_click_on_assign_button() throws Exception {
 		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.assignButton, 20);
 		testBase.clickonElement(Stratos_Supervisor_SHifts_PageObjects.assignButton, "assignButton");
-		 Thread.sleep(6000);
+		 Thread.sleep(2000);
 	}
 
 	@Then("User vaidates the invalid employee")
@@ -104,5 +105,57 @@ public class Stratos_Supervisor_Shifts {
 		Thread.sleep(6000);
 		  
 	}
+	@Then("User validates the success message.")
+	public void user_validates_the_success_message() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.assignEmployeeSuccessMessage, 20);
+		if(!(testBase.isElementVisible(Stratos_Supervisor_SHifts_PageObjects.assignEmployeeSuccessMessage, "error message"))){
+			ExceptionHandling.HandleAssertion("New shift is not assigned");
+		}
+		else
+			Logs.info("New shift is assigned"); 	
+	}
 
+	@Given("User enters valid employee name in filter and validate")
+	public void user_enters_valid_employee_name_in_filter_and_validate() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.employeeNameForValidatiob, 20);
+//		testBase.clickonElement(Stratos_Supervisor_SHifts_PageObjects.employeeNameForValidatiob, "employee name");
+		String Emp=testBase.getElementText(Stratos_Supervisor_SHifts_PageObjects.employeeNameForValidatiob, "employee Name");
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.filterButton, 20);
+		testBase.typeinTextBox(Stratos_Supervisor_SHifts_PageObjects.filterButton, Emp, "employee name");
+	   Thread.sleep(2000);
+	}
+
+	@Then("User enters the invalid employee name")
+	public void user_enters_the_invalid_employee_name() throws Throwable {
+		String invalidEmp=testBase.randomAplhabet(5);
+	    testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.employeeNameForValidatiob, 20);
+	    testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.filterButton, 20);
+	    testBase.typeinTextBox(Stratos_Supervisor_SHifts_PageObjects.filterButton, invalidEmp, "Invalid employee name");
+		 
+	}
+
+	@Then("User validates the error message")
+	public void user_validates_the_error_message() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.invalidemployeeName, 20);
+		if(!(testBase.isElementVisible(Stratos_Supervisor_SHifts_PageObjects.invalidemployeeName, "error message"))){
+			ExceptionHandling.HandleAssertion("employee name should not diaplay");
+		}
+		else
+			Logs.info("employee name should display"); 
+	    
+	}
+
+	@Then("User clicks on Items per page drop down in supervisor login")
+	public void user_clicks_on_Items_per_page_drop_down_in_supervisor_login() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.itemsDropdownSup, 20);
+		testBase.clickonElement(Stratos_Supervisor_SHifts_PageObjects.itemsDropdownSup, "Items Dropdown");
+	}
+
+	@Then("User selects the desired number from items per page dropdown")
+	public void user_selects_the_desired_number_from_items_per_page_dropdown() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_SHifts_PageObjects.itemsDropdownOptionsup, 20);
+		Thread.sleep(2000);
+		testBase.clickonElement(Stratos_Supervisor_SHifts_PageObjects.itemsDropdownOptionsup, "Items Dropdown Option");
+	   
+	}
 }

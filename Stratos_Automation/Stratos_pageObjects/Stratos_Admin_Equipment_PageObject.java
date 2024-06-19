@@ -24,7 +24,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentSerialNumber=By.xpath("//input[@formcontrolname='serialNumber']");
 	public static final By equipmentAutoallocate=By.xpath("//mat-select[@formcontrolname='autoAllocate']");
 //  By.xpath("//mat-select[@formcontrolname='autoAllocate']");
-	public static final By equipmentType=By.xpath("//mat-select[@formcontrolname='equipmentType']");
+	public static final By equipmentType=By.xpath("//div[@class='mat-mdc-select-arrow-wrapper ng-tns-c24-33']");
 	public static final By licenceExpiryDate=By.xpath("[class='mat-mdc-button-touch-target']");
 	public static final By saveAndContinue=By.xpath("//button[@form='myForm']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");

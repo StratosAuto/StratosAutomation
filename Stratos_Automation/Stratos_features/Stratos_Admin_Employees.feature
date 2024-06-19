@@ -4,7 +4,7 @@ Feature: Employees module functionality
    Given Admin User Enter the Stratos application URL
     Then Admin User enter the valid username
     Then Admin User enter the valid password
-    Then Admin User click on Submit button
+    Then Admin User click on Login button
     Then Admin User navigates to home page
 
 

@@ -4,15 +4,8 @@ Feature: Clients functionality
     Given Admin User Enter the Stratos application URL
     Then Admin User enter the valid username
     Then Admin User enter the valid password
-    Then Admin User click on Submit button
-<<<<<<< HEAD:Stratos_Automation/Stratos_features/Stratos_Admin_Clients.feature
-   
-=======
-
+    Then Admin User click on Login button
     Then Admin User navigates to home page
-
-    When User Click on Clients module
->>>>>>> df135186f38d20776151afab36aa4e77dad9352d:Stratos_Automation/Stratos_features/Stratos_Clients.feature
   
   Scenario: Verify add new Clients functionality with in valid data and valid data
     When User Click on Clients module

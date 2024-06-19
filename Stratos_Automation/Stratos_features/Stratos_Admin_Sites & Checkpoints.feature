@@ -4,7 +4,7 @@ Feature: Sites & Checkpoints functionality
     Given Admin User Enter the Stratos application URL
     Then Admin User enter the valid username
     Then Admin User enter the valid password
-    Then Admin User click on Submit button
+    Then Admin User click on Login button
     
   Scenario: Verify add new site functionality with valid data
     When User Click on Sites & Checkpoints module

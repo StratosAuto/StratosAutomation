@@ -40,30 +40,22 @@ public class Stratos_Equipement {
 	@Given("User click on add new equipment button")
 	public void user_click_on_add_new_equipment_button() throws Exception {
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, 20);
-<<<<<<< HEAD
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");
-=======
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.addNewEquipment, "Add new Equipment Module");   
->>>>>>> df135186f38d20776151afab36aa4e77dad9352d
 		Thread.sleep(5000);
 	}
 
 	@Given("Verify that user able to enter invalid data in Add new equipment page")
 	public void verify_that_user_able_to_enter_invalid_data_in_Add_new_equipment_page() throws Exception {
-	
-        
     	equipmentName=testBase.randomAlphanumeric(8)+"%$@";
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentName, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentName, "Equipment name");
 		testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentName, equipmentName, "equipment name");
-	
-		
+
 		String equipmentLicenseNumber=testBase.randomAlphanumeric(5)+"%$@";
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentLicenseNumberInput, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentLicenceNumber, "equipment license number");
 	    testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentLicenseNumberInput, String.valueOf(equipmentLicenseNumber), "Equipemnt");
-	
-	    
+    
 	    String EquipmentSerialNumber =testBase.randomAlphanumeric(6)+"%$@";
 	    testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentSerialNumber, 20);
 	  	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentSerialNumber, "equipment serial number");
@@ -261,34 +253,36 @@ public class Stratos_Equipement {
 
 	@Then("Admin User Enter Equipment Serial Number")
 	public void admin_User_Enter_Equipment_Serial_Number() throws Exception {
-		
 		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
 		EquipmentSerialNumber=Excel_Utility.getCellData_Integer(1, 3);
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentSerialNumber, 20);
 	  	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentSerialNumber, "equipment serial number");
 	    testBase.typeinTextBox(Stratos_Admin_Equipment_PageObject.equipmentSerialNumber, String.valueOf(EquipmentSerialNumber), "serial number");
-	    Thread.sleep(2000);
+	    Thread.sleep(10000);
 	}
 
 
 	@Then("Admin User Select Auto Allocate from Drop Down")
 	public void admin_User_Select_Auto_Allocate_from_Drop_Down() throws Throwable {
+		Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, 20);
-		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "equipment type name selected");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "equipment type name selected");
 //		Thread.sleep(2000);
 //		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.selectSiteName, 20);
-		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
+//		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
 //		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.equipmentAutoallocate, "YES");
-//		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
+		testBase.ClickViaMouse(Stratos_Admin_Equipment_PageObject.selectAutoAllocate, "YES");
 	}
 
 	@Then("Admin User Select Equipment Type from drop down")
 	public void admin_User_Select_Equipment_Type_from_drop_down() throws Exception {
+		Thread.sleep(2000);
 		testBase.waitForElement(Stratos_Admin_Equipment_PageObject.equipmentType, 20);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentType, "equipment type name selected");
+		Thread.sleep(2000);
 		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectEquipmentType1, "Doubel Barrel");
 	//	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentType, "equipment type name selected");
-		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectEquipmentType1, "Doubel Barrel");
+//		testBase.isElementVisible(Stratos_Admin_Equipment_PageObject.selectEquipmentType1, "Doubel Barrel");
 //		testBase.clickonElement(Stratos_Admin_Equipment_PageObject.selectEquipmentType, "Pistol");
 	}
 
@@ -837,7 +831,6 @@ public void admin_User_Select_the_Return_date() throws Throwable {
 	Thread.sleep(1000);
 	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.equipmentExpiryDate, "select the expiry date");
 	
-    
 }
 
 @Then("Admin User Clicks on submit button")
@@ -858,8 +851,6 @@ public void admin_User_capture_the_success_message() throws Throwable  {
 	   	Logs.info("success message displayed");
 	   
 	Thread.sleep(2000);
-	
-    
 }
 
 @Then("Admin User Clicks on Active equipment")
@@ -954,17 +945,5 @@ public void admin_User_Select_the_Return_State_as_Working() throws Throwable {
 	    
 	testBase.waitForElement(Stratos_Admin_Equipment_PageObject.workingStateinReturnEquipment, 20);
 	testBase.clickonElement(Stratos_Admin_Equipment_PageObject.workingStateinReturnEquipment, "workingState");
-   
 }
-
-
-
-
 }
-
-
-
-
-
-
-

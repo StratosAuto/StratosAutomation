@@ -21,4 +21,13 @@ Feature: Supervisor Shifts functionality
     Then User select the valid employee name
     Then User select the valid job card
     Then User click on assign button
-   
+    Then User validates the success message.
+    
+    Scenario: Verify the filter functionality
+    Given User click on shifts
+    And User enters valid employee name in filter and validate
+    Given User click on shifts
+    Then User enters the invalid employee name
+    Then User validates the error message
+    And User clicks on Items per page drop down in supervisor login
+    Then User selects the desired number from items per page dropdown
