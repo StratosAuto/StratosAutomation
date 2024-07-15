@@ -24,7 +24,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentSerialNumber=By.xpath("//input[@formcontrolname='serialNumber']");
 	public static final By equipmentAutoallocate=By.xpath("//mat-select[@formcontrolname='autoAllocate']");
 //  By.xpath("//mat-select[@formcontrolname='autoAllocate']");
-	public static final By equipmentType=By.xpath("//div[@class='mat-mdc-select-arrow-wrapper ng-tns-c24-33']");
+	public static final By equipmentType=By.xpath("//mat-select[@formcontrolname='equipmentType']");
 	public static final By licenceExpiryDate=By.xpath("[class='mat-mdc-button-touch-target']");
 	public static final By saveAndContinue=By.xpath("//button[@form='myForm']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
@@ -37,7 +37,7 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By licenseExpirydateButton=By.xpath("//button[@type='button']");
 	public static final By selectlicenseExpirydate=By.xpath("//span[text()=' 30 ']");
 	public static final By saveAndContinueButton=By.xpath("//button[text()=' Save and Continue ']");
-	public static final By manageEquipment=By.xpath("//button[text()=' Manage Equipment ']");
+	public static final By manageEquipment=By.xpath("//button[@class='btn ng-star-inserted']");
 	public static final By equipmentLicenseNumberInput=By.xpath("//input[@formcontrolname='licenseNumber']");
 	public static final By selectEquipmentType1=By.xpath("//span[text()='Doubel Barrel']");
 	public static final By EquipmentFilter=By.xpath("//input[@placeholder='Ex. Mia']");
@@ -58,25 +58,25 @@ public class Stratos_Admin_Equipment_PageObject {
 	public static final By equipmentNameFieldValidation=By.xpath("(//span[text()='Maximum 25 Characters Allowed.'])[1]");
 	public static final By equipmentLicenseNumberFieldValidation=By.xpath("//span[text()='Maximum 50 Characters Allowed.']");
 	public static final By equipmentSerialNumberFieldValidation=By.xpath("(//span[text()='Maximum 25 Characters Allowed.'])[2]");
-	public static final By inavalidEquipmentNameError=By.xpath("//span[text()='Give Correct Name']");
+	public static final By inavalidEquipmentNameError=By.xpath("(//span[text()='No Special Characters Allowed.'])[1]");
 	public static final By invalidLicenseNumberError=By.xpath("//span[text()='No special Characters Allowed.']");
 	public static final By invalidSerialNumberError=By.xpath("//span[text()='No Special Characters Allowed.']");
 	public static final By clearButton=By.xpath("//button[text()=' Clear ']");
 	public static final By bulkUploadCancelButton=By.xpath("//button[text()='Cancel']");
-	public static final By inactiveManageEquipment=By.xpath("//button[text()=' Manage Equipment ']");
+	public static final By inactiveManageEquipment=By.xpath("//button[@class='btn ng-star-inserted']");
 	public static final By assignEquipment=By.xpath("//button[text()=' Assign Employee ']");
 	public static final By employeeNameInAssignEmployee=By.xpath("//input[@formcontrolname='employeeName']");
 	public static final By selectEmployeeNameInAssignEmployee=By.xpath("(//span[@class='mdc-list-item__primary-text'])[1]");
 	public static final By returnDateInAssignEmployee=By.xpath("(//button[@type='button'])[2]");
 	public static final By selectreturnDateInAssignEmployee=By.xpath("//span[text()=' 30 ']");
 	public static final By submitButtonAssignEmployee=By.xpath("//button[text()=' Submit ']");
-	public static final By manageEquipmentInActiveEquipment=By.xpath("(//button[text()=' Manage Equipment '])[1]");
+	public static final By manageEquipmentInActiveEquipment=By.xpath("//button[@class='btn ng-star-inserted']");
 	public static final By returnEquipmentButton=By.xpath(" //button[text()=' Return Equipment ']");
 	public static final By returnComments=By.xpath("//input[@formcontrolname='comments']");
 	public static final By returnStateDropDown=By.xpath("//mat-select[@formcontrolname='state']");
 	public static final By selectReturnStateDropDown=By.xpath("//span[text()='Faulty']");
 	public static final By SubmitButtonReturnEquipment=By.xpath("//button[text()=' Submit ']");
-	public static final By manageEquipmentInFaulty=By.xpath("(//button[text()=' Manage Equipment '])[1]");
+	public static final By manageEquipmentInFaulty=By.xpath("//button[@class='btn ng-star-inserted']");
 	public static final By dectivateButtonInFaultyEquipment=By.xpath("//button[text()=' Deactivate ']");
 	public static final By workingStateinReturnEquipment=By.xpath("//span[text()='Working']");
 	

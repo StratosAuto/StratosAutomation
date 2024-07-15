@@ -42,7 +42,7 @@ public class Stratos_SitesAndCheckpoints_PageObjects {
     public static final By AdressdropDown=By.xpath("//div[@role='listbox']");
     public static final By clickonCheckpoints =By.xpath("//h2[text()='Create Checkpoints']");
     public static final By checkpointsLAtitude =By.xpath("//input[@formcontrolname='latitude']");
-    public static final By manageSite =By.xpath("//button[text()=' Manage Site '] ");
+    public static final By manageSite =By.xpath("//i[@class='fa-solid square fa-pen']");
     public static final By updateButton  =By.xpath("//button[text()=' Update ']");
     public static final By selectClientName1 =By.xpath("//mat-option[@id='mat-option-13']");
     public static final By filterButton =By.xpath("//input[@placeholder='Ex. Mia']");

@@ -93,8 +93,8 @@ public class Stratos_Supervisor_Dashboard {
 	@Then("User clicks on emplyee under all employees in Supervisor dashboard")
 	public void user_clicks_on_emplyee_under_all_employees_in_Supervisor_dashboard() throws Throwable {
 		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, 20);
-		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, "first employee");
-		Thread.sleep(4000);
+		testBase.ClickViaMouse(Stratos_Supervisor_Dashboard_PageObject.firstEmployee, "first employee");
+		Thread.sleep(2000);
 	}
 
 	@Then("User verifies the shift details in Supervisor dashboard")
@@ -113,7 +113,14 @@ public class Stratos_Supervisor_Dashboard {
 	public void user_clicks_on_more_info_button_in_Active_shift_info_in_Supervisor_dashboard() throws Throwable {
 		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.moreInfoButtonInActiveShift, 20);
 		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.moreInfoButtonInActiveShift, "more info button");
-		Thread.sleep(4000);
+		Thread.sleep(5000);
+		
+	}
+	@Then("User clicks on emplyee under all employees in Supervisor dashboard for task assigned details")
+	public void user_clicks_on_emplyee_under_all_employees_in_Supervisor_dashboard_for_task_assigned_details() throws Throwable {
+		testBase.waitForElement(Stratos_Supervisor_Dashboard_PageObject.assignedTaskemployee, 20);
+		testBase.clickonElement(Stratos_Supervisor_Dashboard_PageObject.assignedTaskemployee, "employee name");
+		Thread.sleep(5000);
 	}
 
 	@Then("User verifies the assigned task list in Supervisor dashboard")

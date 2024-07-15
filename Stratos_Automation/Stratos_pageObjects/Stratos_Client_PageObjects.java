@@ -32,7 +32,7 @@ public class Stratos_Client_PageObjects {
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By saveAndcontinue=By.xpath("//button[text()=' Save and Continue ']");
 	public static final By addclientSuccessMessage=By.xpath("//div[@class='container-2']");
-	public static final By manageClient=By.xpath("//button[text()=' Manage Client ']");
+	public static final By manageClient=By.xpath("(//button[@class='btn ng-star-inserted'])[1]");
 	public static final By editManageClientDetails=By.xpath("//button[text()=' Edit ']");
 	public static final By updateButton=By.xpath("//button[@form='form']");
 	public static final By succcessMessageForUpdate=By.xpath("//p[text()='Client updated Successfully']");
@@ -49,12 +49,12 @@ public class Stratos_Client_PageObjects {
 	public static final By invalidEmailAddress=By.xpath("//span[text()='Give Valid Email']");
 	public static final By invalidFaxNumber=By.xpath("//span[text()='Give Correct Fax Number']");
 	public static final By invalidVatNumberError=By.xpath("//span[text()='Give Correct Vat Number']");
-	public static final By invalidAccountManager=By.xpath("//span[text()='Give Correct Name']");
+	public static final By invalidAccountManager=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
 	public static final By inavlidPostalCode=By.xpath("//span[text()='Give Correct Postal Code']");
 	public static final By fieldLengthErrorForClientName=By.xpath("//span[text()='Maximum 25 Characters Allowed.']");
-	public static final By fieldValiErrorforStreet=By.xpath("(//span[text()='Max length is 100 characters allowed'])[1]");
-	public static final By filedValiErrorForStreet2=By.xpath("(//span[text()='Max length is 100 characters allowed'])[2]");
-	public static final By fieldValiForCommentserror=By.xpath("//span[text()='Max length is 250 characters']");
+	public static final By fieldValiErrorforStreet=By.xpath("(//span[text()='Maximun length is 100 Characters Allowed.'])[1]");
+	public static final By filedValiErrorForStreet2=By.xpath("(//span[text()='Maximun length is 100 Characters Allowed.'])[2]");
+	public static final By fieldValiForCommentserror=By.xpath("//span[text()='Max length is 250 Characters']");
 	public static final By activateButton=By.xpath("//button[text()=' Activate ']");
 //	public static final By =By.xpath("");
 	

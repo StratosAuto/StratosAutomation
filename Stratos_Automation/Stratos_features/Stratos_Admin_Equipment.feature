@@ -62,7 +62,7 @@ Feature: Equipment functionality
     When User clicks on Submit button in equipment page
     And User validates the error message as "errorMessage" of null Bulk Upload in equipment page
     And User clicks on cancel button in equipment page
-   
+	   
     Scenario: Verify the Assign Equipment and Return equipment functionality
     When User Click on Equipment module
     Given User click on add new equipment button

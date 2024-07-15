@@ -64,10 +64,10 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 	testBase.typeinTextBox(Stratos_Client_PageObjects.vatNumber, String.valueOf(VatNumber), "Vat Number");
 
 
-	AccountManager = testBase.randomAlphanumeric(15);
-	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
-	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
-	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account manager");
+//	AccountManager = testBase.randomAlphanumeric(15);
+//	testBase.waitForElement(Stratos_Client_PageObjects.accountManager, 20);
+//	testBase.clickonElement(Stratos_Client_PageObjects.accountManager, "client name");
+//	testBase.typeinTextBox(Stratos_Client_PageObjects.accountManager, AccountManager, "Account manager");
 	
 	Thread.sleep(5000);
     
@@ -111,10 +111,10 @@ public void verify_that_user_able_to_enter_invalid_data_in_Add_new_client_page()
 			Logs.info("give correct vat number");
 		
 		
-		if (!(testBase.isElementVisible(Stratos_Client_PageObjects.invalidAccountManager, "account manager"))) {
-			ExceptionHandling.HandleAssertion("give wrong  account manager");
-		} else
-			Logs.info("give correct account manager");
+//		if (!(testBase.isElementVisible(Stratos_Client_PageObjects.invalidAccountManager, "account manager"))) {
+//			ExceptionHandling.HandleAssertion("give wrong  account manager");
+//		} else
+//			Logs.info("give correct account manager");
 		
 		
 

@@ -22,6 +22,6 @@ Background:
     Then User verifies the shift details in Supervisor dashboard
     Then User clicks on Back button in Supervisor dashboard
     Then User clicks on more info button in Active shift info in Supervisor dashboard
-    Then User clicks on emplyee under all employees in Supervisor dashboard
+    Then User clicks on emplyee under all employees in Supervisor dashboard for task assigned details
     Then User verifies the assigned task list in Supervisor dashboard
     Then User clicks on back button in Supervisor dashboard

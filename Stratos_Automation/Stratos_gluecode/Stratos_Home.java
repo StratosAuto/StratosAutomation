@@ -84,8 +84,6 @@ public class Stratos_Home {
 		testBase.waitForElement(Stratos_Login_PageObjects.updateButton, 20);
 		testBase.ClickViaMouse(Stratos_Login_PageObjects.updateButton, "click");
 		Thread.sleep(10000);
-		testBase.ClickViaMouse(Stratos_Login_PageObjects.updateButton, "click");
-		Thread.sleep(10000);
 	}
 	@Then("Admin User verifies the success message")
 	public void admin_User_verifies_the_success_message() throws Exception {
