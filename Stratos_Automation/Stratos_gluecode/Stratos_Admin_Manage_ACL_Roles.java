@@ -27,6 +27,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 
 	@Given("User clicks on Add button to validate mandatory fields of Roles")
 	public void user_clicks_on_Add_button_to_validate_mandatory_fields_of_Roles() throws Exception {
+		testBase.waitForElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.addButton, 20);
 	    testBase.clickonElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.addButton, "Add");
 	    if(( testBase.isElementVisible(Stratos_Admin_Manage_ACL_Roles_PageObjects.validateRoles, "Roles"))) {
 	    	ExceptionHandling.HandleAssertion("New Role is created");
@@ -34,7 +35,6 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	    	Logs.info("New Role is not created");
 	}
 
-	
 	@Given("User clicks on close button")
 	public void user_clicks_on_close_button()throws Exception {
 	    testBase.waitForElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.closeButton, 20);
@@ -53,7 +53,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	public void user_selects_the_checkboxes_to_assign_permissions() throws Exception{
 	    testBase.waitForElement(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxaddNewProvider, 20);
 	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxaddNewProvider, "Add New Providers");
-	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxProviderListView, excelFileLocation);
+	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxProviderListView, "ProviderListView");
 	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxProvidersBulkUpload,"Providers Bulk Upload");
 	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxUpdateProviders, "Update Providers");
 	    testBase.ClickViaMouse(Stratos_Admin_Manage_ACL_Roles_PageObjects.checkBoxActicateProviders, "Activate Providers");
@@ -73,7 +73,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	    testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 	    Thread.sleep(5000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
-	    String data=testBase.getElementText(Stratos_Admin_Manage_ACL_Roles_PageObjects.roleValidate, "Filtered Data");
+	    String data=testBase.getElementText(Stratos_Admin_Manage_ACL_Roles_PageObjects.roleValidate, "Role");
 	    System.out.println(data);
 	    if(!(data.contains(name))) {
 	    	ExceptionHandling.HandleAssertion("New role is not created");
@@ -146,6 +146,7 @@ public class Stratos_Admin_Manage_ACL_Roles {
 	@Then("User enters invalid Role Name as {string}")
 	public void user_enters_invalid_Role_Name_as(String string) throws Exception {
 		String data = testBase.randomAplhabet(9);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.filter, 20);
 		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, data, "Filter");
 		Thread.sleep(3000);
 	}

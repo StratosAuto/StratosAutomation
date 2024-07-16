@@ -1,10 +1,10 @@
 Feature: 3rd Party Provider functionality
 
-  Background: 
+  Background:
     Given Admin User Enter the Stratos application URL
     Then Admin User enter the valid username
     Then Admin User enter the valid password
-    Then Admin User click on Submit button
+    Then Admin User click on Login button
     Then Admin User navigates to home page
 
   Scenario: Verify Add New Provider functionality status as Active
@@ -37,6 +37,10 @@ Feature: 3rd Party Provider functionality
     And User enters Comments as "comments" in Add Provider page
     Then User clicks on Save and Continue button
     And User verifies the created Active Provider to validate provider is created
+    And User clicks on Add New Provider button
+    And Verify that user able to create duplicate 3rd Party Provider
+    Then User clicks on Save and Continue button
+    And User validates the error message for duplicate 3rd Party Provider
     
 	Scenario: Verify Add New Provider functionality status as Inactive
     Given User clicks on 3rd Party Provider in the menu

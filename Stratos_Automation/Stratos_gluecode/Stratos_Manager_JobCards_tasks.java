@@ -412,7 +412,7 @@ public class Stratos_Manager_JobCards_tasks {
 	
 	@Then("User validates the success message as {string} of valid Bulk Upload of Job Cards")
 	public void user_validates_the_success_message_as_of_valid_Bulk_Upload_of_Job_Cards(String string) throws Exception {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		if (!(testBase.isElementVisible(Stratos_Manager_JobCards_Pageobjects.successBulkUpload, "File Upload"))) {
 			ExceptionHandling.HandleAssertion("Bulk upload file is not uploaded");
 		} else

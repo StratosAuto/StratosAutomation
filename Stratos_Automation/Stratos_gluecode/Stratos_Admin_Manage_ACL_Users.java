@@ -17,19 +17,21 @@ public class Stratos_Admin_Manage_ACL_Users {
 	
 	@Given("User clicks on Manage ACL Users in the menu")
 	public void user_clicks_on_Manage_ACL_Users_in_the_menu() throws Exception {
+		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.usersMenu, 20);
 		Thread.sleep(5000);
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.usersMenu, "Manage ACL Users");  
 	}
 
 	@Given("User clicks on Add New User button")
 	public void user_clicks_on_Add_New_User_button() throws Exception {
+		testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.addNewUserButton, 20);
 	    testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.addNewUserButton, "Add New User"); 
 	}
 
 	@Given("Verify that user able to enter invalid data in Create user page")
 	public void verify_that_user_able_to_enter_invalid_data_in_Create_user_page() throws Exception {
 	   String firstName=testBase.randomAlphanumeric(6)+"#!@";
-	   String emailAddress=testBase.randomAlphanumeric(5)+"-_-++"+"@gmail.com";
+	   String emailAddress=testBase.randomAlphanumeric(5)+";:,.\\\"[]()"+"@gmail.com";
 	   String lastName=testBase.randomAlphanumeric(6)+"@#$";
 	   String mobileNumber=testBase.randomAlphanumeric(7)+"&@#";
 	   
@@ -44,6 +46,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 	   
 	   testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber, 20);
 	   testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.mobileNumber, mobileNumber, "Mobile Number");
+	   
 	   testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
 	}
 
@@ -98,6 +101,10 @@ public class Stratos_Admin_Manage_ACL_Users {
 	
 	@Then("User Validates the error messages of Invalid field length data of all the feilds in Create User page")
 	public void user_Validates_the_error_messages_of_Invalid_field_length_data_of_all_the_feilds_in_Create_User_page() throws Exception {
+		
+		String minFirstName=testBase.randomAlphanumeric(2);
+		String minLastName=testBase.randomAlphanumeric(2);
+		
 		if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.fieldLengthFirstName, "First Name"))) {
 			ExceptionHandling.HandleAssertion("Maximum 25 characters allowed element is not visible");
 		}else
@@ -122,6 +129,25 @@ public class Stratos_Admin_Manage_ACL_Users {
 			ExceptionHandling.HandleAssertion("Minimum 6 characters allowed element is not visible");
 		}else
 	    Logs.info("Minimum 6 characters allowed is visible");
+		
+		   testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, 20);
+		   testBase.clearTextbox(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
+		   testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.firstName, minFirstName, "First Name");
+		   
+		   testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.lastName, 20);
+		   testBase.clearTextbox(Stratos_Admin_ManageACL_Users_PageObjects.lastName, "Last Name");
+		   testBase.typeinTextBox(Stratos_Admin_ManageACL_Users_PageObjects.lastName, minLastName, "Last Name");
+		   testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.firstName, "First Name");
+		   
+		   if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.minFieldLengthFirstName, "First Name"))) {
+				ExceptionHandling.HandleAssertion("Minimum 3 Characters Required element is not visible");
+			}else
+		    Logs.info("Minimum 3 Characters Required element is visible");
+		   
+		   if(!(testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.minFieldLengthLastName, "Last Name"))) {
+				ExceptionHandling.HandleAssertion("Minimum 3 Characters Required element is not visible");
+			}else
+		    Logs.info("Minimum 3 Characters Required element is visible");
 	}
 	
 	@And ("User clicks on Cancel button on Create User page")
@@ -134,6 +160,10 @@ public class Stratos_Admin_Manage_ACL_Users {
 	public void user_clicks_on_Add_button_to_validate_mandatory_fields() throws Exception {
 	   testBase.waitForElement(Stratos_Admin_ManageACL_Users_PageObjects.addButton, 20);
 	   testBase.clickonElement(Stratos_Admin_ManageACL_Users_PageObjects.addButton, "Add");
+	   if((testBase.isElementVisible(Stratos_Admin_ManageACL_Users_PageObjects.nullValidate, "Manage ACL Users"))) {
+		   ExceptionHandling.HandleAssertion("New user is created with null data");
+	   }else
+		   Logs.info("New user is not created with null data");
 	}
 
 	@Then("User enters First Name as {string} in Create User page")
@@ -208,10 +238,7 @@ public class Stratos_Admin_Manage_ACL_Users {
 		String lastName=Excel_Utility.getCellData(1, 3);
 		name=firstName+" "+lastName;
 	    Thread.sleep(6000);
-	    Thread.sleep(4000);
 	    testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.filter, name, "Filter");
-//	    String data=testBase.getElementText(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filter data");
-//	    System.out.println(data);
 	    if(!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.filterValidates, "Filtered Data"))) {
 	    	ExceptionHandling.HandleAssertion("New User is not created");
 	    }else
