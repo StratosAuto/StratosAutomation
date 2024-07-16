@@ -39,15 +39,13 @@ public class Stratos_Login {
 	public void Admin_User_enter_the_valid_passsword() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.password, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.password, "clicked");
-		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password),
-				"Enter password");
+		testBase.typeinTextBox(Stratos_Login_PageObjects.password, String.valueOf(valid_Password), "Enter password");
 	}
  
-	@Then("Admin User click on Submit button")
+	@Then("Admin User click on Login button")
 	public void Admin_User_click_on_Submit_button() throws Exception {
 		testBase.waitForElement(Stratos_Login_PageObjects.loginSubmitutton, 20);
 		testBase.clickonElement(Stratos_Login_PageObjects.loginSubmitutton, "Login");
-		Thread.sleep(20000);
 	}
  
 	@Then("Admin User navigates to home page")
@@ -58,9 +56,9 @@ public class Stratos_Login {
 			} else {
 				Logs.info("User navigated to Homepage");
 			}
-			Thread.sleep(3000);
-		
+			Thread.sleep(5000);
 	}
+	
 	@Then("Admin User enter the invalid username")
 	public void Admin_User_enter_the_invalid_username() throws Exception {
 		invalid_Username = Excel_Utility.getCellData(2, 0);

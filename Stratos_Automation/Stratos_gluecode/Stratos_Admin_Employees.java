@@ -36,7 +36,7 @@ public class Stratos_Admin_Employees {
 	    String lastName=testBase.randomAlphanumeric(15)+"1*%";
 	    String mobileNumber=testBase.randomAlphanumeric(8)+"@#";
 	    String otherContactNumber=testBase.randomAlphanumeric(8)+"@!";
-	    String emailAddress="!*"+testBase.randomAlphanumeric(6)+"@gmail.com";
+	    String emailAddress="!*"+testBase.randomAlphanumeric(6)+";:,.\\\"[]()"+"@gmail.com";
 	    String jobTitle="%$"+testBase.randomAlphanumeric(10);
 	    String passportNumber="@!"+testBase.randomAlphanumeric(7);
 	    String saId="*@"+testBase.randomAlphanumeric(11);
@@ -1096,6 +1096,16 @@ public class Stratos_Admin_Employees {
 		} else
 			Logs.info("New Manager is created successfully");
 	}
+
+	@Then("User validates the error message duplicate employee")
+	public void user_validates_the_error_message_duplicate_employee() throws Exception   {
+	    Thread.sleep(2000);
+	    if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.duplicateEmail, "Duplicate Email Address"))) {
+	    	ExceptionHandling.HandleAssertion("New employee is created with duplicate data");
+	    }else
+	    	Logs.info("New employee is not created with duplicate data");
+	}
+
 
 //	------------------------------	ADD NEW EMPLOYEE AS *SUPERVISOR*	----------------------------------------
 	
@@ -2418,7 +2428,7 @@ public class Stratos_Admin_Employees {
 	@Then("User clicks on Select File button and upload employees file")
 	public void user_clicks_on_Select_File_button_and_upload_employees_file() throws Exception {
 		Thread.sleep(3000);
-		String CSVFile = "Auto-IT/Bulk_Employee-Stable.xlsx";
+		String CSVFile = "Auto-IT/Bulk-Employee-Stable.xlsx";
 		testBase.FileUpload(Stratos_Admin_3rdPartyProviders_PageObjects.file, CSVFile);
 	}
 	
@@ -2429,8 +2439,12 @@ public class Stratos_Admin_Employees {
 	}
 	
 	@Then("User validates the success message as {string} of employee bulk file")
-	public void user_validates_the_success_message_as_of_employee_bulk_file(String string) {
-
+	public void user_validates_the_success_message_as_of_employee_bulk_file(String string) throws Exception {
+		Thread.sleep(2000);
+		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.successMessage, "Valid Bulk File Upload"))) {
+			ExceptionHandling.HandleAssertion("Valid bulk employee is not uploaded");
+		}else
+			Logs.info("Valid bulk employee is uploaded");
 	}
 
 	@Then("User clicks on Select File button to upload invalid Employees bulk file")
@@ -2443,7 +2457,7 @@ public class Stratos_Admin_Employees {
 	@Then("User validates the error message as {string} of invalid Employees Bulk Upload")
 	public void user_validates_the_error_message_as_of_invalid_EmployeesBulk_Upload(String string) throws Exception {
 		Thread.sleep(2000);
-		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "Invalid Bulk File Upload"))) {
+		if(!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.invalidBulkFileError, "Invalid Bulk File Upload"))) {
 			ExceptionHandling.HandleAssertion("Invalid bulk upload file is uploaded");
 		}else
 			Logs.info("Invalid bulk file upload file is not uploaded");
@@ -2458,6 +2472,7 @@ public class Stratos_Admin_Employees {
 	
 	@Given("User validates the error message as {string} of empty Employee null Bulk Upload file")
 	public void user_validates_the_error_message_as_of_empty_Employee_null_Bulk_Upload_file(String string) throws Exception {
+		Thread.sleep(2000);
 		if (!(testBase.isElementVisible(Stratos_Admin_Employees_PageObjects.nullBulkFileError, "Null Bulk File Upload"))) {
 			ExceptionHandling.HandleAssertion("Null bulk upload file is uploaded");
 		} else

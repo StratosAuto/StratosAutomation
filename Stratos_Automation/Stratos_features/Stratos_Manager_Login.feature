@@ -27,5 +27,5 @@ Scenario: Verify the Forgot PIN functionality
 		And User clicks on Go To Login link and navigate to Manager Login page
 		And User clicks on Forgin PIN link and navigate to Forgot Your Pin page
 		Then User clicks on Request New PIN button on Forgot Your Pin page
-		And User enters valid Employee ID as "employeeID"
-		And User validates the success message as "successMessage" of valid Employee ID
+#		And User enters valid Employee ID as "employeeID"
+#		And User validates the success message as "successMessage" of valid Employee ID

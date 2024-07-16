@@ -99,7 +99,7 @@ public class Stratos_Manager_Dashboard {
 	@Then("User clicks on view sites on manager dashboard")
 	public void user_clicks_on_view_sites_on_manager_dashboard() throws Exception {
 		testBase.waitForElement(Stratos_Manager_Dashboard_Pageobjects.viewSites, 20);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	    testBase.ClickViaMouse(Stratos_Manager_Dashboard_Pageobjects.viewSites, "view sites"); 
 	}
 

@@ -19,7 +19,7 @@ public class Stratos_Admin_3rdPartyProvider {
 
 	@Given("User clicks on 3rd Party Provider in the menu")
 	public void user_clicks_on_3rd_Party_Provider_in_the_menu() throws Exception {
-		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.provider, 15);
+		testBase.waitForElement(Stratos_Admin_3rdPartyProviders_PageObjects.provider, 20);
 		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.provider, "3rd Party Provider");
 	}
 
@@ -347,6 +347,56 @@ public class Stratos_Admin_3rdPartyProvider {
 			ExceptionHandling.HandleAssertion("New Active Provider is not created");
 		} else
 			Logs.info("New Active Provider is created successfully");
+	}
+	
+	@Given("Verify that user able to create duplicate 3rd Party Provider")
+	public void verify_that_user_able_to_create_duplicate_3rd_Party_Provider() throws Exception {
+		Excel_Utility.setExcelFile(excelFileLocation, sheetName);
+		String providerName = Excel_Utility.getCellData(1, 0);
+		String mobileNumber = Excel_Utility.getCellData_Integer(1, 1);
+		String otherContactNumber = Excel_Utility.getCellData_Integer(1, 2);
+		String emailAddress = Excel_Utility.getCellData(1, 3);
+		String faxNumber = Excel_Utility.getCellData_Integer(1, 4);
+		String vatNumber = Excel_Utility.getCellData_Integer(1, 5);
+		String street = Excel_Utility.getCellData(1, 6);
+		String street2 = Excel_Utility.getCellData(1, 7);	
+		String postalCode = Excel_Utility.getCellData(1, 8);
+		String comments = Excel_Utility.getCellData(1, 9);
+	
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.providerName, providerName, "Provider Name");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.mobileNumber, String.valueOf(mobileNumber), "Mobile Number");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.otherContactNumber, String.valueOf(otherContactNumber), "Other Contact Number");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.emailAddress, emailAddress, "Email Address");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.faxNumber, String.valueOf(faxNumber), "Fax Number");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.vatNumber, String.valueOf(vatNumber), "Vat Number");
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.status, "Status");
+		Thread.sleep(3000);
+		testBase.clickonElement(Stratos_Admin_3rdPartyProviders_PageObjects.active, "Active");
+		Thread.sleep(3000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street, street, "Street");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.street2, street2, "Street2");
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.city, "City");
+		Thread.sleep(2000);
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.selectCity, "City");
+		if (!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.province, "Province"))) {
+			ExceptionHandling.HandleAssertion("Province is not auto-populated");
+		} else
+			Logs.info("Province is auto-populated");
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.country, "Country");
+		Thread.sleep(3000);
+		testBase.ClickViaMouse(Stratos_Admin_3rdPartyProviders_PageObjects.selectCountry, "Country");
+		Thread.sleep(3000);
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.postalCode, String.valueOf(postalCode),"Postal Code");
+		testBase.typeinTextBox(Stratos_Admin_3rdPartyProviders_PageObjects.comments, comments, "Comments");
+	}
+
+	@Then("User validates the error message for duplicate 3rd Party Provider")
+	public void user_validates_the_error_message_for_duplicate_3rd_Party_Provider() throws Exception {
+		Thread.sleep(2000);
+		if(!(testBase.isElementVisible(Stratos_Admin_3rdPartyProviders_PageObjects.nullProviderError, "Error"))) {
+			ExceptionHandling.HandleAssertion("New provider is created");
+		}
+		Logs.info("New Provider is not created");
 	}
 	
 // Creating Inactive Provider

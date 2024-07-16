@@ -51,9 +51,10 @@ public class Stratos_Admin_3rdPartyProviders_PageObjects {
 	public static final By inactiveProviderRef=By.xpath("//td[text()='6576cdab2c97546ad1fa115a']");
 	public static final By itemsDropdown=By.xpath("//span[text()='5']");
 	public static final By itemsDropdownOption=By.xpath("//span[text()=' 10 ']");	
+	public static final By nullProviderError=By.xpath("//p[text()='ThirdParty is already exists ']");
 	
-	
-	public static final By manageProviderButton=By.xpath("//button[text()=' Manage Provider ']");
+//	public static final By manageProviderButton=By.xpath("//button[text()=' Manage Provider ']");
+	public static final By manageProviderButton=By.xpath("(//button[@class='btn ng-star-inserted'])[1]");
 	public static final By updateButton=By.xpath("//button[text()=' Update ']");
 	public static final By deactivateButton=By.xpath("//button[text()=' Deactivate ']");
 	public static final By validateDeactivate=By.xpath("//td[text()='TY solutions']");

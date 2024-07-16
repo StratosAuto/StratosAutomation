@@ -6,7 +6,7 @@ public class Stratos_Manager_Dashboard_Pageobjects {
 	
 	public static final By dashboardMenu=By.xpath("//span[text()='Dashboard']");
 	public static final By allClients=By.xpath("//mat-label[text()='All Clients']");
-	public static final By selectClient=By.xpath("//span[text()=' sadio ']");
+	public static final By selectClient=By.xpath("//span[text()=' Sadio ']");
 	public static final By country=By.xpath("(//mat-select[@role='combobox'])[2]");
 	public static final By selectCountry=By.xpath("//span[text()='South Africa']");
 	public static final By allProvinces=By.xpath("//mat-label[text()='All Provinces']");

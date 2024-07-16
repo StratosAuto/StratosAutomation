@@ -17,7 +17,8 @@ public class Stratos_Manager_JobCards_Pageobjects {
 	public static final By saveAndContinueButton=By.xpath("//button[text()=' Save and Continue ']");
 	public static final By cancelButton=By.xpath("//button[text()=' Cancel ']");
 	public static final By validateNull=By.xpath("//h1[text()='Job Cards And Tasks']");
-	public static final By manageJobCardsButton=By.xpath("//button[text()=' Manage Job Card ']");
+//	public static final By manageJobCardsButton=By.xpath("//button[text()=' Manage Job Card ']");
+	public static final By manageJobCardsButton=By.xpath("(//button[@class='btn ng-star-inserted'])[1]");
 	public static final By manageTasksButton=By.xpath("//button[text()=' Manage Tasks ']");
 	public static final By updateButton=By.xpath("//button[text()=' Update ']");
 	public static final By deactivate=By.xpath("//button[text()=' Deactivate ']");

@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 
 public class Stratos_Admin_Employees_PageObjects {
 	
+	public static final By duplicateEmail=By.xpath("//p[text()='Email address already exists ']");
+	public static final By successMessage=By.xpath("//p[text()='File Uploaded Successfully']");
 	public static final By invalidBulkFileError=By.xpath("//p[text()='Error']");
 	public static final By nullBulkFileError=By.xpath("//p[text()='Your Excel file is Empty.']");
 	public static final By submitButton=By.xpath("//button[text()='Submit']");
@@ -13,7 +15,8 @@ public class Stratos_Admin_Employees_PageObjects {
 	public static final By saveButton=By.xpath("//button[text()=' Save ']");
 	public static final By employeeID=By.xpath("//input[@placeholder='Ex. Mia']/../../../../following-sibling::div/span/table/tbody/tr/td");
 	public static final By nullValidateEmployees=By.xpath("//h1[text()='Manage Employees']");
-	public static final By manageEmployee=By.xpath("//button[text()=' Manage Employee ']");
+//	public static final By manageEmployee=By.xpath("//button[text()=' Manage Employee ']");
+	public static final By manageEmployee=By.xpath("(//button[@class='btn'])[1]");
 	public static final By inactiveEmployees=By.xpath("//span[text()='Inactive Employees']");
 	public static final By updateButton=By.xpath("//button[@type='submit']");
 	public static final By deactivateButton=By.xpath("//button[text()=' Deactivate ']");

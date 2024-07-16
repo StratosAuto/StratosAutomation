@@ -19,7 +19,8 @@ public class Stratos_Manager_Shifts_Pageobjects {
 	public static final By shiftsMenu=By.xpath("//span[text()='Shifts']");
 	public static final By addNewShiftsButton=By.xpath("//button[text()=' Add New Shifts ']");
 	public static final By bulkUploadButton=By.xpath("//button[text()=' Bulk Upload ']");
-	public static final By editShiftsButton=By.xpath("//button[text()=' Edit shifts ']");
+//	public static final By editShiftsButton=By.xpath("//button[text()=' Edit shifts ']");
+	public static final By editShiftsButton=By.xpath("(//button[@class='btn m-1 ng-star-inserted'])[1]");
 	public static final By updateButton=By.xpath("//button[text()=' Update ']");
 	public static final By assignButton=By.xpath("//button[text()=' Assign ']");
 	public static final By duplicateAssignButton=By.xpath("(//button[text()=' Assign '])[2]");
@@ -29,7 +30,7 @@ public class Stratos_Manager_Shifts_Pageobjects {
 	public static final By supervisorName=By.xpath("//mat-select[@formcontrolname='employeeName']");
 	public static final By selectSupervisorName=By.xpath("//span[text()='Dela Supervisor Supervisor']");
 	public static final By clientName=By.xpath("//mat-select[@formcontrolname='client']");
-	public static final By selectClientName=By.xpath("//span[text()='sadio']");
+	public static final By selectClientName=By.xpath("//span[text()='Sadio']");
 	public static final By siteName=By.xpath("//mat-label[text()='Site Name & Address']");
 	public static final By selectSiteName=By.xpath("//span[text()='Zina']");
 	public static final By checkInDateCalendarButton=By.xpath("//span[@class='mat-mdc-button-touch-target']");
